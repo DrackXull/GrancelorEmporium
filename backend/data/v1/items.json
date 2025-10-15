@@ -1,0 +1,76 @@
+{
+  "version": "v1",
+  "items": [
+    {
+      "id": "mirror_forged_shield",
+      "name": "Mirror-Forged Shield",
+      "slot": "offhand",
+      "gs": 80,
+      "mods": {
+        "ac_bonus": 2
+      }
+    },
+    {
+  "id": "spectral_insight_monocle",
+  "name": "Spectral Insight Monocle",
+  "slot": "wondrous",
+  "gs": 140,
+  "mods": {
+    "to_hit_bonus": 0,
+    "damage_bonus_flat": 0
+  },
+  "notes": "Bonus Action: Scan (out of scope for current sim). Flavor & campaign integration only. Future: advantage on Investigation/Arcana checks in sim contexts."
+},
+
+    {
+      "id": "titan_blood_crystal",
+      "name": "Titan Blood Crystal",
+      "slot": "consumable",
+      "gs": 120,
+      "temp_buff": {
+        "duration_rounds": 10,
+        "on_hit_bonus_damage": [
+          [
+            1,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ring_of_true_sight",
+      "name": "Ring of True Sight",
+      "slot": "ring",
+      "gs": 140,
+      "mods": {
+        "to_hit_bonus": 1
+      }
+    },
+    { "id":"ring_of_reserve", "name":"Ring of Reserve", "slot":"ring", "gs":120,
+  "mods": { "add_slots": { "2": 1 } 
+      }
+
+    },
+
+    {
+      "id": "infernal_brand",
+      "name": "Infernal Brand",
+      "slot": "tattoo",
+      "gs": 60,
+      "mods": {
+        "damage_bonus_flat": 2
+      }
+    },
+    {
+      "id": "elixir_of_vigor",
+      "name": "Elixir of Vigor",
+      "slot": "consumable",
+      "gs": 40,
+      "temp_buff": {
+        "duration_rounds": 5,
+        "hp_temp": 8
+      }
+    }
+  ]
+}

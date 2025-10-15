@@ -1,0 +1,11 @@
+# .gitignore
+__pycache__/
+*.pyc
+.venv/
+env/
+node_modules/
+user_data/*.json
+*.log
+*.tmp
+frontend/dist/
+.vscode/
