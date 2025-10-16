@@ -9,3 +9,15 @@ user_data/*.json
 *.tmp
 frontend/dist/
 .vscode/
+.zoneidentifier
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Windows Alternate Data Streams artifacts on NTFS/WSL
+*:*Zone.Identifier
+*:*zone.identifier
+*:*Zone.Identifier*
+*:*mshield
+*:*msshield*
