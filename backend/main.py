@@ -19,10 +19,10 @@ app = FastAPI(title="TPKA Encounter Simulator API", version="0.7.0")
 # Mount routers
 app.include_router(creator_router, prefix="/api")
 app.include_router(damage_router,  prefix="/api")
-app.include_router(schema_router)
-app.include_router(items_router)
-app.include_router(spells_router)
-app.include_router(sheets_router)
+app.include_router(schema_router, prefix="/api")
+app.include_router(items_router, prefix="/api")
+app.include_router(spells_router, prefix="/api")
+app.include_router(sheets_router, prefix="/api")
 
 
 # ---------- Data ----------
@@ -143,7 +143,7 @@ class PartyCustom(BaseModel):
     abilities: AbilityToggles = AbilityToggles()
 
 class RunRequest(BaseModel):
-    encounter_id: str
+    encounter__id: str
     trap_ids: List[str] = []
     trials: int = 1000
     initiative: str = "random"
@@ -200,7 +200,7 @@ def build_pc_statline(req: BuildPCRequest) -> Dict[str, Any]:
     attack_stat = (req.attack_stat or
                    ("int" if (weap["id"] == "arcane_bolt" and klass["id"] == "wizard") else
                     ("dex" if mods["dex_mod"] >= mods["str_mod"] else "str")))
-    atk_mod = mods[f\'{attack_stat}_mod\']
+    atk_mod = mods[f'{attack_stat}_mod']
 
     prof = klass["prof_by_level"][max(1, min(req.level, len(klass["prof_by_level"]))) - 1]
     auto_apr = 1
@@ -220,10 +220,10 @@ def build_pc_statline(req: BuildPCRequest) -> Dict[str, Any]:
 
     hd = klass["hit_die"]
     hp = int(round((_avg_die(hd) * req.level) + (mods["con_mod"] * req.level)))
-    name = req.name or f\'{klass['name']} L{req.level}\'
+    name = req.name or f'{klass['name']} L{req.level}'
 
     return {
-        "id": f\'custom_{klass['id']}_l{req.level}_{armor['id']}_{weap['id']}_{attack_stat}_{apr}\',
+        "id": f'custom_{klass['id']}_l{req.level}_{armor['id']}_{weap['id']}_{attack_stat}_{apr}',
         "name": name,
         "archetype": klass["id"],
         "level": req.level,

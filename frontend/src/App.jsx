@@ -178,10 +178,7 @@ export default function App() {
           <div style={styles.tab(tab === "dev")} onClick={() => setTab("dev")}>Dev Tools</div>
           <div style={styles.tab(tab === "creator")} onClick={() => setTab("creator")}>Creator</div>
         </div>
-
-        {/* Sidebar content based on tab */}
-        {/* ... (rest of the sidebar) ... */}
-
+        <MonteCarloPanel />
       </aside>
 
       <div role="separator" aria-orientation="vertical" onMouseDown={startDrag} title="Drag to resize" style={{ cursor: "col-resize", background: "#1e2230", width: 10, height: "100%", userSelect: "none" }} />
