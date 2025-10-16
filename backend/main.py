@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from routers.damage import router as damage_router
 from routers.creator import router as creator_router
+from routers.schema import router as schema_router
 from engine.engine_patched import Combatant, EncounterOptions, simulate_mixed
 
 from typing import List, Dict, Any, Optional
@@ -24,6 +25,7 @@ app.add_middleware(
 # Mount routers
 app.include_router(creator_router, prefix="/api")
 app.include_router(damage_router,  prefix="/api")
+app.include_router(schema_router)
 
 
 # ---------- Data ----------

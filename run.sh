@@ -12,22 +12,22 @@ killbg() {
 trap killbg EXIT
 
 echo "==> Checking Python..."
-if ! command -v python3 >/dev/null 2>&1; then
-  echo "ERROR: python3 not found. Install Python 3 first." >&2
+if ! command -v python >/dev/null 2>&1; then
+  echo "ERROR: python not found. Install Python 3 first." >&2
   exit 1
 fi
 
 # Check that venv is available
-if ! python3 -m venv --help >/dev/null 2>&1; then
+if ! python -m venv --help >/dev/null 2>&1; then
   echo "ERROR: The venv module is missing. On Ubuntu/WSL run:" >&2
-  echo "  sudo apt update && sudo apt install -y python3-venv" >&2
+  echo "  sudo apt update && sudo apt install -y python-venv" >&2
   exit 1
 fi
 
 # Create venv if missing
 if [ ! -d "$VENV_DIR" ]; then
   echo "==> Creating backend virtualenv..."
-  python3 -m venv "$VENV_DIR"
+  python -m venv "$VENV_DIR"
   # shellcheck disable=SC1091
   source "$VENV_DIR/bin/activate"
   python -m pip install --upgrade pip
