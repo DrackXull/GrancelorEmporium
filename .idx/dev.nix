@@ -7,6 +7,9 @@
     pkgs.python311
     pkgs.python311Packages.pip
     pkgs.nodejs_20 # Using Node.js version 20
+    pkgs.python311Packages.fastapi
+    pkgs.python311Packages.uvicorn
+    pkgs.python311Packages.pydantic
   ];
 
   # Sets environment variables in the workspace
@@ -27,7 +30,7 @@
           manager = "web";
         };
         backend = {
-          command = ["sh" "-c" "uvicorn backend.main:app --host 0.0.0.0 --port 8000"];
+          command = ["sh" "-c" "python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000"];
           manager = "web";
         };
       };
@@ -39,8 +42,6 @@
       onCreate = {
         # Install frontend dependencies
         npm-install = "cd frontend && npm install";
-        # Install backend dependencies
-        pip-install = "pip install -r backend/requirements.txt";
       };
       # Runs when the workspace is (re)started
       onStart = {
