@@ -1,25 +1,19 @@
-grancelor-backend-key.json
-*grancelor-backend-key.json
-# .gitignore
+
+
+# Ignore credentials
+*.json
+*.log
+
+# Ignore python cache
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Ignore virtual environment
 .venv/
 env/
-node_modules/
-user_data/*.json
-*.log
-*.tmp
-frontend/dist/
-.vscode/
-.zoneidentifier
-# OS junk
+venv/
+
+# Ignore OS-specific files
 .DS_Store
 Thumbs.db
-Desktop.ini
-
-# Windows Alternate Data Streams artifacts on NTFS/WSL
-*:*Zone.Identifier
-*:*zone.identifier
-*:*Zone.Identifier*
-*:*mshield
-*:*msshield*

@@ -1,0 +1,35 @@
+{
+  "version": "v2",
+  "room_effects": [
+    {
+      "id": "fog",
+      "name": "Fog",
+      "description": "A dense fog fills the room, making it harder to hit enemies and amplifying the effect of fire.",
+      "effect": [
+        {
+          "target": "enemy",
+          "attribute": "to-hit",
+          "value": -1
+        },
+        {
+          "target": "all",
+          "attribute": "damage_multiplier",
+          "value": 0.5,
+          "damage_type": "fire"
+        }
+      ]
+    },
+    {
+      "id": "magnetic_field",
+      "name": "Magnetic Field",
+      "description": "A strong magnetic field in the room makes metallic armor less effective.",
+      "effect": [
+        {
+          "target": "all",
+          "attribute": "ac",
+          "value": -2
+        }
+      ]
+    }
+  ]
+}
