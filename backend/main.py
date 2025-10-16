@@ -1,28 +1,20 @@
 # backend/main.py
 import json, os
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from routers.damage import router as damage_router
 from routers.creator import router as creator_router
 from routers.schema import router as schema_router
 from routers.items import router as items_router
 from routers.spells import router as spells_router
+from routers.sheets import router as sheets_router
 from engine.engine_patched import Combatant, EncounterOptions, simulate_mixed
 
 from typing import List, Dict, Any, Optional
 
-
-
 app = FastAPI(title="TPKA Encounter Simulator API", version="0.7.0")
-# (Optional) Relax CORS for local Vite
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # Mount routers
 app.include_router(creator_router, prefix="/api")
@@ -30,6 +22,7 @@ app.include_router(damage_router,  prefix="/api")
 app.include_router(schema_router)
 app.include_router(items_router)
 app.include_router(spells_router)
+app.include_router(sheets_router)
 
 
 # ---------- Data ----------
@@ -207,7 +200,7 @@ def build_pc_statline(req: BuildPCRequest) -> Dict[str, Any]:
     attack_stat = (req.attack_stat or
                    ("int" if (weap["id"] == "arcane_bolt" and klass["id"] == "wizard") else
                     ("dex" if mods["dex_mod"] >= mods["str_mod"] else "str")))
-    atk_mod = mods[f"{attack_stat}_mod"]
+    atk_mod = mods[f\'{attack_stat}_mod\']
 
     prof = klass["prof_by_level"][max(1, min(req.level, len(klass["prof_by_level"]))) - 1]
     auto_apr = 1
@@ -227,10 +220,10 @@ def build_pc_statline(req: BuildPCRequest) -> Dict[str, Any]:
 
     hd = klass["hit_die"]
     hp = int(round((_avg_die(hd) * req.level) + (mods["con_mod"] * req.level)))
-    name = req.name or f"{klass['name']} L{req.level}"
+    name = req.name or f\'{klass['name']} L{req.level}\'
 
     return {
-        "id": f"custom_{klass['id']}_l{req.level}_{armor['id']}_{weap['id']}_{attack_stat}_{apr}",
+        "id": f\'custom_{klass['id']}_l{req.level}_{armor['id']}_{weap['id']}_{attack_stat}_{apr}\',
         "name": name,
         "archetype": klass["id"],
         "level": req.level,
@@ -408,3 +401,10 @@ def run_sim(req: RunRequest):
             if rounds_list else {}
         )
     }
+
+# Serve Frontend
+app.mount("/assets", StaticFiles(directory="../frontend/dist/assets"), name="assets")
+
+@app.get("/{full_path:path}")
+async def catch_all(full_path: str):
+    return FileResponse("../frontend/dist/index.html")

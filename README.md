@@ -3,29 +3,69 @@
 
 This is a ready-to-run webapp for your Monte Carlo encounter simulator.
 
-## Quickstart (local)
+## Quickstart (in this IDE)
 
-### 1) Backend API
-```bash
-pip install -r backend/requirements.txt
-uvicorn backend.main:app --reload --port 8000
-```
+This project is configured to run automatically in this cloud IDE.
+1.  The **Backend API** server will start on port 8000.
+2.  The **Frontend UI** will start on a separate port and be available in the "Previews" tab.
 
-### 2) Frontend UI
-```bash
-cd frontend
-npm install
-npm run dev
-```
+You do not need to run any commands manually. Just open the web preview to use the application.
 
-Open http://localhost:5173 and run simulations.
+## Status
 
-## Deploy options
-- **Render** or **Railway**: Deploy backend as a Python/uvicorn service.
-- **Fly.io** or **Heroku**: Same, set `PORT` and serve at `/api`.
-- **Netlify** or **Vercel**: Deploy the React build (`npm run build`), and point it at your API URL via `VITE_API_BASE` environment variable.
+*   **Completed:** Backend API for Character Sheets (`/api/sheets`).
+*   **In Progress:** Frontend UI for Character Sheet v1.
 
-## Notes
-- MVP supports one monster type from the first wave of a preset encounter.
-- Traps & room effects are live. Paths/Items are loaded but not yet mutating PC stats (next patch).
-- Extend `backend/data/v1/*.json` with your campaign content.
+## Roadmap
+
+### Character Sheet v1
+-   **[In Progress]** Live character sheet with HP, AC, stats, inventory, currency, and notes.
+-   **[Done]** Data is persistent via `/api/sheets` and stored in `user_data/sheets.json`.
+
+### Campaign Save System
+-   Full CRUD API for campaigns at `/api/campaigns`.
+-   Tracks active campaign, party roster, owned items, currency, quest flags, and room upgrades.
+
+### Quests & Triggers
+-   Data models for quests, including steps, rewards, and completion triggers.
+-   Endpoints for managing quests (`/api/quests`) and executing triggers (`/api/triggers/run`).
+
+### DM Dashboard
+-   A dedicated tab for Dungeon Masters to manage the campaign.
+-   Mark quests as complete, add/remove conditions, award loot, and perform bulk operations.
+
+### Balance Analytics
+-   Aggregate DPR, TTK, and win% across classes/levels/items.
+-   `/api/analytics` endpoints + charts: heatmaps of matchup outcomes.
+
+### Content Packs (Modular Data)
+-   Loadable “packs”: base ruleset + optional homebrew pack overlays.
+-   `/api/packs/enable` to toggle; merge strategy with priority.
+
+### User Submissions & Moderation Queue
+-   `/api/submissions` to submit items/abilities/spells.
+-   “Moderator” role UI to approve/decline; approved become shared templates.
+
+### Import/Export Bundles
+-   Zip a campaign (sheets, encounters, items, quests) for backup or sharing.
+-   Import with validation and conflict resolution.
+
+### Schema Migrations
+-   Version headers on all JSON; simple migrators when structure evolves.
+-   `/api/migrate/preview` and `/api/migrate/run`.
+
+### Autosave + Conflict Recovery
+-   Autosave campaign state; keep last 5 snapshots.
+-   UI button “Restore previous autosave”.
+
+### Keyboard-First UX for TBS
+-   Hotkeys for next target, use ability 1–4, end turn.
+-   Reduce clicks; make playtesting snappy.
+
+### Performance Pass
+-   Workerize Monte Carlo (Web Workers) for 100k+ runs without UI jank.
+-   Cache common roll distributions by seed + profile hash.
+
+### Test Harness + Fixtures
+-   Unit tests for adapter, conditions, quests, loot resolution.
+-   Fixture-driven sims to ensure no regressions in balance.
