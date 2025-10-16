@@ -20,6 +20,7 @@ class DamageConfig:
     gear_mods: Iterable[float] = ()
     buff_mods: Iterable[float] = ()
     debuff_mods: Iterable[float] = ()
+    room_mods: Iterable[float] = ()
     crit_chance: float = 0.05
     crit_mult: float = 1.5
     enable_variance: bool = False
@@ -74,6 +75,7 @@ def calculate_damage(cfg: DamageConfig) -> Dict:
     mods.extend(float(m) for m in cfg.gear_mods)
     mods.extend(float(m) for m in cfg.buff_mods)
     mods.extend(float(m) for m in cfg.debuff_mods)
+    mods.extend(float(m) for m in cfg.room_mods)
 
     total_mod = 1.0
     for m in mods:

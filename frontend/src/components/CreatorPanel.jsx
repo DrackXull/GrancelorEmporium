@@ -16,6 +16,8 @@ export default function CreatorPanel(){
   const [catalog, setCatalog] = useState({classes:[],weapons:[],armors:[],paths:[],items:[],monsters_baseline:[]});
   const [pcs, setPcs] = useState([]);
   const [mons, setMons] = useState([]);
+  const [items, setItems] = useState([]);
+  const [spells, setSpells] = useState([]);
   const [tab, setTab] = useState("pc");
 
   // PC form
@@ -46,20 +48,49 @@ export default function CreatorPanel(){
     resists: {}
   });
 
+  // Item form
+  const [item, setItem] = useState({
+    id: null,
+    name: "New Item",
+    slot: "weapon",
+    gs: 0,
+    mods: {},
+    temp_buff: {},
+    notes: ""
+  });
+
+  // Spell form
+  const [spell, setSpell] = useState({
+    id: null,
+    name: "New Spell",
+    level: 1,
+    school: "evocation",
+    casting_time: "1 action",
+    range: "60 feet",
+    components: ["V", "S"],
+    duration: "Instantaneous",
+    description: "",
+    higher_level: ""
+  });
+
   // load catalog + saved
-  useEffect(()=>{
+  useEffect(()=> {
     Promise.all([
       fetch(`${API}/creator/catalog`).then(r=>r.json()),
       fetch(`${API}/creator/pcs`).then(r=>r.json()),
       fetch(`${API}/creator/monsters`).then(r=>r.json()),
-    ]).then(([cat, pcs, mons])=>{
+      fetch(`${API}/items`).then(r=>r.json()),
+      fetch(`${API}/spells`).then(r=>r.json()),
+    ]).then(([cat, pcs, mons, items, spells])=> {
       setCatalog(cat||{});
       setPcs(pcs||[]);
       setMons(mons||[]);
+      setItems(items||[]);
+      setSpells(spells||[]);
     }).catch(()=>{});
   },[]);
 
-  const savePc = async ()=>{
+  const savePc = async ()=> {
     const method = pc.id ? "PUT":"POST";
     const url = pc.id ? `${API}/creator/pcs/${pc.id}` : `${API}/creator/pcs`;
     const res = await fetch(url,{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(pc)});
@@ -69,7 +100,7 @@ export default function CreatorPanel(){
     setPcs(list);
     setPc(data);
   };
-  const deletePc = async ()=>{
+  const deletePc = async ()=> {
     if (!pc.id) return;
     await fetch(`${API}/creator/pcs/${pc.id}`,{method:"DELETE"});
     const list = await fetch(`${API}/creator/pcs`).then(r=>r.json());
@@ -77,7 +108,7 @@ export default function CreatorPanel(){
     setPc({...pc, id:null});
   };
 
-  const saveMon = async ()=>{
+  const saveMon = async ()=> {
     const method = mon.id ? "PUT":"POST";
     const url = mon.id ? `${API}/creator/monsters/${mon.id}` : `${API}/creator/monsters`;
     const res = await fetch(url,{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(mon)});
@@ -86,12 +117,46 @@ export default function CreatorPanel(){
     setMons(list);
     setMon(data);
   };
-  const deleteMon = async ()=>{
+  const deleteMon = async ()=> {
     if (!mon.id) return;
     await fetch(`${API}/creator/monsters/${mon.id}`,{method:"DELETE"});
     const list = await fetch(`${API}/creator/monsters`).then(r=>r.json());
     setMons(list);
     setMon({...mon, id:null});
+  };
+
+  const saveItem = async () => {
+    const method = item.id ? "PUT" : "POST";
+    const url = item.id ? `${API}/items/${item.id}` : `${API}/items`;
+    const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(item) });
+    const data = await res.json();
+    const list = await fetch(`${API}/items`).then(r => r.json());
+    setItems(list);
+    setItem(data);
+  };
+  const deleteItem = async () => {
+    if (!item.id) return;
+    await fetch(`${API}/items/${item.id}`, { method: "DELETE" });
+    const list = await fetch(`${API}/items`).then(r => r.json());
+    setItems(list);
+    setItem({ ...item, id: null });
+  };
+
+  const saveSpell = async () => {
+    const method = spell.id ? "PUT" : "POST";
+    const url = spell.id ? `${API}/spells/${spell.id}` : `${API}/spells`;
+    const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(spell) });
+    const data = await res.json();
+    const list = await fetch(`${API}/spells`).then(r => r.json());
+    setSpells(list);
+    setSpell(data);
+  };
+  const deleteSpell = async () => {
+    if (!spell.id) return;
+    await fetch(`${API}/spells/${spell.id}`, { method: "DELETE" });
+    const list = await fetch(`${API}/spells`).then(r => r.json());
+    setSpells(list);
+    setSpell({ ...spell, id: null });
   };
 
   const Item = ({label,children}) => (
@@ -101,7 +166,7 @@ export default function CreatorPanel(){
     </label>
   );
 
-  const ResistEditor = ({value,onChange})=>{
+  const ResistEditor = ({value,onChange})=> {
     const [k,setK]=useState(""); const [v,setV]=useState("1.0");
     const entries = Object.entries(value||{});
     return (
@@ -110,7 +175,7 @@ export default function CreatorPanel(){
         <div className="flex gap-2 mb-2">
           <input value={k} onChange={e=>setK(e.target.value)} placeholder="type (e.g. fire)" className={styles.input}/>
           <input value={v} onChange={e=>setV(e.target.value)} placeholder="mult (e.g. 0.5)" className={styles.input}/>
-          <button className={`${styles.btn}`} onClick={()=>{
+          <button className={`${styles.btn}`} onClick={()=> {
             const f = parseFloat(v); if (!k || Number.isNaN(f)) return;
             onChange({...value, [k]: f});
             setK(""); setV("1.0");
@@ -118,10 +183,10 @@ export default function CreatorPanel(){
         </div>
         {!!entries.length && (
           <div className="grid grid-cols-2 gap-2">
-            {entries.map(([t,m])=>(
+            {entries.map(([t,m])=> (
               <div key={t} className="flex items-center justify-between border rounded px-2 py-1">
                 <span className="text-sm">{t}: <span className="text-gray-300">{m}</span></span>
-                <button className={`${styles.btn}`} onClick={()=>{
+                <button className={`${styles.btn}`} onClick={()=> {
                   const cp = {...value}; delete cp[t]; onChange(cp);
                 }}>Remove</button>
               </div>
@@ -137,6 +202,8 @@ export default function CreatorPanel(){
       <div className="flex gap-2 mb-4">
         <button className={`${styles.btn} ${tab==='pc'?'bg-gray-800 text-white':'bg-transparent'}`} onClick={()=>setTab('pc')}>Player Character</button>
         <button className={`${styles.btn} ${tab==='mon'?'bg-gray-800 text-white':'bg-transparent'}`} onClick={()=>setTab('mon')}>Monster</button>
+        <button className={`${styles.btn} ${tab==='item'?'bg-gray-800 text-white':'bg-transparent'}`} onClick={()=>setTab('item')}>Item</button>
+        <button className={`${styles.btn} ${tab==='spell'?'bg-gray-800 text-white':'bg-transparent'}`} onClick={()=>setTab('spell')}>Spell</button>
       </div>
 
       {tab==='pc' ? (
@@ -175,7 +242,7 @@ export default function CreatorPanel(){
                 </select>
               </Item>
               <Item label="Damage Profile [(n,d,b)] JSON">
-                <input className={styles.input} value={JSON.stringify(pc.damage_profile)} onChange={e=>{
+                <input className={styles.input} value={JSON.stringify(pc.damage_profile)} onChange={e=> {
                   try{ const v = JSON.parse(e.target.value); setPc({...pc, damage_profile:v}); }catch{}
                 }}/>
               </Item>
@@ -204,7 +271,7 @@ export default function CreatorPanel(){
             <h3 className="font-semibold mb-2">Saved PCs</h3>
             {!pcs.length ? <div className="text-sm text-gray-400">No saved PCs yet.</div> : (
               <div className="grid gap-2">
-                {pcs.map(p=>(
+                {pcs.map(p=> (
                   <div key={p.id} className="border rounded p-2 flex items-center justify-between">
                     <div>
                       <div className="font-semibold">{p.name} <span className="text-xs text-gray-400">({p.id})</span></div>
@@ -212,7 +279,7 @@ export default function CreatorPanel(){
                     </div>
                     <div className="flex gap-2">
                       <button className={styles.btn} onClick={()=>setPc(p)}>Edit</button>
-                      <button className={styles.btn} onClick={()=>{
+                      <button className={styles.btn} onClick={()=> {
                         navigator.clipboard?.writeText(p.id)
                       }}>Copy ID</button>
                     </div>
@@ -223,7 +290,7 @@ export default function CreatorPanel(){
             <div className="text-xs text-gray-400 mt-2">Tip: Paste the ID into your Party “Baseline (or Custom ID)” selector.</div>
           </div>
         </div>
-      ) : (
+      ) : tab==='mon' ? (
         <div className="grid gap-4">
           <div className={`${styles.box}`}>
             <div className={styles.grid3}>
@@ -243,7 +310,7 @@ export default function CreatorPanel(){
             </div>
             <div className={styles.grid2}>
               <Item label="Damage Profile [(n,d,b)] JSON">
-                <input className={styles.input} value={JSON.stringify(mon.damage_profile)} onChange={e=>{
+                <input className={styles.input} value={JSON.stringify(mon.damage_profile)} onChange={e=> {
                   try{ const v = JSON.parse(e.target.value); setMon({...mon, damage_profile:v}); }catch{}
                 }}/>
               </Item>
@@ -261,7 +328,7 @@ export default function CreatorPanel(){
             <h3 className="font-semibold mb-2">Saved Monsters</h3>
             {!mons.length ? <div className="text-sm text-gray-400">No saved monsters yet.</div> : (
               <div className="grid gap-2">
-                {mons.map(m=>(
+                {mons.map(m=> (
                   <div key={m.id} className="border rounded p-2 flex items-center justify-between">
                     <div>
                       <div className="font-semibold">{m.name} <span className="text-xs text-gray-400">({m.id})</span></div>
@@ -278,6 +345,88 @@ export default function CreatorPanel(){
             <div className="text-xs text-gray-400 mt-2">Tip: You can reference custom monsters in encounters or load them via future tools.</div>
           </div>
         </div>
+      ) : tab === 'item' ? (
+        <div className="grid gap-4">
+          <div className={`${styles.box}`}>
+            <div className={styles.grid3}>
+              <Item label="ID"><input className={styles.input} value={item.id} onChange={e=>setItem({...item, id:e.target.value})} /></Item>
+              <Item label="Name"><input className={styles.input} value={item.name} onChange={e=>setItem({...item, name:e.target.value})} /></Item>
+              <Item label="Slot"><input className={styles.input} value={item.slot} onChange={e=>setItem({...item, slot:e.target.value})} /></Item>
+            </div>
+            <div className={styles.grid3}>
+              <Item label="GS"><input className={styles.input} type="number" value={item.gs} onChange={e=>setItem({...item, gs:Number(e.target.value)})} /></Item>
+              <Item label="Mods (JSON)"><input className={styles.input} value={JSON.stringify(item.mods)} onChange={e=>{ try{ const v = JSON.parse(e.target.value); setItem({...item, mods:v}); }catch{} }} /></Item>
+              <Item label="Temp Buff (JSON)"><input className={styles.input} value={JSON.stringify(item.temp_buff)} onChange={e=>{ try{ const v = JSON.parse(e.target.value); setItem({...item, temp_buff:v}); }catch{} }} /></Item>
+            </div>
+            <Item label="Notes"><textarea className={styles.input} value={item.notes} onChange={e=>setItem({...item, notes:e.target.value})} /></Item>
+            <div className="flex gap-3 mt-3">
+              <button className={`${styles.btn} bg-indigo-600 text-white`} onClick={saveItem}>{item.id ? "Update Item":"Save Item"}</button>
+              {item.id && <button className={`${styles.btn} bg-red-700 text-white`} onClick={deleteItem}>Delete</button>}
+            </div>
+          </div>
+          <div className={`${styles.box}`}>
+            <h3 className="font-semibold mb-2">Saved Items</h3>
+            {!items.length ? <div className="text-sm text-gray-400">No saved items yet.</div> : (
+              <div className="grid gap-2">
+                {items.map(i=> (
+                  <div key={i.id} className="border rounded p-2 flex items-center justify-between">
+                    <div>
+                      <div className="font-semibold">{i.name} <span className="text-xs text-gray-400">({i.id})</span></div>
+                      <div className="text-xs text-gray-400">Slot: {i.slot} · GS: {i.gs}</div>
+                    </div>
+                    <div className="flex gap-2">
+                      <button className={styles.btn} onClick={()=>setItem(i)}>Edit</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className="grid gap-4">
+        <div className={`${styles.box}`}>
+          <div className={styles.grid3}>
+            <Item label="ID"><input className={styles.input} value={spell.id} onChange={e=>setSpell({...spell, id:e.target.value})} /></Item>
+            <Item label="Name"><input className={styles.input} value={spell.name} onChange={e=>setSpell({...spell, name:e.target.value})} /></Item>
+            <Item label="Level"><input className={styles.input} type="number" value={spell.level} onChange={e=>setSpell({...spell, level:Number(e.target.value)})} /></Item>
+          </div>
+          <div className={styles.grid3}>
+            <Item label="School"><input className={styles.input} value={spell.school} onChange={e=>setSpell({...spell, school:e.target.value})} /></Item>
+            <Item label="Casting Time"><input className={styles.input} value={spell.casting_time} onChange={e=>setSpell({...spell, casting_time:e.target.value})} /></Item>
+            <Item label="Range"><input className={styles.input} value={spell.range} onChange={e=>setSpell({...spell, range:e.target.value})} /></Item>
+          </div>
+          <div className={styles.grid2}>
+            <Item label="Components (comma-separated)"><input className={styles.input} value={(spell.components||[]).join(', ')} onChange={e=>setSpell({...spell, components:e.target.value.split(',').map(s=>s.trim())})} /></Item>
+            <Item label="Duration"><input className={styles.input} value={spell.duration} onChange={e=>setSpell({...spell, duration:e.target.value})} /></Item>
+          </div>
+          <Item label="Description"><textarea className={styles.input} value={spell.description} onChange={e=>setSpell({...spell, description:e.target.value})} /></Item>
+          <Item label="Higher Level"><textarea className={styles.input} value={spell.higher_level} onChange={e=>setSpell({...spell, higher_level:e.target.value})} /></Item>
+
+          <div className="flex gap-3 mt-3">
+            <button className={`${styles.btn} bg-indigo-600 text-white`} onClick={saveSpell}>{spell.id ? "Update Spell":"Save Spell"}</button>
+            {spell.id && <button className={`${styles.btn} bg-red-700 text-white`} onClick={deleteSpell}>Delete</button>}
+          </div>
+        </div>
+        <div className={`${styles.box}`}>
+          <h3 className="font-semibold mb-2">Saved Spells</h3>
+          {!spells.length ? <div className="text-sm text-gray-400">No saved spells yet.</div> : (
+            <div className="grid gap-2">
+              {spells.map(s=> (
+                <div key={s.id} className="border rounded p-2 flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold">{s.name} <span className="text-xs text-gray-400">({s.id})</span></div>
+                    <div className="text-xs text-gray-400">L{s.level} {s.school}</div>
+                  </div>
+                  <div className="flex gap-2">
+                    <button className={styles.btn} onClick={()=>setSpell(s)}>Edit</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
       )}
     </div>
   );

@@ -1,53 +1,59 @@
-# backend/routers/items.py
-from __future__ import annotations
-import json, os, uuid
-from typing import Dict, Any, List, Optional
-from pydantic import BaseModel, Field
+
+import json, os
 from fastapi import APIRouter, HTTPException
+from typing import List, Dict, Any
 from backend.schemas import ItemSchema
 
-router = APIRouter(tags=["creator"])
+router = APIRouter()
 
-# --- Storage paths ---
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-USER_DIR = os.path.join(BASE_DIR, "user_data")
-ITEMS_PATH = os.path.join(USER_DIR, "items.json")
+USER_DATA_DIR = "user_data"
+ITEMS_FILE = os.path.join(USER_DATA_DIR, "items.json")
 
-def _ensure_user_dir():
-    os.makedirs(USER_DIR, exist_ok=True)
-    if not os.path.exists(ITEMS_PATH):
-        json.dump([], open(ITEMS_PATH, "w"))
-
-def _read_json(path: str) -> List[Dict[str, Any]]:
-    with open(path) as f:
+def get_user_items() -> List[Dict[str, Any]]:
+    if not os.path.exists(ITEMS_FILE):
+        return []
+    with open(ITEMS_FILE, "r") as f:
         return json.load(f)
 
-def _write_json(path: str, data: List[Dict[str, Any]]):
-    with open(path, "w") as f:
-        json.dump(data, f, indent=2)
+def save_user_items(items: List[Dict[str, Any]]):
+    os.makedirs(USER_DATA_DIR, exist_ok=True)
+    with open(ITEMS_FILE, "w") as f:
+        json.dump(items, f, indent=4)
 
-class ItemModel(BaseModel):
-    id: Optional[str] = None
-    name: str
-    description: str
-    cost: Optional[int] = 0
+@router.get("/api/items", response_model=List[ItemSchema])
+def list_items():
+    return get_user_items()
 
-# --- ID helpers ---
-def _new_item_id() -> str: return "custom_item_" + uuid.uuid4().hex[:8]
+@router.post("/api/items", response_model=ItemSchema)
+def create_item(item: ItemSchema):
+    items = get_user_items()
+    if any(i["id"] == item.id for i in items):
+        raise HTTPException(status_code=400, detail="Item with this ID already exists")
+    items.append(item.dict())
+    save_user_items(items)
+    return item
 
-# --- Item endpoints ---
-@router.get("/creator/items")
-def list_items() -> List[Dict[str, Any]]:
-    _ensure_user_dir()
-    return _read_json(ITEMS_PATH)
+@router.get("/api/items/{item_id}", response_model=ItemSchema)
+def get_item(item_id: str):
+    items = get_user_items()
+    item = next((i for i in items if i["id"] == item_id), None)
+    if not item:
+        raise HTTPException(status_code=404, detail="Item not found")
+    return item
 
-@router.post("/creator/items")
-def create_item(item: ItemModel) -> Dict[str, Any]:
-    _ensure_user_dir()
-    items = _read_json(ITEMS_PATH)
-    item.id = item.id or _new_item_id()
-    if any(i.get("id") == item.id for i in items):
-        raise HTTPException(status_code=400, detail="Item id already exists")
-    items.append(item.model_dump())
-    _write_json(ITEMS_PATH, items)
-    return item.model_dump()
+@router.put("/api/items/{item_id}", response_model=ItemSchema)
+def update_item(item_id: str, item_data: ItemSchema):
+    items = get_user_items()
+    item_index = next((i for i, item in enumerate(items) if item["id"] == item_id), -1)
+    if item_index == -1:
+        raise HTTPException(status_code=404, detail="Item not found")
+    items[item_index] = item_data.dict()
+    save_user_items(items)
+    return item_data
+
+@router.delete("/api/items/{item_id}")
+def delete_item(item_id: str):
+    items = get_user_items()
+    items = [i for i in items if i["id"] != item_id]
+    save_user_items(items)
+    return {"ok": True}

@@ -102,6 +102,7 @@ def roll_through_engine(
     gear_mods: Iterable[float] = (),
     buff_mods: Iterable[float] = (),
     debuff_mods: Iterable[float] = (),
+    room_mods: Iterable[float] = (),
     crit_chance: float = 0.05,
     crit_mult: float = 1.5,
     variance: bool = False,
@@ -120,6 +121,7 @@ def roll_through_engine(
         gear_mods=gear_mods,
         buff_mods=buff_mods,
         debuff_mods=debuff_mods,
+        room_mods=room_mods,
         crit_chance=crit_chance,
         crit_mult=crit_mult,
         enable_variance=variance,
@@ -138,6 +140,7 @@ def resolve_attack(
     base_profile: List[Tuple[int, int, int]],
     weapon_id: Optional[str] = None,
     type_override: Optional[str] = None,
+    room_effects: List[Dict] = [],
     # crit / variance
     crit_chance: float = 0.05,
     crit_mult: float = 1.5,
@@ -169,6 +172,17 @@ def resolve_attack(
     damage_type = safe_damage_type(weapon_id, type_override, "slash")
     target_res = extract_resists(target)
 
+    # Apply room effects
+    room_mods = []
+    for effect in room_effects:
+        for modifier in effect.get('effect', []):
+            if modifier.get('target') == 'enemy':
+                if modifier.get('attribute') == 'to-hit':
+                    crit_chance += modifier.get('value', 0) / 100
+                elif modifier.get('attribute') == 'damage_multiplier':
+                    if modifier.get('damage_type') == damage_type or modifier.get('damage_type') is None:
+                        room_mods.append(modifier.get('value', 0))
+
     breakdown: List[Dict[str, Any]] = []
     total = 0
 
@@ -180,6 +194,7 @@ def resolve_attack(
         gear_mods=gear_mods,
         buff_mods=buff_mods,
         debuff_mods=debuff_mods,
+        room_mods=room_mods,
         crit_chance=crit_chance,
         crit_mult=crit_mult,
         variance=variance,
@@ -199,6 +214,7 @@ def resolve_attack(
             gear_mods=gear_mods,
             buff_mods=buff_mods,
             debuff_mods=debuff_mods,
+            room_mods=room_mods,
             crit_chance=crit_chance,
             crit_mult=crit_mult,
             variance=variance,
@@ -218,6 +234,7 @@ def resolve_attack(
             gear_mods=gear_mods,
             buff_mods=buff_mods,
             debuff_mods=debuff_mods,
+            room_mods=room_mods,
             crit_chance=crit_chance,
             crit_mult=crit_mult,
             variance=variance,
@@ -239,6 +256,7 @@ def resolve_attack(
                 gear_mods=gear_mods,
                 buff_mods=buff_mods,
                 debuff_mods=debuff_mods,
+                room_mods=room_mods,
                 crit_chance=crit_chance,
                 crit_mult=crit_mult,
                 variance=variance,

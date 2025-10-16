@@ -1,6 +1,6 @@
 
 from pydantic import BaseModel, Field
-from typing import List, Dict, Tuple, Optional
+from typing import List, Dict, Tuple, Optional, Literal
 
 class PCSchema(BaseModel):
     id: str
@@ -44,6 +44,7 @@ class ItemSchema(BaseModel):
     name: str
     slot: str
     gs: int
+    damage_type: Optional[str] = None
     mods: Optional[Dict] = None
     temp_buff: Optional[Dict] = None
     notes: Optional[str] = None
@@ -58,13 +59,20 @@ class SpellSchema(BaseModel):
     components: List[str]
     duration: str
     description: str
+    damage_type: Optional[str] = None
     higher_level: Optional[str] = None
+
+class ModifierSchema(BaseModel):
+    target: Literal['enemy', 'party', 'all']
+    attribute: str
+    value: float
+    damage_type: Optional[str] = None
 
 class RoomEffectSchema(BaseModel):
     id: str
     name: str
     description: str
-    effect: Dict 
+    effect: List[ModifierSchema]
 
 class ConditionSchema(BaseModel):
     id: str

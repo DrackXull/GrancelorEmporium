@@ -6,6 +6,8 @@ from pydantic import BaseModel
 from routers.damage import router as damage_router
 from routers.creator import router as creator_router
 from routers.schema import router as schema_router
+from routers.items import router as items_router
+from routers.spells import router as spells_router
 from engine.engine_patched import Combatant, EncounterOptions, simulate_mixed
 
 from typing import List, Dict, Any, Optional
@@ -26,6 +28,8 @@ app.add_middleware(
 app.include_router(creator_router, prefix="/api")
 app.include_router(damage_router,  prefix="/api")
 app.include_router(schema_router)
+app.include_router(items_router)
+app.include_router(spells_router)
 
 
 # ---------- Data ----------
