@@ -54,6 +54,7 @@ export default function CreatorPanel(){
     name: "New Item",
     slot: "weapon",
     gs: 0,
+    damage_type: null,
     mods: {},
     temp_buff: {},
     notes: ""
@@ -70,6 +71,7 @@ export default function CreatorPanel(){
     components: ["V", "S"],
     duration: "Instantaneous",
     description: "",
+    damage_type: null,
     higher_level: ""
   });
 
@@ -355,9 +357,10 @@ export default function CreatorPanel(){
             </div>
             <div className={styles.grid3}>
               <Item label="GS"><input className={styles.input} type="number" value={item.gs} onChange={e=>setItem({...item, gs:Number(e.target.value)})} /></Item>
+              <Item label="Damage Type"><input className={styles.input} value={item.damage_type} onChange={e=>setItem({...item, damage_type:e.target.value})} /></Item>
               <Item label="Mods (JSON)"><input className={styles.input} value={JSON.stringify(item.mods)} onChange={e=>{ try{ const v = JSON.parse(e.target.value); setItem({...item, mods:v}); }catch{} }} /></Item>
-              <Item label="Temp Buff (JSON)"><input className={styles.input} value={JSON.stringify(item.temp_buff)} onChange={e=>{ try{ const v = JSON.parse(e.target.value); setItem({...item, temp_buff:v}); }catch{} }} /></Item>
             </div>
+            <Item label="Temp Buff (JSON)"><input className={styles.input} value={JSON.stringify(item.temp_buff)} onChange={e=>{ try{ const v = JSON.parse(e.target.value); setItem({...item, temp_buff:v}); }catch{} }} /></Item>
             <Item label="Notes"><textarea className={styles.input} value={item.notes} onChange={e=>setItem({...item, notes:e.target.value})} /></Item>
             <div className="flex gap-3 mt-3">
               <button className={`${styles.btn} bg-indigo-600 text-white`} onClick={saveItem}>{item.id ? "Update Item":"Save Item"}</button>
@@ -400,8 +403,11 @@ export default function CreatorPanel(){
             <Item label="Components (comma-separated)"><input className={styles.input} value={(spell.components||[]).join(', ')} onChange={e=>setSpell({...spell, components:e.target.value.split(',').map(s=>s.trim())})} /></Item>
             <Item label="Duration"><input className={styles.input} value={spell.duration} onChange={e=>setSpell({...spell, duration:e.target.value})} /></Item>
           </div>
+          <div className={styles.grid2}>
+            <Item label="Damage Type"><input className={styles.input} value={spell.damage_type} onChange={e=>setSpell({...spell, damage_type:e.target.value})} /></Item>
+            <Item label="Higher Level"><textarea className={styles.input} value={spell.higher_level} onChange={e=>setSpell({...spell, higher_level:e.target.value})} /></Item>
+          </div>
           <Item label="Description"><textarea className={styles.input} value={spell.description} onChange={e=>setSpell({...spell, description:e.target.value})} /></Item>
-          <Item label="Higher Level"><textarea className={styles.input} value={spell.higher_level} onChange={e=>setSpell({...spell, higher_level:e.target.value})} /></Item>
 
           <div className="flex gap-3 mt-3">
             <button className={`${styles.btn} bg-indigo-600 text-white`} onClick={saveSpell}>{spell.id ? "Update Spell":"Save Spell"}</button>

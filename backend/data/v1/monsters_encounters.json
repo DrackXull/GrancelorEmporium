@@ -3,80 +3,94 @@
   "monsters": [
     {
       "id": "mirror_doppel_t1",
-      "name": "Mirror Doppelganger \u2013 Tier 1",
+      "name": "Mirror Doppelganger – Tier 1",
       "ac": 13,
       "hp": 22,
       "attack_bonus": 4,
       "attacks_per_round": 1,
       "damage_profile": [[1,8,2]],
       "tags": ["mirror","baseline"],
-      "gs": 90
+      "gs": 90,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "dopp_infernal_shade",
-      "name": "Doppelganger \u2013 Infernal Shade",
+      "name": "Doppelganger – Infernal Shade",
       "ac": 13,
       "hp": 22,
       "attack_bonus": 4,
       "attacks_per_round": 1,
       "damage_profile": [[1,8,2], [1,4,0]],
       "tags": ["fire_immune","burning_ground"],
-      "gs": 90
+      "gs": 90,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "dopp_abyssal_echo",
-      "name": "Doppelganger \u2013 Abyssal Echo",
+      "name": "Doppelganger – Abyssal Echo",
       "ac": 12,
       "hp": 20,
       "attack_bonus": 4,
       "attacks_per_round": 1,
       "damage_profile": [[1,8,0]],
       "tags": ["mindclaw_reaction_lock"],
-      "gs": 85
+      "gs": 85,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "dopp_syndicate_phantom",
-      "name": "Doppelganger \u2013 Syndicate Phantom",
+      "name": "Doppelganger – Syndicate Phantom",
       "ac": 14,
       "hp": 18,
       "attack_bonus": 5,
       "attacks_per_round": 2,
       "damage_profile": [[1,6,2]],
       "tags": ["adv_in_dim_light"],
-      "gs": 95
+      "gs": 95,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "dopp_arcane_projection",
-      "name": "Doppelganger \u2013 Arcane Projection",
+      "name": "Doppelganger – Arcane Projection",
       "ac": 11,
       "hp": 16,
       "attack_bonus": 4,
       "attacks_per_round": 1,
       "damage_profile": [[1,10,0]],
       "tags": ["explode_on_defeat"],
-      "gs": 85
+      "gs": 85,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "dopp_monstrous_husk",
-      "name": "Doppelganger \u2013 Monstrous Husk",
+      "name": "Doppelganger – Monstrous Husk",
       "ac": 13,
       "hp": 26,
       "attack_bonus": 5,
       "attacks_per_round": 1,
       "damage_profile": [[1,6,3]],
       "tags": ["regen_below_half"],
-      "gs": 100
+      "gs": 100,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "dopp_iron_legion_remnant",
-      "name": "Doppelganger \u2013 Iron Legion Remnant",
+      "name": "Doppelganger – Iron Legion Remnant",
       "ac": 16,
       "hp": 25,
       "attack_bonus": 5,
       "attacks_per_round": 1,
       "damage_profile": [[2,6,3]],
       "tags": ["resist_nonmagical"],
-      "gs": 110
+      "gs": 110,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "custodian_construct",
@@ -87,7 +101,9 @@
       "attacks_per_round": 1,
       "damage_profile": [[1,6,1]],
       "tags": ["mop_grab","drops_key_A","immune_poison_psychic"],
-      "gs": 60
+      "gs": 60,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "liability_drone",
@@ -98,7 +114,9 @@
       "attacks_per_round": 1,
       "damage_profile": [[1,6,1]],
       "tags": ["laser_burst_cone","immune_poison_psychic"],
-      "gs": 100
+      "gs": 100,
+      "gear_mods": [],
+      "spell_mods": []
     },
     {
       "id": "contract_keeper_desk",
@@ -109,13 +127,15 @@
       "attacks_per_round": 1,
       "damage_profile": [[1,8,2]],
       "tags": ["ink_spray_cone","immune_poison_psychic_charm"],
-      "gs": 160
+      "gs": 160,
+      "gear_mods": [],
+      "spell_mods": []
     }
   ],
   "encounters": [
     {
       "id": "mirror_room_act1",
-      "name": "Mirror Room \u2013 Act I",
+      "name": "Mirror Room – Act I",
       "waves": [
         {
           "units": [
@@ -127,7 +147,7 @@
     },
     {
       "id": "q1_mirror_infernal",
-      "name": "Quest 1 \u2013 Doppelgangers (Infernal Shades)",
+      "name": "Quest 1 – Doppelgangers (Infernal Shades)",
       "waves": [
         {
           "units": [
@@ -140,7 +160,7 @@
     },
     {
       "id": "q1_mirror_abyssal",
-      "name": "Quest 1 \u2013 Doppelgangers (Abyssal Echoes)",
+      "name": "Quest 1 – Doppelgangers (Abyssal Echoes)",
       "waves": [
         {
           "units": [
@@ -153,7 +173,7 @@
     },
     {
       "id": "q1_mirror_syndicate",
-      "name": "Quest 1 \u2013 Doppelgangers (Syndicate Phantoms)",
+      "name": "Quest 1 – Doppelgangers (Syndicate Phantoms)",
       "waves": [
         {
           "units": [
@@ -166,7 +186,7 @@
     },
     {
       "id": "q1_mirror_arcane",
-      "name": "Quest 1 \u2013 Doppelgangers (Arcane Projections)",
+      "name": "Quest 1 – Doppelgangers (Arcane Projections)",
       "waves": [
         {
           "units": [
@@ -179,7 +199,7 @@
     },
     {
       "id": "q1_mirror_husk",
-      "name": "Quest 1 \u2013 Doppelgangers (Monstrous Husks)",
+      "name": "Quest 1 – Doppelgangers (Monstrous Husks)",
       "waves": [
         {
           "units": [
@@ -192,7 +212,7 @@
     },
     {
       "id": "q1_mirror_iron",
-      "name": "Quest 1 \u2013 Doppelgangers (Iron Legion Remnants)",
+      "name": "Quest 1 – Doppelgangers (Iron Legion Remnants)",
       "waves": [
         {
           "units": [
@@ -205,7 +225,7 @@
     },
     {
       "id": "q1_wandering_custodian",
-      "name": "Mini Encounter \u2013 Wandering Custodian",
+      "name": "Mini Encounter – Wandering Custodian",
       "waves": [
         {
           "units": [
@@ -218,7 +238,7 @@
     },
     {
       "id": "q2_clause_liability",
-      "name": "Clause of Liability \u2013 Liability Drone",
+      "name": "Clause of Liability – Liability Drone",
       "waves": [
         {
           "units": [
@@ -231,7 +251,7 @@
     },
     {
       "id": "q2_clause_termination",
-      "name": "Clause of Termination \u2013 Contract Keeper",
+      "name": "Clause of Termination – Contract Keeper",
       "waves": [
         {
           "units": [
