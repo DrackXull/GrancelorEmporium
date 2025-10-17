@@ -1,7 +1,9 @@
+
 import React, { useEffect, useMemo, useState } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
 import CreatorPanel from "./components/CreatorPanel";
 import MonteCarloPanel from "./components/MonteCarloPanel";
+import SheetPanel from "./components/SheetPanel";
 import http from "./utils/api";
 
 const STORAGE_KEY = "tpka_sim_ui_v3";
@@ -172,13 +174,17 @@ export default function App() {
   return (
     <div style={styles.app(sidebarWidth)}>
       <aside style={styles.sidebar}>
-        <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+        <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap:"wrap" }}>
           <div style={styles.tab(tab === "encounter")} onClick={() => setTab("encounter")}>Encounter</div>
           <div style={styles.tab(tab === "campaign")} onClick={() => setTab("campaign")}>Campaign</div>
-          <div style={styles.tab(tab === "dev")} onClick={() => setTab("dev")}>Dev Tools</div>
           <div style={styles.tab(tab === "creator")} onClick={() => setTab("creator")}>Creator</div>
+          <div style={styles.tab(tab === "sheet")} onClick={() => setTab("sheet")}>Sheet</div>
+          <div style={styles.tab(tab === "dev")} onClick={() => setTab("dev")}>Dev Tools</div>
         </div>
-        <MonteCarloPanel />
+        {/* The sidebar content could be conditional on the tab as well */}
+        {tab === "encounter" && <p>Encounter-specific controls here</p>}
+        {tab === "campaign" && <p>Campaign-specific controls here</p>}
+
       </aside>
 
       <div role="separator" aria-orientation="vertical" onMouseDown={startDrag} title="Drag to resize" style={{ cursor: "col-resize", background: "#1e2230", width: 10, height: "100%", userSelect: "none" }} />
@@ -188,11 +194,11 @@ export default function App() {
 
         {tab === "encounter" && (
           <>
-            {/* Encounter content */}
+            <MonteCarloPanel />
           </>
         )}
-
-        {/* Other tabs */}
+        {tab === "creator" && <CreatorPanel />}
+        {tab === "sheet" && <SheetPanel />}
 
       </main>
 
