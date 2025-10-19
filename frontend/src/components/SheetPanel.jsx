@@ -8,7 +8,9 @@ const styles = {
   box: "border rounded p-3",
   input: "border rounded p-2 bg-transparent",
   btn: "px-4 py-2 rounded border",
+  grid2: "grid grid-cols-1 md:grid-cols-2 gap-3",
   grid3: "grid grid-cols-1 md:grid-cols-3 gap-3",
+  grid6: "grid grid-cols-2 md:grid-cols-6 gap-3",
 };
 
 export default function SheetPanel() {
@@ -40,7 +42,7 @@ export default function SheetPanel() {
   const Item = ({ label, children }) => (
     <label className="flex flex-col gap-1">
       <span className="text-sm text-gray-400">{label}</span>
-      <div className="text-lg">{children}</div>
+      <div className="text-lg font-mono">{children}</div>
     </label>
   );
 
@@ -78,7 +80,32 @@ export default function SheetPanel() {
            <div className={`${styles.grid3} mt-3`}>
             <Item label="Weapon">{sheet.weapon?.name || 'N/A'}</Item>
             <Item label="Armor">{sheet.armor?.name || 'N/A'}</Item>
+            <Item label="Damage Profile">{JSON.stringify(sheet.damage_profile)}</Item>
           </div>
+
+          <div className="border-t my-4" />
+
+          <div className={styles.grid6}>
+            {Object.entries(sheet.save_bonuses || {}).map(([key, value]) => (
+              <Item key={key} label={`${key.toUpperCase()} Save`}>{value > 0 ? `+${value}`: value}</Item>
+            ))}
+          </div>
+
+          <div className="border-t my-4" />
+
+          <div className={styles.grid2}>
+            <div>
+              <h3 className="font-semibold mb-2">Abilities & Mods</h3>
+              <Item label="Abilities">{JSON.stringify(sheet.abilities)}</Item>
+              <Item label="Gear Mods">{JSON.stringify(sheet.gear_mods)}</Item>
+              <Item label="Spell Mods">{JSON.stringify(sheet.spell_mods)}</Item>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Resistances</h3>
+              <Item label="Resistances">{JSON.stringify(sheet.resists)}</Item>
+            </div>
+          </div>
+
         </div>
       )}
     </div>
