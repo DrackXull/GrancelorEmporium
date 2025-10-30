@@ -14,9 +14,9 @@ import "./styles.css";
 import api from "./utils/api";
 
 export default function App() {
-  const [savedOpen, setSavedOpen] = useState(false);
   const [ruleset, setRuleset] = useState("pf2e");
-
+  const [savedOpen, setSavedOpen] = useState(false);
+  
   useEffect(() => {
     const url = new URL(window.location.href);
     const q = url.searchParams.get("q") || "";
@@ -132,7 +132,7 @@ export default function App() {
           <ProgressionPanel initQuery={safeParseRoute(route)} />
         ) : null}
 
-        {route === "Data" && <DataBrowser />}
+        {route === "Data" && <DataBrowser ruleset={ruleset} />}
         {route === "SpellCreator" && <SpellCreator />}
         {route === "MonsterCreator" && <MonsterCreator />}
         {route === "Sim" && <SimLab />}

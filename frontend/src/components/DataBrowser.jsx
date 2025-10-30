@@ -15,7 +15,7 @@ const FACETS = {
   ],
 };
 
-export default function DataBrowser() {
+export default function DataBrowser({ ruleset = "pf2e" }) {
   const [q, setQ] = useState("");
   const [types, setTypes] = useState(["class","weapon","armor","feat","spell"]);
   const [runeSlot, setRuneSlot] = useState(null);
@@ -40,6 +40,7 @@ export default function DataBrowser() {
     if (runeSlot) p.set("rune_slot", runeSlot);
     if (strikingGe) p.set("striking_ge", String(strikingGe));
     if (logic) p.set("logic", logic);
+    if (ruleset) p.set("ruleset", ruleset);
     apiSearch2(Object.fromEntries(p))
   .then((data) => setResults(data))
   .finally(() => setLoading(false));
@@ -49,10 +50,10 @@ export default function DataBrowser() {
 
   useEffect(() => {
     if (!runeQuery) { setRuneSuggest([]); return; }
-    const q = new URLSearchParams({ q: runeQuery, limit: "8" });
-    apiRuneSuggest({ q: runeQuery, limit: 8 })
-  .then(d => setRuneSuggest(d.items || []))
-  .catch(() => setRuneSuggest([]));
+    const q = new URLSearchParams({ q: runeQuery, limit: "8", ruleset });
+    apiRuneSuggest({ q: runeQuery, limit: 8, ruleset })
+     .then(d => setRuneSuggest(d.items || []))
+     .catch(() => setRuneSuggest([]));
   }, [runeQuery]);
 
   return (
