@@ -1,19 +1,33 @@
-# Normalize all text files to LF line endings in repo
+# Normalize line endings to LF (great for WSL/Linux-first projects)
 * text=auto eol=lf
 
-# Mark common binary files
-*.png  binary
-*.jpg  binary
+# Shell / code files
+*.sh     text eol=lf
+*.py     text eol=lf
+*.js     text eol=lf
+*.jsx    text eol=lf
+*.ts     text eol=lf
+*.tsx    text eol=lf
+*.json   text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.css    text eol=lf
+*.html   text eol=lf
+*.md     text eol=lf
+
+# Windows batch files (if you have any)
+*.bat    text eol=crlf
+
+# Binary assets (no EOL conversions)
+*.png binary
+*.jpg binary
 *.jpeg binary
-*.gif  binary
+*.gif binary
+*.ico binary
+*.pdf binary
 *.woff binary
 *.woff2 binary
-*.ttf  binary
-*.ico  binary
-*.zip  binary
-*.7z   binary
 
-# SVG and source maps treated as text but normalized
-*.svg  text eol=lf
-*.map  text eol=lf
-ATTR
+# Mark generated bundles as generated (GitHub linguist)
+frontend/dist/*          linguist-generated
+backend/static/*         linguist-generated

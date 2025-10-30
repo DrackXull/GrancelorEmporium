@@ -1,30 +1,62 @@
+# --- Node (frontend) ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.eslintcache
+frontend/coverage/
+frontend/.parcel-cache/
 
-# --- Python ---
+# --- Python (backend & root venvs) ---
 .venv/
 backend/.venv/
 **/__pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+pip-log.txt
 
-# --- Node ---
-frontend/node_modules/
-frontend/dist/
-frontend/.vite/
-
-# --- Data / DB ---
-*.db
-*.sqlite*
+# --- Databases / local state ---
 backend/*.db
 backend/*.sqlite*
+*.db
+*.sqlite*
+*.sqlite3
 
-# --- Env ---
+# --- Env / secrets ---
 .env
+.env.*
 backend/.env
 frontend/.env
 frontend/.env.*
+!frontend/.env.example  # keep a template
 
-# --- Misc ---
-runtime/
+# --- Logs & transient outputs ---
+*.log
 .ngrok.log
-.tmp
 .tunnel.out
 
+# --- OS/editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.code-workspace
+
+# --- Build/static artifacts ---
+backend/static/assets/
+backend/static/*.map
+
+# --- Runtime scratch (keep if you actually want these) ---
+runtime/*.cache
+runtime/*.local.json
+# If you want to version searches.json, comment out the next line:
+# runtime/searches.json
+
+# --- Temp files ---
+.tmp
+*.tmp
+*.bak
