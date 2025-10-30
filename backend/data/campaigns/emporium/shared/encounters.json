@@ -1,0 +1,196 @@
+[
+  {
+    "id": "mirror_room_act1",
+    "name": "Mirror Room – Act I",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "mirror_doppel_t1",
+            "count": 4
+          }
+        ]
+      }
+    ],
+    "room_effects": []
+  },
+  {
+    "id": "q1_mirror_infernal",
+    "name": "Quest 1 – Doppelgangers (Infernal Shades)",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "dopp_infernal_shade",
+            "count": 4
+          }
+        ]
+      }
+    ],
+    "room_effects": [
+      "burning_ground_aura"
+    ],
+    "economy": {
+      "debt_on_loss": 1.0,
+      "descent_on_win": 1.0
+    }
+  },
+  {
+    "id": "q1_mirror_abyssal",
+    "name": "Quest 1 – Doppelgangers (Abyssal Echoes)",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "dopp_abyssal_echo",
+            "count": 4
+          }
+        ]
+      }
+    ],
+    "room_effects": [],
+    "economy": {
+      "debt_on_loss": 1.0,
+      "descent_on_win": 1.0
+    }
+  },
+  {
+    "id": "q1_mirror_syndicate",
+    "name": "Quest 1 – Doppelgangers (Syndicate Phantoms)",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "dopp_syndicate_phantom",
+            "count": 4
+          }
+        ]
+      }
+    ],
+    "room_effects": [],
+    "economy": {
+      "debt_on_loss": 1.0,
+      "descent_on_win": 1.0
+    }
+  },
+  {
+    "id": "q1_mirror_arcane",
+    "name": "Quest 1 – Doppelgangers (Arcane Projections)",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "dopp_arcane_projection",
+            "count": 4
+          }
+        ]
+      }
+    ],
+    "room_effects": [
+      "arcane_explosion_splash"
+    ],
+    "economy": {
+      "debt_on_loss": 1.0,
+      "descent_on_win": 1.0
+    }
+  },
+  {
+    "id": "q1_mirror_husk",
+    "name": "Quest 1 – Doppelgangers (Monstrous Husks)",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "dopp_monstrous_husk",
+            "count": 3
+          }
+        ]
+      }
+    ],
+    "room_effects": [],
+    "economy": {
+      "debt_on_loss": 1.0,
+      "descent_on_win": 1.0
+    }
+  },
+  {
+    "id": "q1_mirror_iron",
+    "name": "Quest 1 – Doppelgangers (Iron Legion Remnants)",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "dopp_iron_legion_remnant",
+            "count": 3
+          }
+        ]
+      }
+    ],
+    "room_effects": [],
+    "economy": {
+      "debt_on_loss": 1.0,
+      "descent_on_win": 1.0
+    }
+  },
+  {
+    "id": "q1_wandering_custodian",
+    "name": "Mini Encounter – Wandering Custodian",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "custodian_construct",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "room_effects": [],
+    "economy": {
+      "debt_on_loss": 0.5,
+      "descent_on_win": 0.5
+    }
+  },
+  {
+    "id": "q2_clause_liability",
+    "name": "Clause of Liability – Liability Drone",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "liability_drone",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "room_effects": [
+      "drone_laser_burst_pulse"
+    ],
+    "economy": {
+      "debt_on_loss": 1.0,
+      "descent_on_win": 1.0
+    }
+  },
+  {
+    "id": "q2_clause_termination",
+    "name": "Clause of Termination – Contract Keeper",
+    "waves": [
+      {
+        "units": [
+          {
+            "monster_id": "contract_keeper_desk",
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "room_effects": [
+      "desk_ink_spray_pulse"
+    ],
+    "economy": {
+      "debt_on_loss": 1.5,
+      "descent_on_win": 1.5
+    }
+  }
+]

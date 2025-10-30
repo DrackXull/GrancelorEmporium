@@ -1,0 +1,13 @@
+[
+  { "id":"padded",        "ruleset":"pf2e", "name":"Padded",         "category":"light",  "ac_base":1, "dex_cap":5, "check_penalty":0,  "speed_penalty":0 },
+  { "id":"leather",       "ruleset":"pf2e", "name":"Leather",        "category":"light",  "ac_base":1, "dex_cap":4, "check_penalty":0,  "speed_penalty":0 },
+  { "id":"studded_leather","ruleset":"pf2e","name":"Studded Leather","category":"light",  "ac_base":2, "dex_cap":3, "check_penalty":-1, "speed_penalty":0 },
+  { "id":"hide",          "ruleset":"pf2e", "name":"Hide",           "category":"medium", "ac_base":3, "dex_cap":2, "check_penalty":-2, "speed_penalty":0 },
+  { "id":"chain_shirt",   "ruleset":"pf2e", "name":"Chain Shirt",    "category":"medium", "ac_base":2, "dex_cap":3, "check_penalty":-1, "speed_penalty":0 },
+  { "id":"scale_mail",    "ruleset":"pf2e", "name":"Scale Mail",     "category":"medium", "ac_base":3, "dex_cap":2, "check_penalty":-2, "speed_penalty":0 },
+  { "id":"breastplate",   "ruleset":"pf2e", "name":"Breastplate",    "category":"medium", "ac_base":4, "dex_cap":1, "check_penalty":-2, "speed_penalty":0 },
+  { "id":"chain_mail",    "ruleset":"pf2e", "name":"Chain Mail",     "category":"heavy",  "ac_base":5, "dex_cap":0, "check_penalty":-3, "speed_penalty":-5 },
+  { "id":"splint_mail",   "ruleset":"pf2e", "name":"Splint Mail",    "category":"heavy",  "ac_base":5, "dex_cap":0, "check_penalty":-3, "speed_penalty":-5 },
+  { "id":"plate",         "ruleset":"pf2e", "name":"Full Plate",     "category":"heavy",  "ac_base":6, "dex_cap":0, "check_penalty":-3, "speed_penalty":-5 },
+  { "id":"shield",        "ruleset":"pf2e", "name":"Shield",         "category":"shield", "ac_base":2, "dex_cap":null, "check_penalty":0, "speed_penalty":0 }
+]

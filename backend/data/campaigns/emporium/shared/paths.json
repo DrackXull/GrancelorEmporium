@@ -1,0 +1,69 @@
+{
+  "version": "v1",
+  "paths": [
+    {
+      "id": "infernal_t1",
+      "name": "Infernal Dominion \u2013 T1",
+      "gs": 60,
+      "mods": {
+        "resistances": {
+          "fire": 0.5
+        },
+        "abilities": [
+          {
+            "type": "pulse",
+            "name": "Hellish Audit",
+            "dc": 13,
+            "fail_dmg": [
+              [
+                1,
+                6,
+                0
+              ]
+            ],
+            "target": "enemies",
+            "freq": "every_3_rounds"
+          }
+        ]
+      }
+    },
+    {
+      "id": "arcane_t1",
+      "name": "Arcane Echo \u2013 T1",
+      "gs": 55,
+      "mods": {
+        "abilities": [
+          {
+            "type": "on_crit",
+            "name": "Glass Shard Echo",
+            "extra_damage": [
+              [
+                1,
+                4,
+                0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    { "id":"arcane_t2", "name":"Arcane Echo – T2", "gs":90,
+  "mods": {
+    "abilities":[
+      {"type":"active","name":"Glass Lance","uses":"per_encounter:1","dmg":[[4,6,0]],"save":{"type":"dex","dc":14} }
+    ]
+  }
+},
+
+    {
+      "id": "shadow_t1",
+      "name": "Shadow Roads \u2013 T1",
+      "gs": 65,
+      "mods": {
+        "evasion": {
+          "miss_chance": 0.05
+        }
+      }
+    }
+  ]
+}

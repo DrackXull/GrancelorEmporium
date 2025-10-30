@@ -1,0 +1,147 @@
+{
+  "classes": {
+    "artificer": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": "chain_mail",
+          "background_id": "sage",
+          "subclass_id": "battle_smith",
+          "weapon_id": "rapier"
+        }
+      }
+    },
+    "barbarian": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": null,
+          "background_id": "soldier",
+          "subclass_id": "berserker",
+          "weapon_id": "greataxe"
+        }
+      }
+    },
+    "bard": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": "leather",
+          "background_id": "entertainer",
+          "subclass_id": "valor",
+          "weapon_id": "rapier"
+        }
+      }
+    },
+    "cleric": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "dwarf",
+          "armor_id": "chain_mail",
+          "background_id": "acolyte",
+          "subclass_id": "war_domain",
+          "weapon_id": "mace"
+        }
+      }
+    },
+    "druid": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": "leather",
+          "background_id": "acolyte",
+          "subclass_id": "circle_of_the_moon",
+          "weapon_id": "scimitar"
+        }
+      }
+    },
+    "fighter": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": "chain_mail",
+          "background_id": "soldier",
+          "subclass_id": "battle_master",
+          "weapon_id": "longsword"
+        }
+      }
+    },
+    "monk": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": null,
+          "background_id": "acolyte",
+          "subclass_id": "open_hand",
+          "weapon_id": "shortsword"
+        }
+      }
+    },
+    "paladin": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": "chain_mail",
+          "background_id": "acolyte",
+          "subclass_id": "oath_of_devotion",
+          "weapon_id": "longsword"
+        }
+      }
+    },
+    "ranger": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": "leather",
+          "background_id": "outlander",
+          "subclass_id": "hunter",
+          "weapon_id": "longbow"
+        }
+      }
+    },
+    "rogue": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "halfling",
+          "armor_id": "leather",
+          "background_id": "criminal",
+          "subclass_id": "assassin",
+          "weapon_id": "rapier"
+        }
+      }
+    },
+    "sorcerer": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": null,
+          "background_id": "sage",
+          "subclass_id": "draconic_bloodline",
+          "weapon_id": "dagger"
+        }
+      }
+    },
+    "warlock": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "human",
+          "armor_id": null,
+          "background_id": "criminal",
+          "subclass_id": "fiend",
+          "weapon_id": "dagger"
+        }
+      }
+    },
+    "wizard": {
+      "defaults": {
+        "5e": {
+          "ancestry_id": "elf",
+          "armor_id": null,
+          "background_id": "sage",
+          "subclass_id": "evocation",
+          "weapon_id": "dagger"
+        }
+      }
+    }
+  }
+}

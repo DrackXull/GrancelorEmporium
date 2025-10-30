@@ -2,6 +2,31 @@
   "version": "v1",
   "items": [
     {
+  "id": "soldier",
+  "type": "background",
+  "name": "Soldier",
+  "skills": [],
+  "languages": [],
+  "ability_boosts": {},
+  "choices": [
+    { "kind": "skills", "choose": 2, "from": ["athletics", "intimidation", "perception", "survival"] },
+    { "kind": "languages", "choose": 1, "from": ["Common", "Dwarvish", "Elvish", "Goblinoid"] }
+  ]
+},
+{
+  "id": "human",
+  "type": "ancestry",
+  "name": "Human",
+  "hp": 8,
+  "skills": [],
+  "languages": ["Common"],
+  "ability_boosts": {},
+  "choices": [
+    { "kind": "ability_boosts", "choose": 2, "from": ["str","dex","con","int","wis","cha"] }
+  ]
+},
+
+    {
       "id": "mirror_forged_shield",
       "name": "Mirror-Forged Shield",
       "slot": "offhand",

@@ -1,0 +1,1309 @@
+{
+  "classes": [
+    {
+      "casting_stat": null,
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 10,
+            "con": 14,
+            "dex": 12,
+            "int": 8,
+            "str": 16,
+            "wis": 10
+          },
+          "armor_id": "chain_mail",
+          "background_id": "soldier",
+          "feat_ids": [],
+          "loadouts": [
+            {
+              "armor_id": "chain_mail",
+              "id": "sword_and_board",
+              "item_ids": [
+                "shield"
+              ],
+              "name": "Sword & Board",
+              "weapon_id": "longsword"
+            },
+            {
+              "armor_id": "chain_mail",
+              "id": "great_weapon",
+              "item_ids": [],
+              "name": "Great Weapon",
+              "weapon_id": "greatsword"
+            }
+          ],
+          "spell_ids": [],
+          "weapon_id": "longsword"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Fighting Style",
+          "Second Wind"
+        ],
+        "11": [
+          "Extra Attack (2)"
+        ],
+        "17": [
+          "Action Surge (2 uses)",
+          "Indomitable (3 uses)"
+        ],
+        "2": [
+          "Action Surge (1 use)"
+        ],
+        "3": [
+          "Martial Archetype"
+        ],
+        "5": [
+          "Extra Attack"
+        ],
+        "9": [
+          "Indomitable (1 use)"
+        ]
+      },
+      "hit_die": 10,
+      "id": "fighter",
+      "name": "Fighter",
+      "primary_stat": "str",
+      "proficient_skills": [
+        "athletics",
+        "intimidation",
+        "perception"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "str",
+        "con"
+      ],
+      "subclass_unlock": 3,
+      "subclasses": [
+        {
+          "archetype": "champion",
+          "features_by_level": {
+            "10": [
+              "Additional Fighting Style"
+            ],
+            "15": [
+              "Superior Critical"
+            ],
+            "3": [
+              "Improved Critical"
+            ],
+            "7": [
+              "Remarkable Athlete"
+            ]
+          },
+          "id": "champion",
+          "name": "Champion"
+        },
+        {
+          "archetype": "battle_master",
+          "features_by_level": {
+            "10": [
+              "Improved Combat Superiority"
+            ],
+            "3": [
+              "Combat Superiority (maneuvers)",
+              "Student of War"
+            ],
+            "7": [
+              "Know Your Enemy"
+            ]
+          },
+          "id": "battle_master",
+          "name": "Battle Master"
+        }
+      ]
+    },
+    {
+      "casting_stat": "int",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 10,
+            "con": 14,
+            "dex": 14,
+            "int": 16,
+            "str": 8,
+            "wis": 12
+          },
+          "armor_id": null,
+          "background_id": "sage",
+          "feat_ids": [],
+          "loadouts": [
+            {
+              "id": "blaster",
+              "name": "Blaster",
+              "spell_ids": [
+                "magic_missile",
+                "burning_hands",
+                "shield",
+                "mage_armor"
+              ]
+            },
+            {
+              "id": "control",
+              "name": "Control",
+              "spell_ids": [
+                "sleep",
+                "mage_armor",
+                "shield",
+                "web"
+              ]
+            }
+          ],
+          "spell_ids": [
+            "magic_missile",
+            "shield",
+            "mage_armor"
+          ],
+          "weapon_id": "dagger"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Spellcasting",
+          "Arcane Recovery"
+        ],
+        "2": [
+          "Arcane Tradition"
+        ],
+        "3": [
+          "2nd-level Spells"
+        ],
+        "5": [
+          "3rd-level Spells"
+        ],
+        "9": [
+          "5th-level Spells"
+        ]
+      },
+      "hit_die": 6,
+      "id": "wizard",
+      "name": "Wizard",
+      "primary_stat": "int",
+      "proficient_skills": [
+        "arcana",
+        "history",
+        "investigation"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "int",
+        "wis"
+      ],
+      "subclass_unlock": 2,
+      "subclasses": [
+        {
+          "archetype": "evocation",
+          "features_by_level": {
+            "10": [
+              "Empowered Evocation"
+            ],
+            "2": [
+              "Sculpt Spells"
+            ],
+            "6": [
+              "Potent Cantrip"
+            ]
+          },
+          "id": "evocation",
+          "name": "School of Evocation"
+        }
+      ]
+    },
+    {
+      "casting_stat": null,
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 12,
+            "con": 14,
+            "dex": 16,
+            "int": 12,
+            "str": 8,
+            "wis": 10
+          },
+          "armor_id": "leather",
+          "background_id": "criminal",
+          "feat_ids": [],
+          "loadouts": [
+            {
+              "armor_id": "leather",
+              "id": "duelist",
+              "name": "Duelist",
+              "weapon_id": "rapier"
+            },
+            {
+              "armor_id": "leather",
+              "id": "archer",
+              "name": "Archer",
+              "weapon_id": "shortbow"
+            }
+          ],
+          "spell_ids": [],
+          "weapon_id": "shortsword"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Sneak Attack",
+          "Thieves' Cant",
+          "Expertise"
+        ],
+        "11": [
+          "Reliable Talent"
+        ],
+        "2": [
+          "Cunning Action"
+        ],
+        "3": [
+          "Roguish Archetype"
+        ],
+        "5": [
+          "Uncanny Dodge"
+        ],
+        "7": [
+          "Evasion"
+        ]
+      },
+      "hit_die": 8,
+      "id": "rogue",
+      "name": "Rogue",
+      "primary_stat": "dex",
+      "proficient_skills": [
+        "stealth",
+        "acrobatics",
+        "sleight_of_hand",
+        "perception"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "dex",
+        "int"
+      ],
+      "subclass_unlock": 3,
+      "subclasses": [
+        {
+          "archetype": "thief",
+          "features_by_level": {
+            "3": [
+              "Fast Hands",
+              "Second-Story Work"
+            ],
+            "9": [
+              "Supreme Sneak"
+            ]
+          },
+          "id": "thief",
+          "name": "Thief"
+        },
+        {
+          "archetype": "assassin",
+          "features_by_level": {
+            "3": [
+              "Assassinate"
+            ],
+            "9": [
+              "Infiltration Expertise"
+            ]
+          },
+          "id": "assassin",
+          "name": "Assassin"
+        }
+      ]
+    },
+    {
+      "casting_stat": "wis",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 12,
+            "con": 14,
+            "dex": 10,
+            "int": 10,
+            "str": 10,
+            "wis": 16
+          },
+          "armor_id": "chain_mail",
+          "background_id": "acolyte",
+          "feat_ids": [],
+          "spell_ids": [
+            "cure_wounds",
+            "guiding_bolt",
+            "bless"
+          ],
+          "weapon_id": "mace"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Spellcasting",
+          "Divine Domain"
+        ],
+        "2": [
+          "Channel Divinity (1 use)"
+        ],
+        "5": [
+          "Destroy Undead (CR 1/2)"
+        ]
+      },
+      "hit_die": 8,
+      "id": "cleric",
+      "name": "Cleric",
+      "primary_stat": "wis",
+      "proficient_skills": [
+        "insight",
+        "medicine",
+        "religion"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "wis",
+        "cha"
+      ],
+      "subclass_unlock": 1,
+      "subclasses": [
+        {
+          "archetype": "life",
+          "features_by_level": {
+            "1": [
+              "Disciple of Life"
+            ],
+            "2": [
+              "Channel Divinity: Preserve Life"
+            ],
+            "6": [
+              "Blessed Healer"
+            ]
+          },
+          "id": "life",
+          "name": "Life Domain"
+        },
+        {
+          "archetype": "war",
+          "features_by_level": {
+            "1": [
+              "War Priest"
+            ],
+            "2": [
+              "Channel Divinity: Guided Strike"
+            ],
+            "6": [
+              "War God's Blessing"
+            ]
+          },
+          "id": "war_domain",
+          "name": "War Domain"
+        }
+      ]
+    },
+    {
+      "casting_stat": null,
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 8,
+            "con": 16,
+            "dex": 14,
+            "int": 8,
+            "str": 16,
+            "wis": 10
+          },
+          "armor_id": null,
+          "background_id": "outlander",
+          "feat_ids": [],
+          "spell_ids": [],
+          "weapon_id": "greataxe"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Rage (2/day)",
+          "Unarmored Defense"
+        ],
+        "2": [
+          "Reckless Attack",
+          "Danger Sense"
+        ],
+        "3": [
+          "Primal Path"
+        ],
+        "5": [
+          "Extra Attack",
+          "Fast Movement"
+        ]
+      },
+      "hit_die": 12,
+      "id": "barbarian",
+      "name": "Barbarian",
+      "primary_stat": "str",
+      "proficient_skills": [
+        "athletics",
+        "perception",
+        "survival"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "str",
+        "con"
+      ],
+      "subclass_unlock": 3,
+      "subclasses": [
+        {
+          "archetype": "berserker",
+          "features_by_level": {
+            "10": [
+              "Intimidating Presence"
+            ],
+            "3": [
+              "Frenzy"
+            ],
+            "6": [
+              "Mindless Rage"
+            ]
+          },
+          "id": "berserker",
+          "name": "Path of the Berserker"
+        }
+      ]
+    },
+    {
+      "casting_stat": "cha",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 16,
+            "con": 14,
+            "dex": 14,
+            "int": 10,
+            "str": 8,
+            "wis": 10
+          },
+          "armor_id": "leather",
+          "background_id": "entertainer",
+          "feat_ids": [],
+          "spell_ids": [
+            "healing_word",
+            "dissonant_whispers",
+            "faerie_fire"
+          ],
+          "weapon_id": "rapier"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Spellcasting",
+          "Bardic Inspiration (d6)"
+        ],
+        "2": [
+          "Jack of All Trades",
+          "Song of Rest (d6)"
+        ],
+        "3": [
+          "Bard College"
+        ],
+        "5": [
+          "Bardic Inspiration (d8)"
+        ]
+      },
+      "hit_die": 8,
+      "id": "bard",
+      "name": "Bard",
+      "primary_stat": "cha",
+      "proficient_skills": [
+        "performance",
+        "persuasion",
+        "acrobatics",
+        "stealth"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "dex",
+        "cha"
+      ],
+      "subclass_unlock": 3,
+      "subclasses": [
+        {
+          "archetype": "valor",
+          "features_by_level": {
+            "14": [
+              "Battle Magic"
+            ],
+            "3": [
+              "Combat Inspiration"
+            ],
+            "6": [
+              "Extra Attack"
+            ]
+          },
+          "id": "valor",
+          "name": "College of Valor"
+        }
+      ]
+    },
+    {
+      "casting_stat": "cha",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 16,
+            "con": 14,
+            "dex": 8,
+            "int": 8,
+            "str": 16,
+            "wis": 10
+          },
+          "armor_id": "chain_mail",
+          "background_id": "acolyte",
+          "feat_ids": [],
+          "loadouts": [],
+          "spell_ids": [
+            "bless",
+            "shield_of_faith",
+            "cure_wounds"
+          ],
+          "weapon_id": "longsword"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Divine Sense",
+          "Lay on Hands"
+        ],
+        "2": [
+          "Fighting Style",
+          "Spellcasting",
+          "Divine Smite"
+        ],
+        "3": [
+          "Sacred Oath"
+        ],
+        "5": [
+          "Extra Attack"
+        ]
+      },
+      "hit_die": 10,
+      "id": "paladin",
+      "name": "Paladin",
+      "primary_stat": "cha",
+      "proficient_skills": [
+        "athletics",
+        "persuasion",
+        "religion"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "wis",
+        "cha"
+      ],
+      "subclass_unlock": 3,
+      "subclasses": [
+        {
+          "archetype": "devotion",
+          "features_by_level": {
+            "15": [
+              "Purity of Spirit"
+            ],
+            "20": [
+              "Holy Nimbus"
+            ],
+            "3": [
+              "Channel Divinity: Sacred Weapon",
+              "Channel Divinity: Turn the Unholy"
+            ],
+            "7": [
+              "Aura of Devotion"
+            ]
+          },
+          "id": "oath_of_devotion",
+          "name": "Oath of Devotion"
+        },
+        {
+          "archetype": "vengeance",
+          "features_by_level": {
+            "15": [
+              "Soul of Vengeance"
+            ],
+            "20": [
+              "Avenging Angel"
+            ],
+            "3": [
+              "Channel Divinity: Abjure Enemy",
+              "Channel Divinity: Vow of Enmity"
+            ],
+            "7": [
+              "Relentless Avenger"
+            ]
+          },
+          "id": "oath_of_vengeance",
+          "name": "Oath of Vengeance"
+        },
+        {
+          "archetype": "ancients",
+          "features_by_level": {
+            "15": [
+              "Undying Sentinel"
+            ],
+            "20": [
+              "Elder Champion"
+            ],
+            "3": [
+              "Channel Divinity: Nature’s Wrath",
+              "Channel Divinity: Turn the Faithless"
+            ],
+            "7": [
+              "Aura of Warding"
+            ]
+          },
+          "id": "oath_of_the_ancients",
+          "name": "Oath of the Ancients"
+        }
+      ]
+    },
+    {
+      "casting_stat": "wis",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 8,
+            "con": 14,
+            "dex": 16,
+            "int": 10,
+            "str": 10,
+            "wis": 14
+          },
+          "armor_id": "leather",
+          "background_id": "outlander",
+          "feat_ids": [],
+          "loadouts": [],
+          "spell_ids": [
+            "hunters_mark",
+            "cure_wounds",
+            "goodberry"
+          ],
+          "weapon_id": "longbow"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Favored Foe",
+          "Deft Explorer"
+        ],
+        "2": [
+          "Fighting Style",
+          "Spellcasting"
+        ],
+        "3": [
+          "Ranger Archetype"
+        ],
+        "5": [
+          "Extra Attack"
+        ]
+      },
+      "hit_die": 10,
+      "id": "ranger",
+      "name": "Ranger",
+      "primary_stat": "dex",
+      "proficient_skills": [
+        "survival",
+        "perception",
+        "stealth",
+        "nature"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "str",
+        "dex"
+      ],
+      "subclass_unlock": 3,
+      "subclasses": [
+        {
+          "archetype": "hunter",
+          "features_by_level": {
+            "11": [
+              "Multiattack"
+            ],
+            "15": [
+              "Superior Hunter's Defense"
+            ],
+            "3": [
+              "Hunter's Prey"
+            ],
+            "7": [
+              "Defensive Tactics"
+            ]
+          },
+          "id": "hunter",
+          "name": "Hunter"
+        },
+        {
+          "archetype": "beast_master",
+          "features_by_level": {
+            "11": [
+              "Bestial Fury"
+            ],
+            "15": [
+              "Share Spells"
+            ],
+            "3": [
+              "Ranger's Companion"
+            ],
+            "7": [
+              "Exceptional Training"
+            ]
+          },
+          "id": "beast_master",
+          "name": "Beast Master"
+        }
+      ]
+    },
+    {
+      "casting_stat": "cha",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 16,
+            "con": 14,
+            "dex": 14,
+            "int": 10,
+            "str": 8,
+            "wis": 10
+          },
+          "armor_id": null,
+          "background_id": "sage",
+          "feat_ids": [],
+          "loadouts": [],
+          "spell_ids": [
+            "fire_bolt",
+            "shield",
+            "magic_missile",
+            "fireball"
+          ],
+          "weapon_id": "dagger"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Spellcasting",
+          "Sorcerous Origin"
+        ],
+        "2": [
+          "Font of Magic"
+        ],
+        "3": [
+          "Metamagic"
+        ],
+        "5": [
+          "3rd-level Spells"
+        ]
+      },
+      "hit_die": 6,
+      "id": "sorcerer",
+      "name": "Sorcerer",
+      "primary_stat": "cha",
+      "proficient_skills": [
+        "arcana",
+        "deception",
+        "insight"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "con",
+        "cha"
+      ],
+      "subclass_unlock": 1,
+      "subclasses": [
+        {
+          "archetype": "draconic",
+          "features_by_level": {
+            "1": [
+              "Draconic Resilience"
+            ],
+            "14": [
+              "Dragon Wings"
+            ],
+            "18": [
+              "Draconic Presence"
+            ],
+            "6": [
+              "Elemental Affinity"
+            ]
+          },
+          "id": "draconic_bloodline",
+          "name": "Draconic Bloodline"
+        },
+        {
+          "archetype": "wild",
+          "features_by_level": {
+            "1": [
+              "Wild Magic Surge",
+              "Tides of Chaos"
+            ],
+            "14": [
+              "Controlled Chaos"
+            ],
+            "18": [
+              "Spell Bombardment"
+            ],
+            "6": [
+              "Bend Luck"
+            ]
+          },
+          "id": "wild_magic",
+          "name": "Wild Magic"
+        }
+      ]
+    },
+    {
+      "casting_stat": null,
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 8,
+            "con": 14,
+            "dex": 16,
+            "int": 8,
+            "str": 10,
+            "wis": 14
+          },
+          "armor_id": null,
+          "background_id": "acolyte",
+          "feat_ids": [],
+          "loadouts": [],
+          "spell_ids": [],
+          "weapon_id": "shortsword"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Unarmored Defense",
+          "Martial Arts"
+        ],
+        "2": [
+          "Ki",
+          "Unarmored Movement"
+        ],
+        "3": [
+          "Monastic Tradition"
+        ],
+        "5": [
+          "Extra Attack",
+          "Stunning Strike"
+        ]
+      },
+      "hit_die": 8,
+      "id": "monk",
+      "name": "Monk",
+      "primary_stat": "dex",
+      "proficient_skills": [
+        "acrobatics",
+        "athletics",
+        "stealth",
+        "insight"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "str",
+        "dex"
+      ],
+      "subclass_unlock": 3,
+      "subclasses": [
+        {
+          "archetype": "open_hand",
+          "features_by_level": {
+            "11": [
+              "Tranquility"
+            ],
+            "17": [
+              "Quivering Palm"
+            ],
+            "3": [
+              "Open Hand Technique"
+            ],
+            "6": [
+              "Wholeness of Body"
+            ]
+          },
+          "id": "open_hand",
+          "name": "Way of the Open Hand"
+        },
+        {
+          "archetype": "shadow",
+          "features_by_level": {
+            "11": [
+              "Cloak of Shadows"
+            ],
+            "17": [
+              "Opportunist"
+            ],
+            "3": [
+              "Shadow Arts"
+            ],
+            "6": [
+              "Shadow Step"
+            ]
+          },
+          "id": "shadow",
+          "name": "Way of Shadow"
+        },
+        {
+          "archetype": "four_elements",
+          "features_by_level": {
+            "11": [
+              "Elemental Disciplines (Greater)"
+            ],
+            "17": [
+              "Elemental Mastery"
+            ],
+            "3": [
+              "Disciple of the Elements"
+            ],
+            "6": [
+              "Elemental Disciplines (Expanded)"
+            ]
+          },
+          "id": "four_elements",
+          "name": "Way of the Four Elements"
+        }
+      ]
+    },
+    {
+      "casting_stat": "cha",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 16,
+            "con": 14,
+            "dex": 14,
+            "int": 10,
+            "str": 8,
+            "wis": 10
+          },
+          "armor_id": null,
+          "background_id": "criminal",
+          "feat_ids": [],
+          "loadouts": [],
+          "spell_ids": [
+            "eldritch_blast",
+            "hex",
+            "armor_of_agathys",
+            "counterspell"
+          ],
+          "weapon_id": "dagger"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Otherworldly Patron",
+          "Pact Magic",
+          "Eldritch Invocations (seed)"
+        ],
+        "2": [
+          "Eldritch Invocations"
+        ],
+        "3": [
+          "Pact Boon"
+        ],
+        "5": [
+          "3rd-level Spells"
+        ]
+      },
+      "hit_die": 8,
+      "id": "warlock",
+      "name": "Warlock",
+      "primary_stat": "cha",
+      "proficient_skills": [
+        "arcana",
+        "deception",
+        "intimidation",
+        "investigation"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "wis",
+        "cha"
+      ],
+      "subclass_unlock": 1,
+      "subclasses": [
+        {
+          "archetype": "fiend",
+          "features_by_level": {
+            "1": [
+              "Dark One's Blessing"
+            ],
+            "10": [
+              "Fiendish Resilience"
+            ],
+            "14": [
+              "Hurl Through Hell"
+            ],
+            "6": [
+              "Dark One's Own Luck"
+            ]
+          },
+          "id": "fiend",
+          "name": "The Fiend"
+        },
+        {
+          "archetype": "goo",
+          "features_by_level": {
+            "1": [
+              "Awakened Mind"
+            ],
+            "10": [
+              "Thought Shield"
+            ],
+            "14": [
+              "Create Thrall"
+            ],
+            "6": [
+              "Entropic Ward"
+            ]
+          },
+          "id": "great_old_one",
+          "name": "The Great Old One"
+        },
+        {
+          "archetype": "archfey",
+          "features_by_level": {
+            "1": [
+              "Fey Presence"
+            ],
+            "10": [
+              "Beguiling Defenses"
+            ],
+            "14": [
+              "Dark Delirium"
+            ],
+            "6": [
+              "Misty Escape"
+            ]
+          },
+          "id": "archfey",
+          "name": "The Archfey"
+        }
+      ]
+    },
+    {
+      "casting_stat": "wis",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 8,
+            "con": 14,
+            "dex": 14,
+            "int": 10,
+            "str": 10,
+            "wis": 16
+          },
+          "armor_id": "leather",
+          "background_id": "acolyte",
+          "feat_ids": [],
+          "loadouts": [],
+          "spell_ids": [
+            "guidance",
+            "produce_flame",
+            "cure_wounds",
+            "goodberry",
+            "moonbeam"
+          ],
+          "weapon_id": "scimitar"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Druidic",
+          "Spellcasting"
+        ],
+        "2": [
+          "Wild Shape",
+          "Druid Circle"
+        ],
+        "5": [
+          "3rd-level Spells"
+        ]
+      },
+      "hit_die": 8,
+      "id": "druid",
+      "name": "Druid",
+      "primary_stat": "wis",
+      "proficient_skills": [
+        "animal_handling",
+        "insight",
+        "medicine",
+        "nature",
+        "perception",
+        "religion",
+        "survival"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "int",
+        "wis"
+      ],
+      "subclass_unlock": 2,
+      "subclasses": [
+        {
+          "archetype": "moon",
+          "features_by_level": {
+            "10": [
+              "Elemental Wild Shape"
+            ],
+            "14": [
+              "Thousand Forms"
+            ],
+            "2": [
+              "Combat Wild Shape",
+              "Circle Forms"
+            ],
+            "6": [
+              "Primal Strike"
+            ]
+          },
+          "id": "circle_of_the_moon",
+          "name": "Circle of the Moon"
+        },
+        {
+          "archetype": "land",
+          "features_by_level": {
+            "10": [
+              "Nature's Ward"
+            ],
+            "14": [
+              "Nature's Sanctuary"
+            ],
+            "2": [
+              "Bonus Cantrip",
+              "Natural Recovery"
+            ],
+            "6": [
+              "Land's Stride"
+            ]
+          },
+          "id": "circle_of_the_land",
+          "name": "Circle of the Land"
+        }
+      ]
+    },
+    {
+      "casting_stat": "int",
+      "defaults": {
+        "5e": {
+          "ability_scores": {
+            "cha": 8,
+            "con": 14,
+            "dex": 14,
+            "int": 16,
+            "str": 10,
+            "wis": 10
+          },
+          "armor_id": "chain_mail",
+          "background_id": "sage",
+          "feat_ids": [],
+          "loadouts": [],
+          "spell_ids": [
+            "mage_hand",
+            "shield",
+            "cure_wounds",
+            "faerie_fire"
+          ],
+          "weapon_id": "rapier"
+        }
+      },
+      "features_by_level": {
+        "1": [
+          "Magical Tinkering"
+        ],
+        "2": [
+          "Infuse Item"
+        ],
+        "3": [
+          "Artificer Specialist"
+        ],
+        "5": [
+          "Extra Attack"
+        ]
+      },
+      "hit_die": 8,
+      "id": "artificer",
+      "name": "Artificer",
+      "primary_stat": "int",
+      "proficient_skills": [
+        "arcana",
+        "history",
+        "investigation",
+        "medicine",
+        "nature",
+        "sleight_of_hand"
+      ],
+      "ruleset": "5e",
+      "saving_throws": [
+        "con",
+        "int"
+      ],
+      "subclass_unlock": 3,
+      "subclasses": [
+        {
+          "archetype": "alchemist",
+          "features_by_level": {
+            "15": [
+              "Chemical Mastery"
+            ],
+            "3": [
+              "Experimental Elixir"
+            ],
+            "5": [
+              "Alchemical Savant"
+            ],
+            "9": [
+              "Restorative Reagents"
+            ]
+          },
+          "id": "alchemist",
+          "name": "Alchemist"
+        },
+        {
+          "archetype": "battle_smith",
+          "features_by_level": {
+            "15": [
+              "Improved Defender"
+            ],
+            "3": [
+              "Battle Ready",
+              "Steel Defender"
+            ],
+            "5": [
+              "Extra Attack"
+            ],
+            "9": [
+              "Arcane Jolt"
+            ]
+          },
+          "id": "battle_smith",
+          "name": "Battle Smith"
+        },
+        {
+          "archetype": "artillerist",
+          "features_by_level": {
+            "15": [
+              "Fortified Position"
+            ],
+            "3": [
+              "Eldritch Cannon"
+            ],
+            "5": [
+              "Arcane Firearm"
+            ],
+            "9": [
+              "Explosive Cannon"
+            ]
+          },
+          "id": "artillerist",
+          "name": "Artillerist"
+        }
+      ]
+    }
+  ]
+}

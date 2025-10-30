@@ -1,0 +1,67 @@
+{
+  "saved": [
+    {
+      "id": "pf2e_martial_basics",
+      "name": "PF2e: Martial basics (Fighter + weapons/armor)",
+      "query": {
+        "filters": {
+          "class_id": [
+            "fighter"
+          ]
+        },
+        "ruleset": "pf2e",
+        "tables": [
+          "classes",
+          "weapons",
+          "armors",
+          "feats"
+        ]
+      }
+    },
+    {
+      "id": "pf2e_runes_tiers_check",
+      "name": "PF2e: Verify potency/striking/resilient tiers",
+      "query": {
+        "filters": {},
+        "ruleset": "pf2e",
+        "tables": [
+          "runes"
+        ]
+      }
+    },
+    {
+      "id": "5e_magic_quick",
+      "name": "5e: Core magic smoke",
+      "query": {
+        "filters": {
+          "type": [
+            "magic_weapon",
+            "magic_armor",
+            "wondrous",
+            "wand"
+          ]
+        },
+        "ruleset": "5e",
+        "tables": [
+          "items"
+        ]
+      }
+    },
+    {
+      "id": "5e_core_creator_defaults",
+      "name": "5e: Core Creator defaults",
+      "query": {
+        "filters": {},
+        "ruleset": "5e",
+        "tables": [
+          "classes",
+          "backgrounds",
+          "weapons",
+          "armors",
+          "feats",
+          "spells"
+        ]
+      }
+    }
+  ]
+}

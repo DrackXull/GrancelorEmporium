@@ -1,4 +1,49 @@
 # .gitignore
+cat > .gitignore <<'IGN'
+# --- node / vite ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.eslintcache
+
+# --- python / venv ---
+.venv/
+backend/.venv/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# --- local db / state / logs ---
+*.db
+*.sqlite*
+backend/*.db
+backend/*.sqlite*
+runtime/*.json
+.ngrok.log
+
+# --- env files ---
+.env
+.env.*
+backend/.env
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+!backend/.env.example
+
+# --- frontend build artifacts mirrored into backend/static ---
+backend/static/assets/
+backend/static/index.html
+backend/static/*.map
+
+# --- os/editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+IGN
+
 __pycache__/
 *.pyc
 .venv/
@@ -21,3 +66,23 @@ Desktop.ini
 *:*Zone.Identifier*
 *:*mshield
 *:*msshield*
+cat > .gitattributes <<'ATTR'
+# Normalize text files to LF in repo
+* text=auto eol=lf
+
+# Keep binary files untouched
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  text eol=lf
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.ico  binary
+*.zip  binary
+*.7z   binary
+
+# Keep maps as text but normalized
+*.map text eol=lf
+ATTR

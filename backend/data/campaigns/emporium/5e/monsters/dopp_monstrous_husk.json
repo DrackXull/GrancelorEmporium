@@ -1,0 +1,20 @@
+{
+  "id": "dopp_monstrous_husk",
+  "name": "Doppelganger – Monstrous Husk",
+  "ac": 13,
+  "hp": 26,
+  "attack_bonus": 5,
+  "attacks_per_round": 1,
+  "damage_profile": [
+    [
+      1,
+      6,
+      3
+    ]
+  ],
+  "tags": [
+    "regen_below_half"
+  ],
+  "gs": 100,
+  "ruleset": "5e"
+}

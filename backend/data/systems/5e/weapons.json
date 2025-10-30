@@ -1,0 +1,7 @@
+[
+  { "id":"longsword",   "ruleset":"5e", "name":"Longsword",   "group":"sword",  "traits":["versatile"], "damage":"1d8", "hands":1 },
+  { "id":"greatsword",  "ruleset":"5e", "name":"Greatsword",  "group":"sword",  "traits":["heavy","two_handed"], "damage":"2d6", "hands":2 },
+  { "id":"rapier",      "ruleset":"5e", "name":"Rapier",      "group":"sword",  "traits":["finesse"], "damage":"1d8", "hands":1 },
+  { "id":"shortbow",    "ruleset":"5e", "name":"Shortbow",    "group":"bow",    "traits":["two_handed","ammunition"], "damage":"1d6", "hands":2 },
+  { "id":"longbow",     "ruleset":"5e", "name":"Longbow",     "group":"bow",    "traits":["two_handed","ammunition","heavy"], "damage":"1d8", "hands":2 }
+]

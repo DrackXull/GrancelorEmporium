@@ -1,0 +1,166 @@
+[
+  {
+    "effects": "+5 initiative; can't be surprised; unseen attackers don’t gain advantage.",
+    "id": "alert",
+    "name": "Alert",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+1 Str or Dex; climbing not difficult; stand up from prone costs 5 ft.",
+    "id": "athlete",
+    "name": "Athlete",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Dash then bonus-action melee shove/attack with bonus damage.",
+    "id": "charger",
+    "name": "Charger",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+1 Con; hit die minimum = 2× Con mod.",
+    "id": "durable",
+    "name": "Durable",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "-5 to hit for +10 damage; bonus action attack on crit/kill.",
+    "id": "great_weapon_master",
+    "name": "Great Weapon Master",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Ignore cover; long-range no disadvantage; -5/+10 ranged.",
+    "id": "sharpshooter",
+    "name": "Sharpshooter",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Opportunity hits reduce speed to 0; ignore Disengage; reaction on attacks vs allies.",
+    "id": "sentinel",
+    "name": "Sentinel",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+1 to chosen ability; gain its save proficiency.",
+    "id": "resilient",
+    "name": "Resilient",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "3 luck points to reroll attacks/checks/saves (choose result).",
+    "id": "lucky",
+    "name": "Lucky",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+2 HP per level.",
+    "id": "tough",
+    "name": "Tough",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Advantage on concentration; somatic with hands full; cast as OA.",
+    "id": "war_caster",
+    "name": "War Caster",
+    "prereqs": [
+      "spellcasting"
+    ],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+10 speed; dash over difficult terrain; no OA from target you attack.",
+    "id": "mobile",
+    "name": "Mobile",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+1 Int or Wis; +5 passive Perception/Investigation; lip-reading.",
+    "id": "observant",
+    "name": "Observant",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Bonus-action butt-end attack; OA when enter reach.",
+    "id": "polearm_master",
+    "name": "Polearm Master",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Add shield to Dex saves vs effects; shove bonus action; no damage on successful Dex save.",
+    "id": "shield_master",
+    "name": "Shield Master",
+    "prereqs": [
+      "shield_proficiency"
+    ],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+1 Cha; advantage to mimicry/disguise voice.",
+    "id": "actor",
+    "name": "Actor",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Ignore loading; no disadvantage in melee; bonus-action hand crossbow shot.",
+    "id": "crossbow_expert",
+    "name": "Crossbow Expert",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+1 AC while dual-wielding; draw two; use non-light 1h weapons.",
+    "id": "dual_wielder",
+    "name": "Dual Wielder",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+1 Dex/Int/Wis/Cha; reroll one die on advantage with chosen stat attacks.",
+    "id": "elven_accuracy",
+    "name": "Elven Accuracy",
+    "prereqs": [
+      "elf_or_half_elf"
+    ],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "+1 Str or Con; gain heavy armor proficiency.",
+    "id": "heavily_armored",
+    "name": "Heavily Armored",
+    "prereqs": [
+      "medium_armor_proficiency"
+    ],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Advantage vs unmounted; redirect attacks to you; mount evasion-like.",
+    "id": "mounted_combatant",
+    "name": "Mounted Combatant",
+    "prereqs": [],
+    "ruleset": "5e"
+  },
+  {
+    "effects": "Hide better in dim light; missed ranged doesn’t reveal; see in dim light.",
+    "id": "skulker",
+    "name": "Skulker",
+    "prereqs": [
+      "dex_13"
+    ],
+    "ruleset": "5e"
+  }
+]

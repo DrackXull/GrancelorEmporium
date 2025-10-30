@@ -1,0 +1,34 @@
+/* ---- global.css : app-wide dark theme ---- */
+:root {
+  color-scheme: dark;
+  --bg: #0b1220;       /* page background */
+  --panel: #0f172a;    /* cards/panels */
+  --text: #e7eaf3;     /* primary text */
+  --muted: #9aa3b2;    /* muted text */
+  --border: #1f2742;   /* subtle borders */
+  --accent: #3b82f6;   /* brand accent (blue) */
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: var(--accent); }
+
+button, input, select, textarea {
+  color: var(--text);
+  background: #121a2f;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+::selection { background: rgba(59,130,246,.35); }

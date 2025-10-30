@@ -1,0 +1,231 @@
+{
+  "classes": {
+    "alchemist": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "dwarf",
+          "armor_id": "leather",
+          "background_id": "scholar",
+          "weapon_id": "dagger"
+        }
+      }
+    },
+    "barbarian": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "hide",
+          "background_id": "soldier",
+          "subclass_id": "giant",
+          "weapon_id": "greataxe"
+        }
+      }
+    },
+    "bard": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "leather",
+          "background_id": "scholar",
+          "subclass_id": "maestro",
+          "weapon_id": "rapier"
+        }
+      }
+    },
+    "champion": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "plate",
+          "background_id": "acolyte",
+          "weapon_id": "longsword"
+        }
+      }
+    },
+    "cleric": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "dwarf",
+          "armor_id": "chain_mail",
+          "background_id": "acolyte",
+          "subclass_id": "warpriest",
+          "weapon_id": "warhammer"
+        }
+      }
+    },
+    "druid": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "elf",
+          "armor_id": "hide",
+          "background_id": "scholar",
+          "subclass_id": "wild",
+          "weapon_id": "spear"
+        }
+      }
+    },
+    "fighter": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "chain_mail",
+          "background_id": "soldier",
+          "weapon_id": "longsword"
+        }
+      }
+    },
+    "gunslinger": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "leather",
+          "background_id": "soldier",
+          "weapon_id": "crossbow"
+        }
+      }
+    },
+    "inventor": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "dwarf",
+          "armor_id": "breastplate",
+          "background_id": "scholar",
+          "weapon_id": "warhammer"
+        }
+      }
+    },
+    "investigator": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "leather",
+          "background_id": "scholar",
+          "weapon_id": "rapier"
+        }
+      }
+    },
+    "kineticist": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "elf",
+          "armor_id": "hide",
+          "background_id": "outlander",
+          "weapon_id": "spear"
+        }
+      }
+    },
+    "magus": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "studded_leather",
+          "background_id": "scholar",
+          "weapon_id": "rapier"
+        }
+      }
+    },
+    "monk": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "halfling",
+          "armor_id": "leather",
+          "background_id": "acolyte",
+          "subclass_id": "mountain",
+          "weapon_id": "shortsword"
+        }
+      }
+    },
+    "oracle": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "chain_mail",
+          "background_id": "acolyte",
+          "weapon_id": "mace"
+        }
+      }
+    },
+    "psychic": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "studded_leather",
+          "background_id": "scholar",
+          "weapon_id": "dagger"
+        }
+      }
+    },
+    "ranger": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "leather",
+          "background_id": "soldier",
+          "weapon_id": "longbow"
+        }
+      }
+    },
+    "rogue": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "halfling",
+          "armor_id": "leather",
+          "background_id": "criminal",
+          "subclass_id": "thief",
+          "weapon_id": "shortsword"
+        }
+      }
+    },
+    "sorcerer": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "studded_leather",
+          "background_id": "scholar",
+          "subclass_id": "draconic",
+          "weapon_id": "dagger"
+        }
+      }
+    },
+    "summoner": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "elf",
+          "armor_id": "leather",
+          "background_id": "scholar",
+          "weapon_id": "dagger"
+        }
+      }
+    },
+    "swashbuckler": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "elf",
+          "armor_id": "leather",
+          "background_id": "scholar",
+          "weapon_id": "rapier"
+        }
+      }
+    },
+    "thaumaturge": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "breastplate",
+          "background_id": "acolyte",
+          "weapon_id": "warhammer"
+        }
+      }
+    },
+    "witch": {
+      "defaults": {
+        "pf2e": {
+          "ancestry_id": "human",
+          "armor_id": "studded_leather",
+          "background_id": "scholar",
+          "weapon_id": "dagger"
+        }
+      }
+    }
+  }
+}

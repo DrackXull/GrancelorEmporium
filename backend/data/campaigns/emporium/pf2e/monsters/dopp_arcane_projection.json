@@ -1,0 +1,20 @@
+{
+  "id": "dopp_arcane_projection",
+  "name": "Doppelganger – Arcane Projection",
+  "ac": 11,
+  "hp": 16,
+  "attack_bonus": 4,
+  "attacks_per_round": 1,
+  "damage_profile": [
+    [
+      1,
+      10,
+      0
+    ]
+  ],
+  "tags": [
+    "explode_on_defeat"
+  ],
+  "gs": 85,
+  "ruleset": "pf2e"
+}

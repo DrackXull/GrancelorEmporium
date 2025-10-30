@@ -1,0 +1,179 @@
+[
+  {
+    "effects": {
+      "attack_bonus": 1
+    },
+    "id": "weapon_potency_1",
+    "min_level": 2,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_potency",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "attack_bonus": 2
+    },
+    "id": "weapon_potency_2",
+    "min_level": 10,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_potency",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "damage_die_increase": "+1_step"
+    },
+    "id": "striking",
+    "min_level": 4,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_property",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "damage_die_increase": "+2_steps"
+    },
+    "id": "greater_striking",
+    "min_level": 12,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_property",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "save_bonus": 1
+    },
+    "id": "resilient",
+    "min_level": 8,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "armor_property",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "save_bonus": 2
+    },
+    "id": "greater_resilient",
+    "min_level": 17,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "armor_property",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "bonus_damage": "1d6",
+      "damage_type": "fire"
+    },
+    "id": "flaming",
+    "min_level": 8,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_property",
+    "traits": [
+      "fire",
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "attack_bonus": 3
+    },
+    "id": "weapon_potency_3",
+    "min_level": 16,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_potency",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "damage_die_increase": "+3_steps"
+    },
+    "id": "major_striking",
+    "min_level": 19,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_property",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "save_bonus": 3
+    },
+    "id": "major_resilient",
+    "min_level": 20,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "armor_property",
+    "traits": [
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "bonus_damage": "1d6",
+      "damage_type": "cold"
+    },
+    "id": "frost",
+    "min_level": 8,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_property",
+    "traits": [
+      "cold",
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "bonus_damage": "1d6",
+      "damage_type": "electricity"
+    },
+    "id": "shock",
+    "min_level": 8,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_property",
+    "traits": [
+      "electricity",
+      "magical"
+    ]
+  },
+  {
+    "effects": {
+      "bonus_damage": "1d6",
+      "damage_type": "acid"
+    },
+    "id": "corrosive",
+    "min_level": 8,
+    "restrictions": null,
+    "ruleset": "pf2e",
+    "slot": "weapon_property",
+    "traits": [
+      "acid",
+      "magical"
+    ]
+  }
+]

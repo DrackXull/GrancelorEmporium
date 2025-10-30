@@ -1,0 +1,7 @@
+{
+  "armors": [
+    {"id":"cloth","name":"Cloth","base_ac":10,"dex_cap":999},
+    {"id":"leather","name":"Leather","base_ac":11,"dex_cap":999},
+    {"id":"chain","name":"Chain","base_ac":16,"dex_cap":0}
+  ]
+}

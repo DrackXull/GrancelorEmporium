@@ -1,0 +1,212 @@
+[
+  {
+    "id": "fire",
+    "kind": "damage_type",
+    "name": "Fire",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "magical",
+    "kind": "trait",
+    "name": "Magical",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "agile",
+    "kind": "weapon_trait",
+    "name": "Agile",
+    "notes": "-2 MAP instead of -5/-10.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "finesse",
+    "kind": "weapon_trait",
+    "name": "Finesse",
+    "notes": "Use Dex for attack rolls.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "thrown_10",
+    "kind": "weapon_trait",
+    "name": "Thrown 10 ft",
+    "notes": "Range increment 10 ft when thrown.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "deadly_d8",
+    "kind": "weapon_trait",
+    "name": "Deadly d8",
+    "notes": "Extra die on crit.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "deadly_d10",
+    "kind": "weapon_trait",
+    "name": "Deadly d10",
+    "notes": "Extra die on crit.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "disarm",
+    "kind": "weapon_trait",
+    "name": "Disarm",
+    "notes": "Can Disarm without free hand penalty.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "forceful",
+    "kind": "weapon_trait",
+    "name": "Forceful",
+    "notes": "Extra damage with multiple attacks this turn.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "sweep",
+    "kind": "weapon_trait",
+    "name": "Sweep",
+    "notes": "+1 circumstance bonus on attacks after striking a different target.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "versatile_p",
+    "kind": "weapon_trait",
+    "name": "Versatile P",
+    "notes": "Can deal piercing instead of base type.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "reach",
+    "kind": "weapon_trait",
+    "name": "Reach",
+    "notes": "Increased reach for Strikes.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "propulsive",
+    "kind": "weapon_trait",
+    "name": "Propulsive",
+    "notes": "Add half Str modifier to damage (ranged).",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "volley_30",
+    "kind": "weapon_trait",
+    "name": "Volley 30 ft",
+    "notes": "-2 within first 30 ft.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "reload_1",
+    "kind": "weapon_trait",
+    "name": "Reload 1",
+    "notes": "Takes 1 Interact to reload.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "healing",
+    "kind": "spell_trait",
+    "name": "Healing",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "positive",
+    "kind": "spell_trait",
+    "name": "Positive",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "force",
+    "kind": "spell_trait",
+    "name": "Force",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "emotion",
+    "kind": "spell_trait",
+    "name": "Emotion",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "fear",
+    "kind": "spell_trait",
+    "name": "Fear",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "mental",
+    "kind": "spell_trait",
+    "name": "Mental",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "aura",
+    "kind": "spell_trait",
+    "name": "Aura",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "concentrate",
+    "kind": "spell_trait",
+    "name": "Concentrate",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "alignment",
+    "kind": "spell_trait",
+    "name": "Alignment",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "electricity",
+    "kind": "damage_type",
+    "name": "Electricity",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "acid",
+    "kind": "damage_type",
+    "name": "Acid",
+    "notes": "",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "fatal_d10",
+    "kind": "weapon_trait",
+    "name": "Fatal d10",
+    "notes": "On crit, increase die and add one.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "backswing",
+    "kind": "weapon_trait",
+    "name": "Backswing",
+    "notes": "+1 circumstance bonus on next attack after a miss.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "two_hand_d12",
+    "kind": "weapon_trait",
+    "name": "Two-Hand d12",
+    "notes": "Can be wielded in two hands for listed die.",
+    "ruleset": "pf2e"
+  },
+  {
+    "id": "parry",
+    "kind": "weapon_trait",
+    "name": "Parry",
+    "notes": "+1 circumstance to AC when you parry.",
+    "ruleset": "pf2e"
+  }
+]

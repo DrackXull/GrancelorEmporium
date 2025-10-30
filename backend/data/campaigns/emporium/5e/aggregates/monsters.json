@@ -1,0 +1,213 @@
+[
+  {
+    "id": "mirror_doppel_t1",
+    "name": "Mirror Doppelganger – Tier 1",
+    "ac": 13,
+    "hp": 22,
+    "attack_bonus": 4,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        1,
+        8,
+        2
+      ]
+    ],
+    "tags": [
+      "mirror",
+      "baseline"
+    ],
+    "gs": 90,
+    "ruleset": "5e"
+  },
+  {
+    "id": "dopp_infernal_shade",
+    "name": "Doppelganger – Infernal Shade",
+    "ac": 13,
+    "hp": 22,
+    "attack_bonus": 4,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        1,
+        8,
+        2
+      ],
+      [
+        1,
+        4,
+        0
+      ]
+    ],
+    "tags": [
+      "fire_immune",
+      "burning_ground"
+    ],
+    "gs": 90,
+    "ruleset": "5e"
+  },
+  {
+    "id": "dopp_abyssal_echo",
+    "name": "Doppelganger – Abyssal Echo",
+    "ac": 12,
+    "hp": 20,
+    "attack_bonus": 4,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        1,
+        8,
+        0
+      ]
+    ],
+    "tags": [
+      "mindclaw_reaction_lock"
+    ],
+    "gs": 85,
+    "ruleset": "5e"
+  },
+  {
+    "id": "dopp_syndicate_phantom",
+    "name": "Doppelganger – Syndicate Phantom",
+    "ac": 14,
+    "hp": 18,
+    "attack_bonus": 5,
+    "attacks_per_round": 2,
+    "damage_profile": [
+      [
+        1,
+        6,
+        2
+      ]
+    ],
+    "tags": [
+      "adv_in_dim_light"
+    ],
+    "gs": 95,
+    "ruleset": "5e"
+  },
+  {
+    "id": "dopp_arcane_projection",
+    "name": "Doppelganger – Arcane Projection",
+    "ac": 11,
+    "hp": 16,
+    "attack_bonus": 4,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        1,
+        10,
+        0
+      ]
+    ],
+    "tags": [
+      "explode_on_defeat"
+    ],
+    "gs": 85,
+    "ruleset": "5e"
+  },
+  {
+    "id": "dopp_monstrous_husk",
+    "name": "Doppelganger – Monstrous Husk",
+    "ac": 13,
+    "hp": 26,
+    "attack_bonus": 5,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        1,
+        6,
+        3
+      ]
+    ],
+    "tags": [
+      "regen_below_half"
+    ],
+    "gs": 100,
+    "ruleset": "5e"
+  },
+  {
+    "id": "dopp_iron_legion_remnant",
+    "name": "Doppelganger – Iron Legion Remnant",
+    "ac": 16,
+    "hp": 25,
+    "attack_bonus": 5,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        2,
+        6,
+        3
+      ]
+    ],
+    "tags": [
+      "resist_nonmagical"
+    ],
+    "gs": 110,
+    "ruleset": "5e"
+  },
+  {
+    "id": "custodian_construct",
+    "name": "Custodian Construct",
+    "ac": 13,
+    "hp": 18,
+    "attack_bonus": 3,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        1,
+        6,
+        1
+      ]
+    ],
+    "tags": [
+      "mop_grab",
+      "drops_key_A",
+      "immune_poison_psychic"
+    ],
+    "gs": 60,
+    "ruleset": "5e"
+  },
+  {
+    "id": "liability_drone",
+    "name": "Liability Drone",
+    "ac": 14,
+    "hp": 25,
+    "attack_bonus": 4,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        1,
+        6,
+        1
+      ]
+    ],
+    "tags": [
+      "laser_burst_cone",
+      "immune_poison_psychic"
+    ],
+    "gs": 100,
+    "ruleset": "5e"
+  },
+  {
+    "id": "contract_keeper_desk",
+    "name": "Contract Keeper (Animated Desk)",
+    "ac": 15,
+    "hp": 34,
+    "attack_bonus": 4,
+    "attacks_per_round": 1,
+    "damage_profile": [
+      [
+        1,
+        8,
+        2
+      ]
+    ],
+    "tags": [
+      "ink_spray_cone",
+      "immune_poison_psychic_charm"
+    ],
+    "gs": 160,
+    "ruleset": "5e"
+  }
+]

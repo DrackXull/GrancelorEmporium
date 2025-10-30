@@ -1,0 +1,21 @@
+{
+  "id": "liability_drone",
+  "name": "Liability Drone",
+  "ac": 14,
+  "hp": 25,
+  "attack_bonus": 4,
+  "attacks_per_round": 1,
+  "damage_profile": [
+    [
+      1,
+      6,
+      1
+    ]
+  ],
+  "tags": [
+    "laser_burst_cone",
+    "immune_poison_psychic"
+  ],
+  "gs": 100,
+  "ruleset": "pf2e"
+}

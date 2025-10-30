@@ -1,7 +1,64 @@
 {
   "classes": [
-    {"id":"fighter","name":"Fighter","hit_die":10,"primary":"str","prof_by_level":[2,2,2,2,3,3,3,3,4,4,4,4]},
-    {"id":"rogue","name":"Rogue","hit_die":8,"primary":"dex","prof_by_level":[2,2,2,2,3,3,3,3,4,4,4,4]},
-    {"id":"wizard","name":"Wizard","hit_die":6,"primary":"int","prof_by_level":[2,2,2,2,3,3,3,3,4,4,4,4]}
+    {
+      "hit_die": 10,
+      "id": "fighter",
+      "name": "Fighter",
+      "primary": "str",
+      "prof_by_level": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "hit_die": 8,
+      "id": "rogue",
+      "name": "Rogue",
+      "primary": "dex",
+      "prof_by_level": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "hit_die": 6,
+      "id": "wizard",
+      "name": "Wizard",
+      "primary": "int",
+      "prof_by_level": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ]
+    }
   ]
 }

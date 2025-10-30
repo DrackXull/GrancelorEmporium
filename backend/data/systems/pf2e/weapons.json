@@ -1,0 +1,22 @@
+[
+  { "id":"dagger",       "ruleset":"pf2e", "name":"Dagger",        "group":"knife",     "traits":["agile","finesse","thrown_10"], "damage":"1d4", "hands":1 },
+  { "id":"shortsword",   "ruleset":"pf2e", "name":"Shortsword",    "group":"sword",     "traits":["agile","finesse"],            "damage":"1d6", "hands":1 },
+  { "id":"rapier",       "ruleset":"pf2e", "name":"Rapier",        "group":"sword",     "traits":["deadly_d8","disarm","finesse"],"damage":"1d6","hands":1 },
+  { "id":"longsword",    "ruleset":"pf2e", "name":"Longsword",     "group":"sword",     "traits":[],                              "damage":"1d8", "hands":1 },
+  { "id":"scimitar",     "ruleset":"pf2e", "name":"Scimitar",      "group":"sword",     "traits":["forceful","sweep"],            "damage":"1d6", "hands":1 },
+  { "id":"falchion",     "ruleset":"pf2e", "name":"Falchion",      "group":"sword",     "traits":["forceful","sweep"],            "damage":"1d10","hands":2 },
+  { "id":"greatsword",   "ruleset":"pf2e", "name":"Greatsword",    "group":"sword",     "traits":["versatile_p"],                 "damage":"1d12","hands":2 },
+  { "id":"greataxe",     "ruleset":"pf2e", "name":"Greataxe",      "group":"axe",       "traits":["sweep"],                       "damage":"1d12","hands":2 },
+  { "id":"battle_axe",   "ruleset":"pf2e", "name":"Battle Axe",    "group":"axe",       "traits":["versatile_p"],                 "damage":"1d8", "hands":1 },
+  { "id":"handaxe",      "ruleset":"pf2e", "name":"Handaxe",       "group":"axe",       "traits":["agile","thrown_10"],           "damage":"1d6", "hands":1 },
+  { "id":"mace",         "ruleset":"pf2e", "name":"Mace",          "group":"club",      "traits":[],                              "damage":"1d6", "hands":1 },
+  { "id":"warhammer",    "ruleset":"pf2e", "name":"Warhammer",     "group":"hammer",    "traits":["versatile_p"],                 "damage":"1d8", "hands":1 },
+  { "id":"maul",         "ruleset":"pf2e", "name":"Maul",          "group":"hammer",    "traits":[],                              "damage":"1d12","hands":2 },
+  { "id":"spear",        "ruleset":"pf2e", "name":"Spear",         "group":"spear",     "traits":["thrown_20"],                   "damage":"1d6", "hands":1 },
+  { "id":"halberd",      "ruleset":"pf2e", "name":"Halberd",       "group":"polearm",   "traits":["reach"],                        "damage":"1d10","hands":2 },
+  { "id":"glaive",       "ruleset":"pf2e", "name":"Glaive",        "group":"polearm",   "traits":["reach","sweep"],               "damage":"1d8", "hands":2 },
+  { "id":"trident",      "ruleset":"pf2e", "name":"Trident",       "group":"spear",     "traits":["thrown_20"],                   "damage":"1d8", "hands":1 },
+  { "id":"shortbow",     "ruleset":"pf2e", "name":"Shortbow",      "group":"bow",       "traits":["deadly_d10","propulsive"],     "damage":"1d6", "hands":2 },
+  { "id":"longbow",      "ruleset":"pf2e", "name":"Longbow",       "group":"bow",       "traits":["deadly_d10","propulsive","volley_30"], "damage":"1d8","hands":2 },
+  { "id":"crossbow",     "ruleset":"pf2e", "name":"Crossbow",      "group":"bow",       "traits":["deadly_d10","reload_1"],       "damage":"1d8", "hands":2 }
+]

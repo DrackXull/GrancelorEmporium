@@ -1,0 +1,22 @@
+{
+  "id": "custodian_construct",
+  "name": "Custodian Construct",
+  "ac": 13,
+  "hp": 18,
+  "attack_bonus": 3,
+  "attacks_per_round": 1,
+  "damage_profile": [
+    [
+      1,
+      6,
+      1
+    ]
+  ],
+  "tags": [
+    "mop_grab",
+    "drops_key_A",
+    "immune_poison_psychic"
+  ],
+  "gs": 60,
+  "ruleset": "pf2e"
+}

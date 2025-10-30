@@ -1,0 +1,79 @@
+[
+  {
+    "id": "shatterglass_showcase",
+    "name": "Shatterglass Showcase",
+    "trigger": "item_lift",
+    "save": {
+      "type": "dex",
+      "dc": 14
+    },
+    "on_fail_dmg": [
+      [
+        3,
+        6,
+        0
+      ]
+    ],
+    "aura_tags": [
+      "bleed"
+    ],
+    "gs": 60
+  },
+  {
+    "id": "ledger_bomb",
+    "name": "Infernal Ledger Bomb",
+    "trigger": "open_book",
+    "save": {
+      "type": "wis",
+      "dc": 13
+    },
+    "on_fail_dmg": [
+      [
+        2,
+        8,
+        0
+      ]
+    ],
+    "gs": 70
+  },
+  {
+    "id": "fire_clause_burn",
+    "name": "Clause of Ownership — Flame Curtains",
+    "trigger": "puzzle_fail",
+    "save": {
+      "type": "dex",
+      "dc": 14
+    },
+    "on_fail_dmg": [
+      [
+        2,
+        6,
+        0
+      ]
+    ],
+    "aura_tags": [
+      "burn_inventory_escrow"
+    ],
+    "gs": 80
+  },
+  {
+    "id": "consent_field_shock",
+    "name": "Clause of Consent — Cease & Desist Shock",
+    "trigger": "act_without_pressing",
+    "save": {
+      "type": "wis",
+      "dc": 14
+    },
+    "on_fail_dmg": [
+      [
+        1,
+        4,
+        0
+      ]
+    ],
+    "aura_tags": [
+      "paralyze_on_fail_flavor"
+    ],
+    "gs": 60
+  }
+]

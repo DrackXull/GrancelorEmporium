@@ -1,0 +1,2260 @@
+[
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 8,
+          "con": 14,
+          "dex": 14,
+          "int": 10,
+          "str": 16,
+          "wis": 10
+        },
+        "ancestry_id": "human",
+        "armor_id": "chain_mail",
+        "background_id": "soldier",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "longsword"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Attack of Opportunity"
+      ],
+      "13": [
+        "Greater Weapon Specialization"
+      ],
+      "19": [
+        "Legendary Weapon Expertise"
+      ],
+      "5": [
+        "Weapon Mastery"
+      ],
+      "9": [
+        "Combat Flexibility"
+      ]
+    },
+    "hp_per_level": 10,
+    "id": "fighter",
+    "name": "Fighter",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "19": "L",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "str",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 12,
+          "dex": 14,
+          "int": 18,
+          "str": 8,
+          "wis": 12
+        },
+        "ancestry_id": "elf",
+        "armor_id": "studded_leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "dagger"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Arcane Thesis"
+      ],
+      "11": [
+        "Quick Preparation"
+      ],
+      "19": [
+        "Archwizard's Spellcraft"
+      ],
+      "5": [
+        "Signature Spells"
+      ]
+    },
+    "hp_per_level": 6,
+    "id": "wizard",
+    "name": "Wizard",
+    "pf2e_armor_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "int",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 12,
+          "dex": 18,
+          "int": 12,
+          "str": 10,
+          "wis": 10
+        },
+        "ancestry_id": "halfling",
+        "armor_id": "leather",
+        "background_id": "criminal",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "shortsword"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Sneak Attack",
+        "Surprise Attack"
+      ],
+      "13": [
+        "Vicious Debilitation"
+      ],
+      "19": [
+        "Master Strike"
+      ],
+      "5": [
+        "Debilitating Strike"
+      ],
+      "9": [
+        "Light Step"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "rogue",
+    "name": "Rogue",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "19": "L",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "dex",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Dex to Damage (finesse)"
+          ],
+          "9": [
+            "Elusive Step"
+          ]
+        },
+        "id": "thief",
+        "name": "Thief Racket"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Simple Weapons Sneak"
+          ],
+          "9": [
+            "Brutal Beating"
+          ]
+        },
+        "id": "ruffian",
+        "name": "Ruffian Racket"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Charismatic Tricks"
+          ],
+          "9": [
+            "Dastardly Deeds"
+          ]
+        },
+        "id": "scoundrel",
+        "name": "Scoundrel Racket"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 14,
+          "dex": 10,
+          "int": 10,
+          "str": 12,
+          "wis": 18
+        },
+        "ancestry_id": "dwarf",
+        "armor_id": "chain_mail",
+        "background_id": "acolyte",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "warhammer"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Doctrine Selection"
+      ],
+      "13": [
+        "Greater Weapon Specialization"
+      ],
+      "19": [
+        "Miracle Worker"
+      ],
+      "5": [
+        "Healing Hands"
+      ],
+      "9": [
+        "Emblazon Symbol"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "cleric",
+    "name": "Cleric",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "11": "M",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "primary_stat": "wis",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Heavier Armor Training"
+          ],
+          "3": [
+            "Favored Weapon Focus"
+          ]
+        },
+        "id": "warpriest",
+        "name": "Warpriest Doctrine"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Domain Breadth"
+          ],
+          "3": [
+            "Improved Casting"
+          ]
+        },
+        "id": "cloistered",
+        "name": "Cloistered Cleric Doctrine"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 8,
+          "con": 14,
+          "dex": 14,
+          "int": 8,
+          "str": 18,
+          "wis": 10
+        },
+        "ancestry_id": "human",
+        "armor_id": "hide",
+        "background_id": "soldier",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "greataxe"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Rage"
+      ],
+      "13": [
+        "Devastating Strikes"
+      ],
+      "19": [
+        "Mighty Rage"
+      ],
+      "5": [
+        "Brutality"
+      ],
+      "9": [
+        "Raging Brutality"
+      ]
+    },
+    "hp_per_level": 12,
+    "id": "barbarian",
+    "name": "Barbarian",
+    "pf2e_armor_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "19": "L",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "str",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Bestial Rage"
+          ],
+          "9": [
+            "Savage Critical"
+          ]
+        },
+        "id": "animal",
+        "name": "Animal Instinct"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Draconic Rage"
+          ],
+          "9": [
+            "Draconic Resistance"
+          ]
+        },
+        "id": "dragon",
+        "name": "Dragon Instinct"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Pure Rage"
+          ],
+          "9": [
+            "Relentless Rage"
+          ]
+        },
+        "id": "fury",
+        "name": "Fury Instinct"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Massive Weapons"
+          ],
+          "9": [
+            "Giant's Stature"
+          ]
+        },
+        "id": "giant",
+        "name": "Giant Instinct"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Ghost Hunter"
+          ],
+          "9": [
+            "Wraith's Call"
+          ]
+        },
+        "id": "spirit",
+        "name": "Spirit Instinct"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Wary of Magic"
+          ],
+          "9": [
+            "Defy Spell"
+          ]
+        },
+        "id": "superstition",
+        "name": "Superstition Instinct"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 8,
+          "con": 12,
+          "dex": 18,
+          "int": 10,
+          "str": 12,
+          "wis": 14
+        },
+        "ancestry_id": "human",
+        "armor_id": "leather",
+        "background_id": "soldier",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "longbow"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Hunt Prey"
+      ],
+      "13": [
+        "Impossible Flurry"
+      ],
+      "19": [
+        "Masterful Hunter"
+      ],
+      "5": [
+        "Twin Takedown"
+      ],
+      "9": [
+        "Nature's Edge"
+      ]
+    },
+    "hp_per_level": 10,
+    "id": "ranger",
+    "name": "Ranger",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "19": "L",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "dex",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Hunt Prey: Flurry"
+          ],
+          "7": [
+            "Running Reload Synergy"
+          ]
+        },
+        "id": "flurry",
+        "name": "Flurry Edge"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Hunt Prey: Precision"
+          ],
+          "7": [
+            "Deadly Aim Synergy"
+          ]
+        },
+        "id": "precision",
+        "name": "Precision Edge"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Hunt Prey: Outwit"
+          ],
+          "7": [
+            "Debilitating Distraction"
+          ]
+        },
+        "id": "outwit",
+        "name": "Outwit Edge"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 16,
+          "con": 14,
+          "dex": 10,
+          "int": 8,
+          "str": 16,
+          "wis": 12
+        },
+        "ancestry_id": "human",
+        "armor_id": "plate",
+        "background_id": "acolyte",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "longsword"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Deity & Cause",
+        "Retributive Strike"
+      ],
+      "13": [
+        "Weapon Specialization"
+      ],
+      "19": [
+        "Hero's Defiance"
+      ],
+      "5": [
+        "Divine Ally"
+      ],
+      "9": [
+        "Armor Expertise"
+      ]
+    },
+    "hp_per_level": 10,
+    "id": "champion",
+    "name": "Champion",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "11": "M",
+        "19": "L",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "cha",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Retributive Strike"
+          ],
+          "9": [
+            "Aura of Courage"
+          ]
+        },
+        "id": "paladin",
+        "name": "Paladin (LG)"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Glimpse of Redemption"
+          ],
+          "9": [
+            "Divine Grace (Improved)"
+          ]
+        },
+        "id": "redeemer",
+        "name": "Redeemer (NG)"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Liberating Step"
+          ],
+          "9": [
+            "Unimpeded Stride"
+          ]
+        },
+        "id": "liberator",
+        "name": "Liberator (CG)"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Selfish Shield"
+          ],
+          "9": [
+            "Unholy Grace"
+          ]
+        },
+        "id": "desecrator",
+        "name": "Desecrator (NE)"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Aggressive Retribution"
+          ],
+          "9": [
+            "Terrifying Resistance"
+          ]
+        },
+        "id": "tyrant",
+        "name": "Tyrant (LE)"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Desecrating Smite"
+          ],
+          "9": [
+            "Aura of Despair"
+          ]
+        },
+        "id": "antipaladin",
+        "name": "Antipaladin (CE)"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 12,
+          "dex": 14,
+          "int": 10,
+          "str": 10,
+          "wis": 18
+        },
+        "ancestry_id": "elf",
+        "armor_id": "hide",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "spear"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Anathema & Order"
+      ],
+      "13": [
+        "Primal Casting (Master)"
+      ],
+      "19": [
+        "Primal Casting (Legendary)"
+      ],
+      "5": [
+        "Wild Shape"
+      ],
+      "9": [
+        "Primal Casting (Expert)"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "druid",
+    "name": "Druid",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "wis",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Goodberry Focus"
+          ],
+          "9": [
+            "Plant Step"
+          ]
+        },
+        "id": "leaf",
+        "name": "Leaf Order"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Tempest Magic"
+          ],
+          "9": [
+            "Storm Born"
+          ]
+        },
+        "id": "storm",
+        "name": "Storm Order"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Wild Shape Emphasis"
+          ],
+          "9": [
+            "Ferocious Shape"
+          ]
+        },
+        "id": "wild",
+        "name": "Wild Order"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Water Shaping"
+          ],
+          "9": [
+            "Tidal Surge"
+          ]
+        },
+        "id": "wave",
+        "name": "Wave Order"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 18,
+          "con": 12,
+          "dex": 14,
+          "int": 10,
+          "str": 8,
+          "wis": 10
+        },
+        "ancestry_id": "human",
+        "armor_id": "studded_leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "dagger"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Bloodline",
+        "Spell Repertoire"
+      ],
+      "11": [
+        "Greater Bloodline"
+      ],
+      "19": [
+        "Bloodline Paragon"
+      ],
+      "5": [
+        "Signature Spells"
+      ]
+    },
+    "hp_per_level": 6,
+    "id": "sorcerer",
+    "name": "Sorcerer",
+    "pf2e_armor_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "cha",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Breath Spell"
+          ],
+          "9": [
+            "Wings"
+          ]
+        },
+        "id": "draconic",
+        "name": "Draconic Bloodline"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Fey Magic"
+          ],
+          "9": [
+            "Mirthful Reposition"
+          ]
+        },
+        "id": "fey",
+        "name": "Fey Bloodline"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Hellfire Spell"
+          ],
+          "9": [
+            "Diabolic Influence"
+          ]
+        },
+        "id": "infernal",
+        "name": "Infernal Bloodline"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 8,
+          "con": 12,
+          "dex": 18,
+          "int": 10,
+          "str": 12,
+          "wis": 14
+        },
+        "ancestry_id": "halfling",
+        "armor_id": "leather",
+        "background_id": "acolyte",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "shortsword"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Flurry of Blows",
+        "Ki"
+      ],
+      "13": [
+        "Timeless Body"
+      ],
+      "19": [
+        "Perfected Form"
+      ],
+      "5": [
+        "Incredible Movement"
+      ],
+      "9": [
+        "Metal Strikes"
+      ]
+    },
+    "hp_per_level": 10,
+    "id": "monk",
+    "name": "Monk",
+    "pf2e_armor_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "dex",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Mountain Stance"
+          ],
+          "9": [
+            "Adamantine Stance"
+          ]
+        },
+        "id": "mountain",
+        "name": "Mountain Stance"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Crane Stance"
+          ],
+          "9": [
+            "Graceful Mastery"
+          ]
+        },
+        "id": "crane",
+        "name": "Crane Style"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Dragon Stance"
+          ],
+          "9": [
+            "Draconic Ferocity"
+          ]
+        },
+        "id": "dragon",
+        "name": "Dragon Style"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 12,
+          "dex": 14,
+          "int": 18,
+          "str": 8,
+          "wis": 10
+        },
+        "ancestry_id": "dwarf",
+        "armor_id": "leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "dagger"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Alchemy",
+        "Research Field"
+      ],
+      "13": [
+        "Perpetual Potency"
+      ],
+      "19": [
+        "Perpetual Perfection"
+      ],
+      "5": [
+        "Perpetual Infusions"
+      ],
+      "9": [
+        "Alchemical Expertise"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "alchemist",
+    "name": "Alchemist",
+    "pf2e_armor_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "int",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 18,
+          "con": 12,
+          "dex": 14,
+          "int": 12,
+          "str": 8,
+          "wis": 10
+        },
+        "ancestry_id": "human",
+        "armor_id": "leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "rapier"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Composition Cantrips",
+        "Muse"
+      ],
+      "13": [
+        "Master Compositions"
+      ],
+      "19": [
+        "Fatal Performance"
+      ],
+      "5": [
+        "Inspire Heroics"
+      ],
+      "9": [
+        "Greater Compositions"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "bard",
+    "name": "Bard",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "cha",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Lingering Composition"
+          ],
+          "9": [
+            "Inspire Heroics Focus"
+          ]
+        },
+        "id": "maestro",
+        "name": "Maestro Muse"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Versatile Performance"
+          ],
+          "9": [
+            "Breadth of Knowledge"
+          ]
+        },
+        "id": "polymath",
+        "name": "Polymath Muse"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Esoteric Lore"
+          ],
+          "9": [
+            "Perfect Recall"
+          ]
+        },
+        "id": "enigma",
+        "name": "Enigma Muse"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 8,
+          "con": 12,
+          "dex": 16,
+          "int": 18,
+          "str": 10,
+          "wis": 12
+        },
+        "ancestry_id": "human",
+        "armor_id": "leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "rapier"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Devise a Stratagem",
+        "Methodology"
+      ],
+      "13": [
+        "Strategic Strike (Master)"
+      ],
+      "19": [
+        "Strategic Strike (Legendary)"
+      ],
+      "5": [
+        "Strategic Strike (Expert)"
+      ],
+      "9": [
+        "Clue In"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "investigator",
+    "name": "Investigator",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "int",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Compound Knowledge"
+          ],
+          "9": [
+            "Perpetual Potions"
+          ]
+        },
+        "id": "alchemical",
+        "name": "Alchemical Sciences"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Rational Eye"
+          ],
+          "9": [
+            "Unshakable Analysis"
+          ]
+        },
+        "id": "empiricism",
+        "name": "Empiricism"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Forensic Acumen"
+          ],
+          "9": [
+            "Battle Medicine Mastery"
+          ]
+        },
+        "id": "forensic",
+        "name": "Forensic Medicine"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 12,
+          "con": 12,
+          "dex": 18,
+          "int": 10,
+          "str": 10,
+          "wis": 10
+        },
+        "ancestry_id": "elf",
+        "armor_id": "leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "rapier"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Panache",
+        "Swaggering Initiative"
+      ],
+      "13": [
+        "Masterful Finisher"
+      ],
+      "19": [
+        "Incredible Luck"
+      ],
+      "5": [
+        "Precise Finisher"
+      ],
+      "9": [
+        "Derring-Do"
+      ]
+    },
+    "hp_per_level": 10,
+    "id": "swashbuckler",
+    "name": "Swashbuckler",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "19": "L",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "dex",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Demoralize to Gain Panache"
+          ],
+          "9": [
+            "Impressive Finisher"
+          ]
+        },
+        "id": "braggart",
+        "name": "Braggart"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Feint to Gain Panache"
+          ],
+          "9": [
+            "Riposte Mastery"
+          ]
+        },
+        "id": "fencer",
+        "name": "Fencer"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Grapple/Shove Panache"
+          ],
+          "9": [
+            "Acrobatic Finisher"
+          ]
+        },
+        "id": "gymnast",
+        "name": "Gymnast"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Banter to Panache"
+          ],
+          "9": [
+            "Verbal Takedown"
+          ]
+        },
+        "id": "wit",
+        "name": "Wit"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 18,
+          "con": 12,
+          "dex": 12,
+          "int": 10,
+          "str": 8,
+          "wis": 12
+        },
+        "ancestry_id": "human",
+        "armor_id": "chain_mail",
+        "background_id": "acolyte",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "mace"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Mystery",
+        "Divine Spellcasting"
+      ],
+      "13": [
+        "Greater Revelation"
+      ],
+      "19": [
+        "Manifestation"
+      ],
+      "5": [
+        "Moderate Curse"
+      ],
+      "9": [
+        "Severe Curse"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "oracle",
+    "name": "Oracle",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "cha",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Ancestral Touch"
+          ],
+          "9": [
+            "Ancestral Cooperation"
+          ]
+        },
+        "id": "ancestors",
+        "name": "Ancestors Mystery"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Battlefield Clarity"
+          ],
+          "9": [
+            "Armor of Bones"
+          ]
+        },
+        "id": "battle",
+        "name": "Battle Mystery"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Fire Ray"
+          ],
+          "9": [
+            "Cremate the Fallen"
+          ]
+        },
+        "id": "flame",
+        "name": "Flame Mystery"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Life Link"
+          ],
+          "9": [
+            "Overflowing Life"
+          ]
+        },
+        "id": "life",
+        "name": "Life Mystery"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 12,
+          "dex": 14,
+          "int": 18,
+          "str": 8,
+          "wis": 12
+        },
+        "ancestry_id": "human",
+        "armor_id": "studded_leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "dagger"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Patron",
+        "Familiar"
+      ],
+      "13": [
+        "Major Hexes"
+      ],
+      "19": [
+        "Eldritch Hexes"
+      ],
+      "5": [
+        "Coven Casting"
+      ],
+      "9": [
+        "Widened Repertoire"
+      ]
+    },
+    "hp_per_level": 6,
+    "id": "witch",
+    "name": "Witch",
+    "pf2e_armor_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "int",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Frost Hex"
+          ],
+          "9": [
+            "Frozen Grasp"
+          ]
+        },
+        "id": "winter",
+        "name": "Winter Patron"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Twist Fate"
+          ],
+          "9": [
+            "Threads of Destiny"
+          ]
+        },
+        "id": "fate",
+        "name": "Fate Patron"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Shadow Familiar"
+          ],
+          "9": [
+            "Umbral Shroud"
+          ]
+        },
+        "id": "night",
+        "name": "Night Patron"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 8,
+          "con": 12,
+          "dex": 16,
+          "int": 18,
+          "str": 14,
+          "wis": 10
+        },
+        "ancestry_id": "human",
+        "armor_id": "studded_leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "rapier"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Spellstrike",
+        "Arcane Cascade"
+      ],
+      "13": [
+        "Master Spellstrike"
+      ],
+      "19": [
+        "Unlimited Spellstrike"
+      ],
+      "5": [
+        "Expansive Spellstrike"
+      ],
+      "9": [
+        "Spell Parry"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "magus",
+    "name": "Magus",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "int",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Ranged Spellstrike"
+          ],
+          "9": [
+            "Meteoric Shot"
+          ]
+        },
+        "id": "starlit_span",
+        "name": "Starlit Span"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Mobile Spellstrike"
+          ],
+          "9": [
+            "Shadow Mirage"
+          ]
+        },
+        "id": "laughing_shadow",
+        "name": "Laughing Shadow"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Heavy Spellstrike"
+          ],
+          "9": [
+            "Implacable Advance"
+          ]
+        },
+        "id": "inexorable_iron",
+        "name": "Inexorable Iron"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Staff Spellstrike"
+          ],
+          "9": [
+            "Arboreal Reach"
+          ]
+        },
+        "id": "twisting_tree",
+        "name": "Twisting Tree"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 18,
+          "con": 12,
+          "dex": 14,
+          "int": 10,
+          "str": 10,
+          "wis": 10
+        },
+        "ancestry_id": "elf",
+        "armor_id": "leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "dagger"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Eidolon",
+        "Act Together"
+      ],
+      "13": [
+        "Greater Link"
+      ],
+      "19": [
+        "Eidolon Apotheosis"
+      ],
+      "5": [
+        "Reinforce Eidolon"
+      ],
+      "9": [
+        "Twin Eidolon"
+      ]
+    },
+    "hp_per_level": 10,
+    "id": "summoner",
+    "name": "Summoner",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "cha",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Radiant Ally"
+          ],
+          "9": [
+            "Blazing Halo (Aid)"
+          ]
+        },
+        "id": "angelic",
+        "name": "Angelic Eidolon"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Ruinous Claws"
+          ],
+          "9": [
+            "Hellish Hide"
+          ]
+        },
+        "id": "demonic",
+        "name": "Demonic Eidolon"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Drake Breath"
+          ],
+          "9": [
+            "Scaled Might"
+          ]
+        },
+        "id": "draconic",
+        "name": "Draconic Eidolon"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Ferocious Pounce"
+          ],
+          "9": [
+            "Bestial Fortitude"
+          ]
+        },
+        "id": "beast",
+        "name": "Beast Eidolon"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Clockwork Core"
+          ],
+          "9": [
+            "Reinforced Frame"
+          ]
+        },
+        "id": "construct",
+        "name": "Construct Eidolon"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 8,
+          "con": 12,
+          "dex": 16,
+          "int": 18,
+          "str": 12,
+          "wis": 10
+        },
+        "ancestry_id": "dwarf",
+        "armor_id": "breastplate",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "warhammer"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Innovation",
+        "Overdrive"
+      ],
+      "13": [
+        "Megavolt"
+      ],
+      "19": [
+        "True Innovation"
+      ],
+      "5": [
+        "Explosive Leap"
+      ],
+      "9": [
+        "Incredible Innovation"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "inventor",
+    "name": "Inventor",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "int",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Customized Armor"
+          ],
+          "9": [
+            "Adamant Plating"
+          ]
+        },
+        "id": "armor",
+        "name": "Armor Innovation"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Prototype Weapon"
+          ],
+          "9": [
+            "Overclocked Strikes"
+          ]
+        },
+        "id": "weapon",
+        "name": "Weapon Innovation"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Construct Companion"
+          ],
+          "9": [
+            "Enhanced Actuators"
+          ]
+        },
+        "id": "construct",
+        "name": "Construct Innovation"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 12,
+          "dex": 18,
+          "int": 10,
+          "str": 10,
+          "wis": 12
+        },
+        "ancestry_id": "human",
+        "armor_id": "leather",
+        "background_id": "soldier",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "crossbow"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Way of the Gun",
+        "Reloading Strike"
+      ],
+      "13": [
+        "Devastating Shot"
+      ],
+      "19": [
+        "Perfect Readiness"
+      ],
+      "5": [
+        "Pistolero's Retort"
+      ],
+      "9": [
+        "Running Reload"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "gunslinger",
+    "name": "Gunslinger",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "19": "L",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "dex",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Gun & Blade"
+          ],
+          "9": [
+            "Fluid Advance"
+          ]
+        },
+        "id": "drifter",
+        "name": "Way of the Drifter"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Rebounding Shots"
+          ],
+          "9": [
+            "Pistol Mastery"
+          ]
+        },
+        "id": "pistolero",
+        "name": "Way of the Pistolero"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Deadly Aim"
+          ],
+          "9": [
+            "One Shot, One Kill"
+          ]
+        },
+        "id": "sniper",
+        "name": "Way of the Sniper"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Shield and Shot"
+          ],
+          "9": [
+            "Bulwark Volley"
+          ]
+        },
+        "id": "vanguard",
+        "name": "Way of the Vanguard"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 12,
+          "dex": 18,
+          "int": 10,
+          "str": 10,
+          "wis": 12
+        },
+        "ancestry_id": "human",
+        "armor_id": "leather",
+        "background_id": "soldier",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "crossbow"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Way of the Gun",
+        "Reloading Strike"
+      ],
+      "13": [
+        "Devastating Shot"
+      ],
+      "19": [
+        "Perfect Readiness"
+      ],
+      "5": [
+        "Pistolero's Retort"
+      ],
+      "9": [
+        "Running Reload"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "gunslinger",
+    "name": "Gunslinger",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "19": "L",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "dex",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 18,
+          "con": 12,
+          "dex": 14,
+          "int": 10,
+          "str": 12,
+          "wis": 10
+        },
+        "ancestry_id": "human",
+        "armor_id": "breastplate",
+        "background_id": "acolyte",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "warhammer"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Esoteric Lore",
+        "Implement"
+      ],
+      "13": [
+        "Implement's Flight"
+      ],
+      "19": [
+        "Paragon Implement"
+      ],
+      "5": [
+        "Divine Force"
+      ],
+      "9": [
+        "Greater Implement"
+      ]
+    },
+    "hp_per_level": 10,
+    "id": "thaumaturge",
+    "name": "Thaumaturge",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {
+        "13": "M",
+        "5": "E"
+      },
+      "default": "T"
+    },
+    "primary_stat": "cha",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Protective Ward"
+          ],
+          "9": [
+            "Greater Ward"
+          ]
+        },
+        "id": "amulet",
+        "name": "Amulet Implement"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Implement's Interruption"
+          ],
+          "9": [
+            "Disrupting Strikes"
+          ]
+        },
+        "id": "weapon",
+        "name": "Weapon Implement"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Esoteric Antiphony"
+          ],
+          "9": [
+            "Infinite Archive"
+          ]
+        },
+        "id": "tome",
+        "name": "Tome Implement"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 8,
+          "con": 18,
+          "dex": 14,
+          "int": 10,
+          "str": 10,
+          "wis": 12
+        },
+        "ancestry_id": "elf",
+        "armor_id": "hide",
+        "background_id": "outlander",
+        "feat_ids": [],
+        "loadouts": [],
+        "weapon_id": "spear"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Elemental Gate",
+        "Kinetic Aura"
+      ],
+      "13": [
+        "Impulse Mastery"
+      ],
+      "19": [
+        "Gate Perfection"
+      ],
+      "5": [
+        "Expanded Elements"
+      ],
+      "9": [
+        "Impulse Expertise"
+      ]
+    },
+    "hp_per_level": 8,
+    "id": "kineticist",
+    "name": "Kineticist",
+    "pf2e_armor_tiers": {
+      "by_level": {
+        "13": "M"
+      },
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "con",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1,
+    "subclasses": [
+      {
+        "features_by_level": {
+          "1": [
+            "Air Impulse"
+          ],
+          "9": [
+            "Cyclone Burst"
+          ]
+        },
+        "id": "air",
+        "name": "Air Gate"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Earth Impulse"
+          ],
+          "9": [
+            "Tectonic Crash"
+          ]
+        },
+        "id": "earth",
+        "name": "Earth Gate"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Fire Impulse"
+          ],
+          "9": [
+            "Inferno Wave"
+          ]
+        },
+        "id": "fire",
+        "name": "Fire Gate"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Water Impulse"
+          ],
+          "9": [
+            "Tidal Crush"
+          ]
+        },
+        "id": "water",
+        "name": "Water Gate"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Wood Impulse"
+          ],
+          "9": [
+            "Thicket Surge"
+          ]
+        },
+        "id": "wood",
+        "name": "Wood Gate"
+      },
+      {
+        "features_by_level": {
+          "1": [
+            "Metal Impulse"
+          ],
+          "9": [
+            "Iron Tempest"
+          ]
+        },
+        "id": "metal",
+        "name": "Metal Gate"
+      }
+    ]
+  },
+  {
+    "defaults": {
+      "pf2e": {
+        "ability_scores": {
+          "cha": 10,
+          "con": 12,
+          "dex": 14,
+          "int": 18,
+          "str": 8,
+          "wis": 12
+        },
+        "ancestry_id": "human",
+        "armor_id": "studded_leather",
+        "background_id": "scholar",
+        "feat_ids": [],
+        "loadouts": [],
+        "subclasses": [
+          {
+            "features_by_level": {
+              "1": [
+                "Subtle Psychic"
+              ],
+              "9": [
+                "Quieted Echoes"
+              ]
+            },
+            "id": "silent_whisper",
+            "name": "Silent Whisper"
+          },
+          {
+            "features_by_level": {
+              "1": [
+                "Shaping Fantasies"
+              ],
+              "9": [
+                "Deepened Dream"
+              ]
+            },
+            "id": "tangible_dream",
+            "name": "Tangible Dream"
+          },
+          {
+            "features_by_level": {
+              "1": [
+                "Kinetic Push"
+              ],
+              "9": [
+                "Telekinetic Mastery"
+              ]
+            },
+            "id": "distant_grasp",
+            "name": "Distant Grasp"
+          }
+        ],
+        "weapon_id": "dagger"
+      }
+    },
+    "features_by_level": {
+      "1": [
+        "Conscious Mind",
+        "Unleash Psyche"
+      ],
+      "13": [
+        "Greater Psyche"
+      ],
+      "19": [
+        "Perfected Psyche"
+      ],
+      "5": [
+        "Warp Space"
+      ],
+      "9": [
+        "Mental Overflow"
+      ]
+    },
+    "hp_per_level": 6,
+    "id": "psychic",
+    "name": "Psychic",
+    "pf2e_armor_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "pf2e_weapon_tiers": {
+      "by_level": {},
+      "default": "T"
+    },
+    "primary_stat": "int",
+    "ruleset": "pf2e",
+    "subclass_unlock": 1
+  }
+]

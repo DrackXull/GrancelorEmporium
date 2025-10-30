@@ -1,0 +1,12 @@
+[
+  { "id":"rope_hempen_50ft", "ruleset":"pf2e", "name":"Rope, Hempen (50 ft)", "type":"adventuring_gear", "bulk":"L", "price_sp":10, "notes":"Climbing or binding; supports 300 lb." },
+  { "id":"torch", "ruleset":"pf2e", "name":"Torch", "type":"adventuring_gear", "bulk":"L", "price_cp":1, "notes":"Burns 1 hour; bright 20 ft, dim 20 ft." },
+  { "id":"rations_1day", "ruleset":"pf2e", "name":"Rations (1 day)", "type":"adventuring_gear", "bulk":"L", "price_sp":3, "notes":"Preserved food for one day." },
+  { "id":"waterskin", "ruleset":"pf2e", "name":"Waterskin", "type":"adventuring_gear", "bulk":"L", "price_cp":5, "notes":"Holds one day of water." },
+  { "id":"healers_tools", "ruleset":"pf2e", "name":"Healer's Tools", "type":"tool", "bulk":"1", "price_gp":5, "notes":"Required for Treat Wounds and Medicine tasks." },
+  { "id":"repair_kit", "ruleset":"pf2e", "name":"Repair Kit", "type":"tool", "bulk":"2", "price_gp":2, "notes":"Required for Repair action with Crafting." },
+  { "id":"potion_healing_minor", "ruleset":"pf2e", "name":"Healing Potion (Minor)", "type":"consumable", "rarity":"common", "bulk":"L", "price_gp":4, "effects":"Heals 1d8 HP (or 1d8+8 if 4th+?—scale later)" },
+  { "id":"antidote_minor", "ruleset":"pf2e", "name":"Antidote (Minor)", "type":"consumable", "rarity":"common", "bulk":"L", "price_gp":3, "effects":"+1 item bonus to Fort saves vs poison for 6 hours." },
+  { "id":"antiplague_minor", "ruleset":"pf2e", "name":"Antiplague (Minor)", "type":"consumable", "rarity":"common", "bulk":"L", "price_gp":3, "effects":"+1 item bonus to Fort saves vs disease for 24 hours." },
+  { "id":"lantern_hooded", "ruleset":"pf2e", "name":"Lantern, Hooded", "type":"adventuring_gear", "bulk":"L", "price_gp":7, "notes":"Burns oil for 6 hours per flask; hood to dim light." }
+]

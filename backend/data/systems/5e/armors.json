@@ -1,0 +1,6 @@
+[
+  { "id":"leather",    "ruleset":"5e", "name":"Leather",    "category":"light",  "ac_base":11, "dex_cap": null },
+  { "id":"chain_mail", "ruleset":"5e", "name":"Chain Mail", "category":"heavy",  "ac_base":16, "dex_cap": 0 },
+  { "id":"plate",      "ruleset":"5e", "name":"Plate",      "category":"heavy",  "ac_base":18, "dex_cap": 0 },
+  { "id":"shield",     "ruleset":"5e", "name":"Shield",     "category":"shield", "ac_base": 2, "dex_cap": null }
+]

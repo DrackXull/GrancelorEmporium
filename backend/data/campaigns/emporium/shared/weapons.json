@@ -1,0 +1,8 @@
+{
+  "weapons": [
+    {"id":"longsword","name":"Longsword","dice":[[1,8,0]],"adds_mod":true},
+    {"id":"dagger","name":"Dagger","dice":[[1,6,0]],"adds_mod":true},
+    {"id":"staff","name":"Quarterstaff","dice":[[1,6,0]],"adds_mod":true},
+    {"id":"arcane_bolt","name":"Arcane Bolt","dice":[[1,10,0]],"adds_mod":false}
+  ]
+}

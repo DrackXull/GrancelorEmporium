@@ -1,0 +1,28 @@
+2025-10-17T02:09:30Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2025-10-17T02:09:30Z INF Requesting new quick Tunnel on trycloudflare.com...
+2025-10-17T02:09:35Z INF +--------------------------------------------------------------------------------------------+
+2025-10-17T02:09:35Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2025-10-17T02:09:35Z INF |  https://subscribe-workshop-unsubscribe-love.trycloudflare.com                             |
+2025-10-17T02:09:35Z INF +--------------------------------------------------------------------------------------------+
+2025-10-17T02:09:35Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2025-10-17T02:09:35Z INF Version 2025.10.0 (Checksum d334c30ab628d4698455acadae5bdb3e33705a5f8dade510ce5ac7fc75d327fe)
+2025-10-17T02:09:35Z INF GOOS: linux, GOVersion: go1.24.4, GoArch: amd64
+2025-10-17T02:09:35Z INF Settings: map[ha-connections:1 protocol:quic url:http://127.0.0.1:8000]
+2025-10-17T02:09:35Z INF Autoupdate frequency is set autoupdateFreq=86400000
+2025-10-17T02:09:45Z ERR Failed to fetch features, default to disable error="lookup cfd-features.argotunnel.com on 10.255.255.254:53: dial udp 10.255.255.254:53: i/o timeout"
+2025-10-17T02:09:45Z INF Generated Connector ID: 3643bf31-7237-40d2-8fcd-f5858a4bbf61
+2025-10-17T02:10:06Z WRN Unable to lookup protocol percentage.
+2025-10-17T02:10:06Z INF Initial protocol quic
+2025-10-17T02:10:06Z INF ICMP proxy will use 172.21.11.235 as source for IPv4
+2025-10-17T02:10:06Z INF ICMP proxy will use fe80::215:5dff:fe13:fd61 in zone eth0 as source for IPv6
+2025-10-17T02:10:06Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="Group ID 1000 is not between ping group 1 to 0"
+2025-10-17T02:10:06Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: Group ID 1000 is not between ping group 1 to 0 nor ICMPv6 proxy: socket: permission denied"
+2025-10-17T02:10:06Z ERR Cannot determine default origin certificate path. No file cert.pem in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]. You need to specify the origin certificate path by specifying the origincert option in the configuration file, or set TUNNEL_ORIGIN_CERT environment variable originCertPath=
+2025-10-17T02:10:06Z INF ICMP proxy will use 172.21.11.235 as source for IPv4
+2025-10-17T02:10:06Z INF ICMP proxy will use fe80::215:5dff:fe13:fd61 in zone eth0 as source for IPv6
+2025-10-17T02:10:06Z INF Starting metrics server on 127.0.0.1:20241/metrics
+2025-10-17T02:10:06Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.192.47
+2025/10/16 22:10:06 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
+2025-10-17T02:10:07Z INF Registered tunnel connection connIndex=0 connection=d860b013-41b2-4920-8f32-e3a44d4a06f6 event=0 ip=198.41.192.47 location=ewr05 protocol=quic
+2025-10-17T03:11:12Z ERR Failed to refresh feature selector error="lookup cfd-features.argotunnel.com on 10.255.255.254:53: dial udp 10.255.255.254:53: i/o timeout"
+2025-10-17T04:12:23Z ERR Failed to refresh feature selector error="lookup cfd-features.argotunnel.com on 10.255.255.254:53: dial udp 10.255.255.254:53: i/o timeout"

@@ -1,0 +1,48 @@
+[
+  {
+    "id":"acolyte",
+    "ruleset":"pf2e",
+    "name":"Acolyte",
+    "boosts":["wis","cha"],
+    "skills":["religion"],
+    "feat_id":"student_of_the_canon",
+    "description":"You served your faith and studied divine texts."
+  },
+  {
+    "id":"soldier",
+    "ruleset":"pf2e",
+    "name":"Soldier",
+    "boosts":["str","con"],
+    "skills":["athletics"],
+    "feat_id":"intimidating_glare",
+    "description":"You trained and fought as part of a disciplined army."
+  },
+  {
+    "id":"criminal",
+    "ruleset":"pf2e",
+    "name":"Criminal",
+    "boosts":["dex","int"],
+    "skills":["stealth"],
+    "feat_id":"streetwise",
+    "description":"You lived a life of crime and learned the networks of the underworld."
+  },
+  {
+    "id":"scholar",
+    "ruleset":"pf2e",
+    "name":"Scholar",
+    "boosts":["int","wis"],
+    "skills":["lore"],
+    "feat_id":"assurance_lore",
+    "description":"You spent years pursuing academic knowledge."
+  },
+  {
+  "id":"outlander",
+  "ruleset":"pf2e",
+  "name":"Outlander",
+  "boosts":["str","wis"],
+  "skills":["survival"],
+  "feat_id":"assurance_lore",
+  "description":"You grew up in the wilds, at home far from settlements."
+}
+
+]

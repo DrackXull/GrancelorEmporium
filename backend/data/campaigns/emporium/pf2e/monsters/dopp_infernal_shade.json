@@ -1,0 +1,26 @@
+{
+  "id": "dopp_infernal_shade",
+  "name": "Doppelganger – Infernal Shade",
+  "ac": 13,
+  "hp": 22,
+  "attack_bonus": 4,
+  "attacks_per_round": 1,
+  "damage_profile": [
+    [
+      1,
+      8,
+      2
+    ],
+    [
+      1,
+      4,
+      0
+    ]
+  ],
+  "tags": [
+    "fire_immune",
+    "burning_ground"
+  ],
+  "gs": 90,
+  "ruleset": "pf2e"
+}

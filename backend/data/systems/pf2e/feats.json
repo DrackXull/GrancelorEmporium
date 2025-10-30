@@ -1,0 +1,14 @@
+[
+  { "id":"power_attack", "ruleset":"pf2e", "name":"Power Attack", "level":1, "type":"fighter", "traits":["attack","open"], "description":"Make a single Strike that deals extra damage if it hits." },
+  { "id":"shield_block", "ruleset":"pf2e", "name":"Shield Block", "level":1, "type":"general", "traits":["reaction"], "description":"Raise a shield to block damage with hardness value." },
+  { "id":"intimidating_glare", "ruleset":"pf2e", "name":"Intimidating Glare", "level":1, "type":"skill", "traits":["auditory","emotion","fear"], "description":"Demoralize without sharing a language." },
+  { "id":"assurance_lore", "ruleset":"pf2e", "name":"Assurance (Lore)", "level":1, "type":"skill", "traits":[], "description":"Take 10 + proficiency on a chosen skill without rolling." },
+  { "id":"toughness", "ruleset":"pf2e", "name":"Toughness", "level":1, "type":"general", "traits":[], "description":"Gain extra HP and reduced dying condition threshold." },
+  { "id":"fleet", "ruleset":"pf2e", "name":"Fleet", "level":1, "type":"general", "traits":[], "description":"Increase Speed by 5 feet." },
+  { "id":"diehard", "ruleset":"pf2e", "name":"Diehard", "level":1, "type":"general", "traits":[], "description":"You die at dying 5 instead of dying 4." },
+  { "id":"student_of_the_canon", "ruleset":"pf2e", "name":"Student of the Canon", "level":1, "type":"background", "traits":[], "description":"You studied holy texts and the practices of your faith." },
+  { "id":"streetwise", "ruleset":"pf2e", "name":"Streetwise", "level":1, "type":"background", "traits":[], "description":"Use Society to Gather Information about criminal underworld." },
+  { "id":"shield_bash", "ruleset":"pf2e", "name":"Shield Bash", "level":1, "type":"fighter", "traits":["attack"], "description":"Use your shield offensively in combat." },
+  { "id":"battle_medicine", "ruleset":"pf2e", "name":"Battle Medicine", "level":1, "type":"skill", "traits":["healing","manipulate"], "description":"Heal an ally in combat with Medicine skill." },
+  { "id":"combat_reflexes", "ruleset":"pf2e", "name":"Combat Reflexes", "level":2, "type":"fighter", "traits":[], "description":"Make multiple reactions for attacks of opportunity each round." }
+]

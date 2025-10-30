@@ -1,0 +1,12 @@
+[
+  { "id":"acid_splash", "ruleset":"pf2e", "name":"Acid Splash", "level":0, "school":"evocation", "traits":["acid","attack","cantrip"], "range":"30_ft", "duration":"instant", "description":"A small orb of acid splashes a creature, dealing acid damage." },
+  { "id":"detect_magic", "ruleset":"pf2e", "name":"Detect Magic", "level":0, "school":"divination", "traits":["cantrip","concentrate"], "range":"30_ft", "duration":"sustained", "description":"Sense the presence of magic in an area." },
+  { "id":"divine_lance", "ruleset":"pf2e", "name":"Divine Lance", "level":0, "school":"evocation", "traits":["attack","alignment","cantrip"], "range":"30_ft", "duration":"instant", "description":"Strike a foe with your deity’s alignment energy." },
+  { "id":"electric_arc", "ruleset":"pf2e", "name":"Electric Arc", "level":0, "school":"evocation", "traits":["attack","electricity","cantrip"], "range":"30_ft", "duration":"instant", "description":"Discharge electricity that arcs between two targets." },
+  { "id":"heal", "ruleset":"pf2e", "name":"Heal", "level":1, "school":"necromancy", "traits":["healing","positive"], "range":"touch_or_30ft", "duration":"instant", "description":"Restore Hit Points or damage undead." },
+  { "id":"magic_missile", "ruleset":"pf2e", "name":"Magic Missile", "level":1, "school":"evocation", "traits":["force"], "range":"120_ft", "duration":"instant", "description":"Fire one or more darts of magical force that automatically hit." },
+  { "id":"fear", "ruleset":"pf2e", "name":"Fear", "level":1, "school":"enchantment", "traits":["emotion","fear","mental"], "range":"30_ft", "duration":"1_minute", "description":"Instill fear, giving frightened condition." },
+  { "id":"bless", "ruleset":"pf2e", "name":"Bless", "level":1, "school":"enchantment", "traits":["aura","concentrate"], "range":"emanation_5ft", "duration":"sustained", "description":"Allies gain +1 status bonus to attacks in the aura." },
+  { "id":"fireball", "ruleset":"pf2e", "name":"Fireball", "level":3, "school":"evocation", "traits":["attack","fire"], "range":"500_ft", "duration":"instant", "description":"A burst of flame explodes, dealing fire damage in a 20-ft radius." },
+  { "id":"haste", "ruleset":"pf2e", "name":"Haste", "level":3, "school":"transmutation", "traits":["transmutation"], "range":"30_ft", "duration":"1_minute", "description":"Target gains an extra action each turn for Stride or Strike." }
+]

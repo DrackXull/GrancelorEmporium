@@ -1,248 +1,128 @@
-import { useEffect, useMemo, useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
+// frontend/src/components/MonteCarloPanel.jsx
+import React, { useMemo, useState } from "react";
+import api from "../utils/api";
+import { exportEncounterCsv } from "../utils/export";
+ import {
+   ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid,
+ } from "recharts";
 
-const API_BASE = (import.meta.env.VITE_API_BASE || "http://localhost:8000");
-const API = API_BASE.replace(/\/$/, "") + "/api";
+const A = (v) => (Array.isArray(v) ? v : []);
 
-export default function MonteCarloPanel() {
-  const [types, setTypes] = useState([]);
-  const [form, setForm] = useState({
-    runs: 100000,
-    baseRoll: "1d8+3",
-    damageType: "fire",
-    resistMultiplier: 1.0,
-    critChance: 0.05,
-    critMult: 1.5,
-    enableVariance: false,
-    varianceRange: 0.03,
-    seed: 42,
-    // Histogram extras
-    histProfileText: "[[1,8,3]]",
-    histBinSize: 1
-  });
-  const [standard, setStandard] = useState(null);
-  const [single, setSingle] = useState(null);
-  const [hist, setHist] = useState(null);
-  const [loading, setLoading] = useState(false);
+export default function MonteCarloPanel({
+  party,
+  partyCustom = [],
+  encounterId,
+  trials = 1000,
+  initiative = "random",
+  strategy = "focus_lowest",
+  trapIds = [],
+  ignoreRooms = false,
+}) {
+  const [busy, setBusy] = useState(false);
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState("");
 
-  useEffect(() => {
-    fetch(`${API}/damage/types`)
-      .then(r => r.json())
-      .then(d => setTypes(d.damageTypes || []))
-      .catch(() => setTypes([]));
-  }, []);
+  function roundsSeries(hist) {
+    if (!hist) return [];
+    return Object.keys(hist).map(k => ({ round: Number(k), count: hist[k] })).sort((a,b)=>a.round-b.round);
+  }
 
-  const onChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setForm(prev => ({
-      ...prev,
-      [name]:
-        type === "checkbox" ? checked :
-        (name === "runs" || name === "seed" || name === "histBinSize")
-          ? parseInt(value || 0, 10)
-          : (name === "resistMultiplier" || name === "critChance" || name === "critMult" || name === "varianceRange")
-            ? parseFloat(value || 0)
-            : value
-    }));
-  };
-
-  const runStandard = async () => {
-    setLoading(true);
+  async function run() {
+    setBusy(true);
+    setError("");
+    setResult(null);
     try {
-      const res = await fetch(`${API}/damage/montecarlo/standard`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          runs: form.runs,
-          baseRoll: form.baseRoll,
-          damageType: form.damageType,
-          critChance: form.critChance,
-          critMult: form.critMult,
-          enableVariance: form.enableVariance,
-          varianceRange: form.varianceRange,
-          seed: form.seed
-        })
-      });
-      setStandard(await res.json());
+      const body = {
+        encounter_id: encounterId,
+        trap_ids: trapIds,
+        trials,
+        initiative,
+        strategy,
+        ignore_room_effects: !!ignoreRooms,
+        party,
+        party_custom: partyCustom,
+      };
+      const data = await api.runSim(body);
+      setResult(data);
+    } catch (e) {
+      setError(e.__tpka_message || e.message);
     } finally {
-      setLoading(false);
+      setBusy(false);
     }
-  };
+  }
 
-  const runSingle = async () => {
-    setLoading(true);
-    try {
-      const res = await fetch(`${API}/damage/montecarlo`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          runs: form.runs,
-          baseRoll: form.baseRoll,
-          damageType: form.damageType,
-          resistMultiplier: form.resistMultiplier,
-          critChance: form.critChance,
-          critMult: form.critMult,
-          enableVariance: form.enableVariance,
-          varianceRange: form.varianceRange,
-          seed: form.seed
-        })
-      });
-      setSingle(await res.json());
-    } finally {
-      setLoading(false);
-    }
-  };
+  function exportCsv() {
+    const sum = {
+      encounter_id: encounterId,
+      trials,
+      initiative,
+      strategy,
+      win_rate: result?.win_rate ?? "",
+      avg_damage: result?.avg_damage ?? "",
+    };
+    exportEncounterCsv("tpka_encounter.csv", sum, result?.hist_rounds || {});
+  }
 
-  const runHistogram = async () => {
-    setLoading(true);
-    try {
-      let profile;
-      try {
-        profile = JSON.parse(form.histProfileText);
-      } catch {
-        alert("Histogram profile must be valid JSON like [[1,8,3]]");
-        return;
-      }
-      const res = await fetch(`${API}/damage/montecarlo/hist`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          runs: form.runs,
-          profile,
-          damageType: form.damageType,
-          resistMultiplier: form.resistMultiplier,
-          critChance: form.critChance,
-          critMult: form.critMult,
-          enableVariance: form.enableVariance,
-          varianceRange: form.varianceRange,
-          seed: form.seed,
-          binSize: form.histBinSize
-        })
-      });
-      setHist(await res.json());
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const histData = useMemo(() => {
-    if (!hist?.histogram) return [];
-    return Object.entries(hist.histogram).map(([bucket, count]) => ({ bucket, count }));
-  }, [hist]);
+  const histSeries = useMemo(() => roundsSeries(result?.hist_rounds), [result]);
 
   return (
-    <div className="p-4 max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Monte Carlo Damage Tools</h2>
+    <section style={{ border:"1px solid rgba(255,255,255,0.1)", borderRadius:12, padding:16 }}>
+      <header style={{ fontWeight:600, marginBottom:8 }}>Monte Carlo Encounter</header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <label className="flex flex-col">
-          <span className="text-sm text-gray-400">Base Roll (for Single/Standard)</span>
-          <input name="baseRoll" value={form.baseRoll} onChange={onChange} className="border p-2 rounded bg-transparent" />
-        </label>
-
-        <label className="flex flex-col">
-          <span className="text-sm text-gray-400">Damage Type</span>
-          <select name="damageType" value={form.damageType} onChange={onChange} className="border p-2 rounded bg-transparent">
-            {types.map(t => <option key={t} value={t}>{t}</option>)}
-          </select>
-        </label>
-
-        <label className="flex flex-col">
-          <span className="text-sm text-gray-400">Runs</span>
-          <input name="runs" type="number" min={1000} step={1000} value={form.runs} onChange={onChange} className="border p-2 rounded bg-transparent" />
-        </label>
-
-        <label className="flex flex-col">
-          <span className="text-sm text-gray-400">Resist Multiplier</span>
-          <input name="resistMultiplier" type="number" step="0.1" value={form.resistMultiplier} onChange={onChange} className="border p-2 rounded bg-transparent" />
-        </label>
-
-        <label className="flex flex-col">
-          <span className="text-sm text-gray-400">Crit Chance</span>
-          <input name="critChance" type="number" step="0.01" value={form.critChance} onChange={onChange} className="border p-2 rounded bg-transparent" />
-        </label>
-
-        <label className="flex flex-col">
-          <span className="text-sm text-gray-400">Crit Multiplier</span>
-          <input name="critMult" type="number" step="0.1" value={form.critMult} onChange={onChange} className="border p-2 rounded bg-transparent" />
-        </label>
-
-        <label className="flex gap-2 items-center">
-          <input name="enableVariance" type="checkbox" checked={form.enableVariance} onChange={onChange} />
-          <span className="text-sm text-gray-300">Enable Variance (±{Math.round(form.varianceRange*100)}%)</span>
-        </label>
-
-        <label className="flex flex-col">
-          <span className="text-sm text-gray-400">Variance Range</span>
-          <input name="varianceRange" type="number" step="0.01" value={form.varianceRange} onChange={onChange} className="border p-2 rounded bg-transparent" />
-        </label>
-
-        <label className="flex flex-col">
-          <span className="text-sm text-gray-400">Seed (optional)</span>
-          <input name="seed" type="number" value={form.seed} onChange={onChange} className="border p-2 rounded bg-transparent" />
-        </label>
-      </div>
-
-      <div className="flex gap-3 mb-6">
-        <button onClick={runSingle} className="px-4 py-2 rounded bg-black text-white border border-gray-600 disabled:opacity-50" disabled={loading}>
-          Run Single Scenario
+      <div style={{ display:"flex", gap:8 }}>
+        <button onClick={run} disabled={busy} style={{ borderRadius:8 }}>
+          {busy ? "Running…" : "Run Simulation"}
         </button>
-        <button onClick={runStandard} className="px-4 py-2 rounded bg-gray-800 text-white border border-gray-600 disabled:opacity-50" disabled={loading}>
-          Run Standard Set
+        <button onClick={exportCsv} disabled={!result} style={{ borderRadius:8 }}>
+          Export CSV
         </button>
       </div>
 
-      {single && (
-        <div className="mb-6 border rounded p-3">
-          <h3 className="font-semibold mb-2">Single Scenario</h3>
-          <pre className="text-sm bg-black/30 p-2 rounded overflow-auto">{JSON.stringify(single, null, 2)}</pre>
-        </div>
-      )}
+      {error && <pre style={{ marginTop:10, color:"#fca5a5" }}>{String(error)}</pre>}
 
-      {standard && (
-        <div className="mb-6 border rounded p-3">
-          <h3 className="font-semibold mb-2">Standard Scenarios</h3>
-          <pre className="text-sm bg-black/30 p-2 rounded overflow-auto">{JSON.stringify(standard, null, 2)}</pre>
-        </div>
-      )}
-
-      <div className="border rounded p-3">
-        <h3 className="font-semibold mb-2">Histogram (legacy profile)</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
-          <label className="flex flex-col">
-            <span className="text-sm text-gray-400">Profile JSON [(n,d,b)]</span>
-            <textarea name="histProfileText" value={form.histProfileText} onChange={onChange} rows={3} className="border p-2 rounded bg-transparent font-mono text-xs" />
-          </label>
-          <div className="grid grid-cols-2 gap-3">
-            <label className="flex flex-col">
-              <span className="text-sm text-gray-400">Bin Size</span>
-              <input name="histBinSize" type="number" min={1} step={1} value={form.histBinSize} onChange={onChange} className="border p-2 rounded bg-transparent" />
-            </label>
-            <div className="flex items-end">
-              <button onClick={runHistogram} className="px-4 py-2 rounded bg-indigo-600 text-white disabled:opacity-50" disabled={loading}>
-                Build Histogram
-              </button>
+      {result && !error && (
+        <>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+              gap: 8,
+              marginTop: 12,
+            }}
+          >
+            <div style={{ border:"1px solid rgba(255,255,255,0.1)", borderRadius:10, padding:12 }}>
+              <div style={{ fontSize:12, opacity:0.7 }}>Win Rate</div>
+              <div style={{ fontSize:22, fontWeight:700 }}>
+                {Math.round((Number(result.win_rate || 0) * 100 + Number.EPSILON) * 10) / 10}%
+              </div>
+            </div>
+            <div style={{ border:"1px solid rgba(255,255,255,0.1)", borderRadius:10, padding:12 }}>
+              <div style={{ fontSize:12, opacity:0.7 }}>Avg Damage</div>
+              <div style={{ fontSize:22, fontWeight:700 }}>
+                {Math.round((Number(result.avg_damage || 0) + Number.EPSILON) * 10) / 10}
+              </div>
+            </div>
+            <div style={{ border:"1px solid rgba(255,255,255,0.1)", borderRadius:10, padding:12 }}>
+              <div style={{ fontSize:12, opacity:0.7 }}>Rounds Covered</div>
+              <div style={{ fontSize:22, fontWeight:700 }}>{(Object.keys(result.hist_rounds || {}).length) || 0}</div>
             </div>
           </div>
-        </div>
 
-        {hist && (
-          <>
-            <div className="text-xs text-gray-400 mb-2">min {hist.min} · max {hist.max} · binsize {hist.binSize}</div>
-            <div style={{ width: "100%", height: 260, border: "1px solid #1e2230", borderRadius: 10 }}>
+          {histSeries.length > 0 && (
+            <div style={{ width:"100%", height:260, marginTop:12 }}>
               <ResponsiveContainer>
-                <BarChart data={histData}>
+                <BarChart data={histSeries}>
                   <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="bucket" />
-                  <YAxis />
+                  <XAxis dataKey="round" />
+                  <YAxis allowDecimals={false} />
                   <Tooltip />
                   <Bar dataKey="count" />
                 </BarChart>
               </ResponsiveContainer>
             </div>
-          </>
-        )}
-      </div>
-    </div>
+          )}
+        </>
+      )}
+    </section>
   );
 }

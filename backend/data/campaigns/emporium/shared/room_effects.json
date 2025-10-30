@@ -1,0 +1,89 @@
+[
+  {
+    "id": "reflective_ground",
+    "name": "Reflective Ground",
+    "rule": "crit_range_wider_for_mirror",
+    "params": {
+      "mirror_side_bonus": 1
+    }
+  },
+  {
+    "id": "burning_ground_aura",
+    "name": "Burning Ground (Infernal Shade)",
+    "rule": "pulse_every_n",
+    "params": {
+      "n": 2,
+      "dc": 12,
+      "dmg": [
+        [
+          1,
+          4,
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "arcane_explosion_splash",
+    "name": "Arcane Projection — Splash on Defeat (approx.)",
+    "rule": "pulse_every_n",
+    "params": {
+      "n": 4,
+      "dc": 12,
+      "dmg": [
+        [
+          1,
+          6,
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "drone_laser_burst_pulse",
+    "name": "Liability Drone — Laser Burst (cone approx.)",
+    "rule": "pulse_every_n",
+    "params": {
+      "n": 3,
+      "dc": 13,
+      "dmg": [
+        [
+          2,
+          6,
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "desk_ink_spray_pulse",
+    "name": "Contract Keeper — Ink Spray (cone approx.)",
+    "rule": "pulse_every_n",
+    "params": {
+      "n": 3,
+      "dc": 13,
+      "dmg": [
+        [
+          2,
+          10,
+          0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "audit_field",
+    "name": "Audit Field",
+    "rule": "psychic_pulse_every_3",
+    "params": {
+      "dc": 13,
+      "dmg": [
+        [
+          1,
+          6,
+          0
+        ]
+      ]
+    }
+  }
+]

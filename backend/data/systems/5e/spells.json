@@ -1,0 +1,41 @@
+[
+  { "id":"fire_bolt",       "ruleset":"5e", "name":"Fire Bolt",       "level":0, "school":"evocation", "casting_time":"1_action", "range":"120_ft", "components":["V","S"], "duration":"instant", "classes":["wizard","sorcerer","artificer"] },
+  { "id":"eldritch_blast",  "ruleset":"5e", "name":"Eldritch Blast",  "level":0, "school":"evocation", "casting_time":"1_action", "range":"120_ft", "components":["V","S"], "duration":"instant", "classes":["warlock"] },
+  { "id":"mage_hand",       "ruleset":"5e", "name":"Mage Hand",       "level":0, "school":"conjuration","casting_time":"1_action","range":"30_ft","components":["V","S"],"duration":"1_minute","classes":["wizard","sorcerer","warlock","bard"] },
+  { "id":"guidance",        "ruleset":"5e", "name":"Guidance",        "level":0, "school":"divination","casting_time":"1_action","range":"touch","components":["V","S"],"duration":"1_minute","classes":["cleric","druid","artificer"] },
+  { "id":"sacred_flame",    "ruleset":"5e", "name":"Sacred Flame",    "level":0, "school":"evocation", "casting_time":"1_action","range":"60_ft","components":["V","S"],"duration":"instant","classes":["cleric"] },
+
+  { "id":"shield",          "ruleset":"5e", "name":"Shield",          "level":1, "school":"abjuration", "casting_time":"1_reaction","range":"self","components":["V","S"],"duration":"1_round","classes":["wizard","sorcerer"] },
+  { "id":"magic_missile",   "ruleset":"5e", "name":"Magic Missile",   "level":1, "school":"evocation",  "casting_time":"1_action","range":"120_ft","components":["V","S"],"duration":"instant","classes":["wizard","sorcerer"] },
+  { "id":"cure_wounds",     "ruleset":"5e", "name":"Cure Wounds",     "level":1, "school":"evocation",  "casting_time":"1_action","range":"touch","components":["V","S"],"duration":"instant","classes":["cleric","druid","bard","paladin","ranger","artificer"] },
+  { "id":"bless",           "ruleset":"5e", "name":"Bless",           "level":1, "school":"enchantment","casting_time":"1_action","range":"30_ft","components":["V","S","M"],"duration":"1_minute","classes":["cleric","paladin"] },
+  { "id":"healing_word",    "ruleset":"5e", "name":"Healing Word",    "level":1, "school":"evocation",  "casting_time":"1_bonus_action","range":"60_ft","components":["V"],"duration":"instant","classes":["cleric","bard","druid"] },
+  { "id":"thunderwave",     "ruleset":"5e", "name":"Thunderwave",     "level":1, "school":"evocation",  "casting_time":"1_action","range":"self_15ft_cube","components":["V","S"],"duration":"instant","classes":["wizard","sorcerer","bard","druid"] },
+  { "id":"sleep",           "ruleset":"5e", "name":"Sleep",           "level":1, "school":"enchantment","casting_time":"1_action","range":"90_ft","components":["V","S","M"],"duration":"1_minute","classes":["wizard","sorcerer","bard"] },
+  { "id":"burning_hands",   "ruleset":"5e", "name":"Burning Hands",   "level":1, "school":"evocation",  "casting_time":"1_action","range":"self_15ft_cone","components":["V","S"],"duration":"instant","classes":["wizard","sorcerer"] },
+  { "id":"shield_of_faith", "ruleset":"5e", "name":"Shield of Faith", "level":1, "school":"abjuration", "casting_time":"1_bonus_action","range":"60_ft","components":["V","S","M"],"duration":"10_minutes","classes":["cleric","paladin"] },
+  { "id":"hunters_mark",    "ruleset":"5e", "name":"Hunter's Mark",   "level":1, "school":"divination", "casting_time":"1_bonus_action","range":"90_ft","components":["V"],"duration":"1_hour","classes":["ranger"] },
+  { "id":"hex",             "ruleset":"5e", "name":"Hex",             "level":1, "school":"enchantment","casting_time":"1_bonus_action","range":"90_ft","components":["V","S","M"],"duration":"1_hour","classes":["warlock"] },
+
+  { "id":"mirror_image",    "ruleset":"5e", "name":"Mirror Image",    "level":2, "school":"illusion",   "casting_time":"1_action","range":"self","components":["V","S"],"duration":"1_minute","classes":["wizard","sorcerer"] },
+  { "id":"misty_step",      "ruleset":"5e", "name":"Misty Step",      "level":2, "school":"conjuration","casting_time":"1_bonus_action","range":"self","components":["V"],"duration":"instant","classes":["wizard","sorcerer","warlock"] },
+  { "id":"shatter",         "ruleset":"5e", "name":"Shatter",         "level":2, "school":"evocation",  "casting_time":"1_action","range":"60_ft","components":["V","S","M"],"duration":"instant","classes":["wizard","sorcerer","bard"] },
+  { "id":"invisibility",    "ruleset":"5e", "name":"Invisibility",    "level":2, "school":"illusion",   "casting_time":"1_action","range":"touch","components":["V","S","M"],"duration":"1_hour","classes":["wizard","sorcerer","bard","warlock"] },
+
+  { "id":"fireball",        "ruleset":"5e", "name":"Fireball",        "level":3, "school":"evocation",  "casting_time":"1_action","range":"150_ft","components":["V","S","M"],"duration":"instant","classes":["wizard","sorcerer"] },
+  { "id":"counterspell",    "ruleset":"5e", "name":"Counterspell",    "level":3, "school":"abjuration", "casting_time":"1_reaction","range":"60_ft","components":["S"],"duration":"instant","classes":["wizard","sorcerer","warlock"] },
+  { "id":"fly",             "ruleset":"5e", "name":"Fly",             "level":3, "school":"transmutation","casting_time":"1_action","range":"touch","components":["V","S","M"],"duration":"10_minutes","classes":["wizard","sorcerer","warlock"] },
+  { "id":"haste",           "ruleset":"5e", "name":"Haste",           "level":3, "school":"transmutation","casting_time":"1_action","range":"30_ft","components":["V","S","M"],"duration":"1_minute","classes":["wizard","sorcerer"] },
+  { "id":"revivify",        "ruleset":"5e", "name":"Revivify",        "level":3, "school":"necromancy", "casting_time":"1_action","range":"touch","components":["V","S","M"],"duration":"instant","classes":["cleric","paladin"] },
+  { "id":"spiritual_weapon","ruleset":"5e", "name":"Spiritual Weapon","level":2, "school":"evocation",  "casting_time":"1_bonus_action","range":"60_ft","components":["V","S"],"duration":"1_minute","classes":["cleric"] },
+  { "id":"dispel_magic",    "ruleset":"5e", "name":"Dispel Magic",    "level":3, "school":"abjuration", "casting_time":"1_action","range":"120_ft","components":["V","S"],"duration":"instant","classes":["wizard","sorcerer","warlock","cleric","bard","druid"] },
+  { "id":"lightning_bolt",  "ruleset":"5e", "name":"Lightning Bolt",  "level":3, "school":"evocation",  "casting_time":"1_action","range":"self_100ft_line","components":["V","S","M"],"duration":"instant","classes":["wizard","sorcerer"] },
+  { "id":"detect_magic",    "ruleset":"5e", "name":"Detect Magic",    "level":1, "school":"divination", "casting_time":"1_action","range":"self","components":["V","S"],"duration":"10_minutes","classes":["wizard","sorcerer","warlock","cleric","druid","bard"] },
+  { "id":"identify",        "ruleset":"5e", "name":"Identify",        "level":1, "school":"divination", "casting_time":"1_minute","range":"touch","components":["V","S","M"],"duration":"instant","classes":["wizard","bard","artificer"] },
+  { "id":"weapon_plus_one","ruleset":"5e","name":"+1 Weapon","type":"magic_weapon","rarity":"uncommon","effects":"+1 to hit and damage." },
+{ "id":"armor_plus_one","ruleset":"5e","name":"+1 Armor","type":"magic_armor","rarity":"rare","effects":"+1 AC." },
+{ "id":"cloak_of_protection","ruleset":"5e","name":"Cloak of Protection","type":"wondrous","rarity":"uncommon","effects":"+1 AC and saves while worn." },
+{ "id":"bag_of_holding","ruleset":"5e","name":"Bag of Holding","type":"wondrous","rarity":"uncommon","effects":"Holds up to 500 lb, 64 cu ft; 15 lb weight." },
+{ "id":"wand_of_magic_missiles","ruleset":"5e","name":"Wand of Magic Missiles","type":"wand","rarity":"uncommon","effects":"7 charges; cast Magic Missile." }
+
+]

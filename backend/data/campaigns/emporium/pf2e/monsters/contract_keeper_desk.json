@@ -1,0 +1,21 @@
+{
+  "id": "contract_keeper_desk",
+  "name": "Contract Keeper (Animated Desk)",
+  "ac": 15,
+  "hp": 34,
+  "attack_bonus": 4,
+  "attacks_per_round": 1,
+  "damage_profile": [
+    [
+      1,
+      8,
+      2
+    ]
+  ],
+  "tags": [
+    "ink_spray_cone",
+    "immune_poison_psychic_charm"
+  ],
+  "gs": 160,
+  "ruleset": "pf2e"
+}

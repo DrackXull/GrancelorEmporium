@@ -1,0 +1,46 @@
+[
+  {
+    "id": "human",
+    "ruleset": "5e",
+    "name": "Human",
+    "size": "medium",
+    "speed": 30,
+    "traits": ["humanoid","human"],
+    "ability_score_increase": { "any": 2, "flex": 1 },
+    "languages": ["common","choice"],
+    "features": ["Versatile"]
+  },
+  {
+    "id": "dwarf",
+    "ruleset": "5e",
+    "name": "Dwarf",
+    "size": "medium",
+    "speed": 25,
+    "traits": ["humanoid","dwarf"],
+    "ability_score_increase": { "con": 2, "choice": 1 },
+    "languages": ["common","dwarvish"],
+    "features": ["Darkvision","Dwarven Resilience","Dwarven Combat Training"]
+  },
+  {
+    "id": "elf",
+    "ruleset": "5e",
+    "name": "Elf",
+    "size": "medium",
+    "speed": 30,
+    "traits": ["humanoid","elf"],
+    "ability_score_increase": { "dex": 2, "choice": 1 },
+    "languages": ["common","elvish"],
+    "features": ["Darkvision","Keen Senses","Fey Ancestry","Trance"]
+  },
+  {
+    "id": "halfling",
+    "ruleset": "5e",
+    "name": "Halfling",
+    "size": "small",
+    "speed": 25,
+    "traits": ["humanoid","halfling"],
+    "ability_score_increase": { "dex": 2, "choice": 1 },
+    "languages": ["common","halfling"],
+    "features": ["Lucky","Brave","Halfling Nimbleness"]
+  }
+]

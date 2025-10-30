@@ -1,0 +1,21 @@
+{
+  "id": "mirror_doppel_t1",
+  "name": "Mirror Doppelganger – Tier 1",
+  "ac": 13,
+  "hp": 22,
+  "attack_bonus": 4,
+  "attacks_per_round": 1,
+  "damage_profile": [
+    [
+      1,
+      8,
+      2
+    ]
+  ],
+  "tags": [
+    "mirror",
+    "baseline"
+  ],
+  "gs": 90,
+  "ruleset": "5e"
+}

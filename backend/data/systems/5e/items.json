@@ -1,0 +1,92 @@
+[
+  {
+    "cost_gp": 1,
+    "id": "rope_hempen_50ft",
+    "name": "Rope, Hempen (50 ft)",
+    "notes": "Can be used for climbing or binding.",
+    "ruleset": "5e",
+    "type": "adventuring_gear",
+    "weight": 10
+  },
+  {
+    "cost_cp": 1,
+    "id": "torch",
+    "name": "Torch",
+    "notes": "Burns 1 hour; bright 20 ft + dim 20 ft light.",
+    "ruleset": "5e",
+    "type": "adventuring_gear",
+    "weight": 1
+  },
+  {
+    "cost_sp": 5,
+    "id": "rations_1day",
+    "name": "Rations (1 day)",
+    "notes": "Preserved food for one day.",
+    "ruleset": "5e",
+    "type": "adventuring_gear",
+    "weight": 2
+  },
+  {
+    "cost_sp": 2,
+    "id": "waterskin",
+    "name": "Waterskin",
+    "notes": "Holds one day of water.",
+    "ruleset": "5e",
+    "type": "adventuring_gear",
+    "weight": 5
+  },
+  {
+    "cost_gp": 50,
+    "effects": "Regain 2d4+2 HP when drunk.",
+    "id": "healing_potion",
+    "name": "Potion of Healing",
+    "rarity": "common",
+    "ruleset": "5e",
+    "type": "consumable"
+  },
+  {
+    "cost_gp": 150,
+    "effects": "Regain 4d4+4 HP when drunk.",
+    "id": "greater_healing_potion",
+    "name": "Potion of Greater Healing",
+    "rarity": "uncommon",
+    "ruleset": "5e",
+    "type": "consumable"
+  },
+  {
+    "cost_gp": 300,
+    "effects": "Casts Fireball once (DC 15).",
+    "id": "scroll_fireball",
+    "name": "Spell Scroll (Fireball)",
+    "rarity": "rare",
+    "ruleset": "5e",
+    "type": "consumable"
+  },
+  {
+    "cost_gp": 10,
+    "id": "rope_silk_50ft",
+    "name": "Rope, Silk (50 ft)",
+    "notes": "Light and strong climbing rope.",
+    "ruleset": "5e",
+    "type": "adventuring_gear",
+    "weight": 5
+  },
+  {
+    "cost_gp": 5,
+    "id": "lantern_hooded",
+    "name": "Lantern, Hooded",
+    "notes": "Burns 6 hours per pint of oil.",
+    "ruleset": "5e",
+    "type": "adventuring_gear",
+    "weight": 2
+  },
+  {
+    "cost_sp": 1,
+    "id": "oil_flask",
+    "name": "Oil (Flask)",
+    "notes": "Covers 5-ft square; ignites for 2d6 fire damage.",
+    "ruleset": "5e",
+    "type": "adventuring_gear",
+    "weight": 1
+  }
+]

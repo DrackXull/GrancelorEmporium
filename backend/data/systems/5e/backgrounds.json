@@ -1,0 +1,147 @@
+[
+  {
+    "features": [
+      "Shelter of the Faithful"
+    ],
+    "id": "acolyte",
+    "languages": 2,
+    "name": "Acolyte",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "insight",
+      "religion"
+    ],
+    "tool_proficiencies": []
+  },
+  {
+    "features": [
+      "Military Rank"
+    ],
+    "id": "soldier",
+    "languages": 0,
+    "name": "Soldier",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "athletics",
+      "intimidation"
+    ],
+    "tool_proficiencies": [
+      "gaming_set",
+      "vehicles_land"
+    ]
+  },
+  {
+    "features": [
+      "Researcher"
+    ],
+    "id": "sage",
+    "languages": 2,
+    "name": "Sage",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "arcana",
+      "history"
+    ],
+    "tool_proficiencies": []
+  },
+  {
+    "features": [
+      "Criminal Contact"
+    ],
+    "id": "criminal",
+    "languages": 0,
+    "name": "Criminal",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "deception",
+      "stealth"
+    ],
+    "tool_proficiencies": [
+      "thieves_tools",
+      "gaming_set"
+    ]
+  },
+  {
+    "features": [
+      "Wanderer"
+    ],
+    "id": "outlander",
+    "languages": 1,
+    "name": "Outlander",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "athletics",
+      "survival"
+    ],
+    "tool_proficiencies": [
+      "musical_instrument"
+    ]
+  },
+  {
+    "features": [
+      "By Popular Demand"
+    ],
+    "id": "entertainer",
+    "languages": 0,
+    "name": "Entertainer",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "acrobatics",
+      "performance"
+    ],
+    "tool_proficiencies": [
+      "disguise_kit",
+      "musical_instrument"
+    ]
+  },
+  {
+    "features": [
+      "Position of Privilege"
+    ],
+    "id": "noble",
+    "languages": 1,
+    "name": "Noble",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "history",
+      "persuasion"
+    ],
+    "tool_proficiencies": [
+      "gaming_set"
+    ]
+  },
+  {
+    "features": [
+      "City Secrets"
+    ],
+    "id": "urchin",
+    "languages": 0,
+    "name": "Urchin",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "sleight_of_hand",
+      "stealth"
+    ],
+    "tool_proficiencies": [
+      "disguise_kit",
+      "thieves_tools"
+    ]
+  },
+  {
+    "features": [
+      "Ship's Passage"
+    ],
+    "id": "sailor",
+    "languages": 0,
+    "name": "Sailor",
+    "ruleset": "5e",
+    "skill_proficiencies": [
+      "athletics",
+      "perception"
+    ],
+    "tool_proficiencies": [
+      "navigator_tools",
+      "vehicles_water"
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7e6"/>
+      <stop offset="42%" stop-color="#f9d67a"/>
+      <stop offset="100%" stop-color="#cfa840"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.25" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+<!--badge background-->
+  <rect width="64" height="64" rx="12" fill="#0b1220"/>
+<!--subtle golden twinkles (low-opac so they don't fight the blue particles)-->
+  <g fill="url(#gold)" opacity="0.45">
+    <path d="M12 12l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5z"/>
+    <path d="M50 10l1.2 2.4 2.4 1.2-2.4 1.2-1.2 2.4-1.2-2.4-2.4-1.2 2.4-1.2z"/>
+    <path d="M53 47l0.9 1.8 1.8 0.9-1.8 0.9-0.9 1.8-0.9-1.8-1.8-0.9 1.8-0.9z"/>
+  </g>
+<!--Main "G" body (cleaner top loop)-->
+  <path d="M18 32c0-11.4 8.4-20 19.8-20 8.4 0 14 5.2 14 10.7 0 3.3-2.3 5.6-5.6 5.6-2.3 0-4.5-1.3-4.5-3.6 0-1.9 1.1-3.1 2.7-3.9-2.2-1.9-5.2-3.1-8.6-3.1-7.7 0-12.9 7.4-12.9 16.3 0 10 6.8 15.9 15.6 15.9 3.7 0 7.2-1.2 10.4-3.4v-6.3h-8.4v-4.2H52v13.1c-4.7 3.2-10.1 5.1-15.6 5.1C25 53.2 18 45.1 18 32z" fill="url(#gold)" filter="url(#glow)"/>
+<!--Ornate lower flourish: extended tail with counter-curl & filigree-->
+  <path d="M26 49
+           c 3.6 2.1 7.6 2.9 12.8 1.9
+           c 3.0-.6 6.1-1.9 9.3-4.0
+           c 7.6 0.9 1.2 1.8 1.9 2.9
+           c -.5 1.2 -7.0 6.2 -10.4 8.5
+           c -5.0 2.7 -15.1 2.9 -25.9 -5.3
+           c 1.5 -.9 4.0 -2 4.5 -20.5
+           z" fill="url(#gold)" opacity="0.98" filter="url(#glow)"/>
+<!--delicate filigree curl that mirrors the top stroke (adds “fancy” to lower half)-->
+</svg>

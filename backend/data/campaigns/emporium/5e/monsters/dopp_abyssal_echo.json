@@ -1,0 +1,20 @@
+{
+  "id": "dopp_abyssal_echo",
+  "name": "Doppelganger – Abyssal Echo",
+  "ac": 12,
+  "hp": 20,
+  "attack_bonus": 4,
+  "attacks_per_round": 1,
+  "damage_profile": [
+    [
+      1,
+      8,
+      0
+    ]
+  ],
+  "tags": [
+    "mindclaw_reaction_lock"
+  ],
+  "gs": 85,
+  "ruleset": "5e"
+}

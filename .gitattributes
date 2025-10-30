@@ -1,0 +1,19 @@
+# Normalize all text files to LF line endings in repo
+* text=auto eol=lf
+
+# Mark common binary files
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.ico  binary
+*.zip  binary
+*.7z   binary
+
+# SVG and source maps treated as text but normalized
+*.svg  text eol=lf
+*.map  text eol=lf
+ATTR

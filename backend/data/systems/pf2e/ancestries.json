@@ -1,0 +1,53 @@
+[
+  {
+    "id":"human",
+    "ruleset":"pf2e",
+    "name":"Human",
+    "hp":8,
+    "size":"medium",
+    "speed":25,
+    "traits":["humanoid","human"],
+    "description":"Versatile and ambitious, humans are found everywhere.",
+    "boosts":["two_free"],
+    "languages":["common","regional"]
+  },
+  {
+    "id":"dwarf",
+    "ruleset":"pf2e",
+    "name":"Dwarf",
+    "hp":10,
+    "size":"medium",
+    "speed":20,
+    "traits":["humanoid","dwarf"],
+    "description":"Hardy miners and warriors with strong traditions.",
+    "boosts":["con","wis","free"],
+    "flaws":["cha"],
+    "languages":["common","dwarven"]
+  },
+  {
+    "id":"elf",
+    "ruleset":"pf2e",
+    "name":"Elf",
+    "hp":6,
+    "size":"medium",
+    "speed":30,
+    "traits":["humanoid","elf"],
+    "description":"Graceful and intelligent people with ancient magic.",
+    "boosts":["dex","int","free"],
+    "flaws":["con"],
+    "languages":["common","elven"]
+  },
+  {
+    "id":"halfling",
+    "ruleset":"pf2e",
+    "name":"Halfling",
+    "hp":6,
+    "size":"small",
+    "speed":25,
+    "traits":["humanoid","halfling"],
+    "description":"Optimistic and nimble, halflings live by their luck.",
+    "boosts":["dex","cha","free"],
+    "flaws":["str"],
+    "languages":["common","halfling"]
+  }
+]
